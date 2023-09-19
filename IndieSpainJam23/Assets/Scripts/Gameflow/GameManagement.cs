@@ -5,7 +5,9 @@ public class GameManagement : MonoBehaviour
 {
     public static GameManagement Instance { get; private set; }
 
-    private int m_stars = 1;
+    [SerializeField] private int m_stars = 1;
+
+    private bool m_gameOver = false;
 
     private void Awake()
     {
@@ -17,8 +19,15 @@ public class GameManagement : MonoBehaviour
         return m_stars;
     }
 
+    public bool GameIsOver()
+    {
+        return m_gameOver;
+    }
+
     public void LoseStar()
     {
+        if (m_gameOver) return;
+
         m_stars--;
 
         UI_InGame.Instance.UpdateStars();
@@ -26,6 +35,7 @@ public class GameManagement : MonoBehaviour
         if (m_stars == 0)
         {
             print("GAME OVER");
+            m_gameOver = true;
             UI_InGame.Instance.GameOver();
         }
     }
