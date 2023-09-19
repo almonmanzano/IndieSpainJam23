@@ -27,6 +27,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if (GameManagement.Instance.GameIsOver()) return;
+
         m_movement = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
 
         // Flip
@@ -73,6 +75,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (GameManagement.Instance.GameIsOver())
+        {
+            m_rb.velocity = Vector2.zero;
+            return;
+        }
+
         // Movement
         float speed = m_isDashing ? m_dashSpeed : m_moveSpeed;
         m_rb.velocity = m_movement * speed;
