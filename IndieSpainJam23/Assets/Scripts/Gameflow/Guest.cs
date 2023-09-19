@@ -36,8 +36,8 @@ public class Guest : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void BeScared()
+    public void BeScared(bool scared)
     {
-        m_beingScared = true;
+        m_beingScared = scared;
     }
 }

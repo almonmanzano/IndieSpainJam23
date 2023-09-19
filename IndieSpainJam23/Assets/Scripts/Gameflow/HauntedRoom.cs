@@ -20,7 +20,7 @@ public class HauntedRoom : MonoBehaviour
 
         if (m_guest)
         {
-            m_guest.BeScared();
+            m_guest.BeScared(true);
         }
     }
 
@@ -32,5 +32,10 @@ public class HauntedRoom : MonoBehaviour
     public void StopHaunted()
     {
         m_haunted = false;
+
+        if (m_guest)
+        {
+            m_guest.BeScared(false);
+        }
     }
 }
