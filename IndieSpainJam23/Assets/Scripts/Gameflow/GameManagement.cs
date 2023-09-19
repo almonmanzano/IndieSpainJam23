@@ -26,6 +26,7 @@ public class GameManagement : MonoBehaviour
         if (m_stars == 0)
         {
             print("GAME OVER");
+            UI_InGame.Instance.GameOver();
         }
     }
 }

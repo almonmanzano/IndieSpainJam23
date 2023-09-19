@@ -6,6 +6,7 @@ public class UI_InGame : MonoBehaviour
     public static UI_InGame Instance;
 
     [SerializeField] private Image[] m_starImages;
+    [SerializeField] private GameObject m_gameOver;
 
     private void Awake()
     {
@@ -25,5 +26,10 @@ public class UI_InGame : MonoBehaviour
             Color color = m_starImages[i].color;
             m_starImages[i].color = new Color(color.r, color.g, color.b, i < stars ? 1f : 0.5f);
         }
+    }
+
+    public void GameOver()
+    {
+        m_gameOver.SetActive(true);
     }
 }
