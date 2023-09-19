@@ -7,6 +7,7 @@ public class UI_InGame : MonoBehaviour
 
     [SerializeField] private Image[] m_starImages;
     [SerializeField] private GameObject m_gameOver;
+    [SerializeField] private GameObject m_pausePanel;
 
     private void Awake()
     {
@@ -31,5 +32,10 @@ public class UI_InGame : MonoBehaviour
     public void GameOver()
     {
         m_gameOver.SetActive(true);
+    }
+
+    public void PauseGame(bool pause)
+    {
+        m_pausePanel.SetActive(pause);
     }
 }
