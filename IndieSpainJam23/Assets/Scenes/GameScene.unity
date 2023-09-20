@@ -316,6 +316,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7919326775134496855, guid: d105d53e705c3e847a291946b8d9bb6e, type: 3}
   m_PrefabInstance: {fileID: 40630973}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &52569817 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2812660621568443369, guid: d105d53e705c3e847a291946b8d9bb6e, type: 3}
+  m_PrefabInstance: {fileID: 952907954}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &56661250
 GameObject:
   m_ObjectHideFlags: 0
@@ -505,7 +516,7 @@ PrefabInstance:
     - target: {fileID: 2864922806926353999, guid: d6131526d59032b419298beb63db7daa, type: 3}
       propertyPath: m_fearSlider
       value: 
-      objectReference: {fileID: 2015705238}
+      objectReference: {fileID: 746772997}
     - target: {fileID: 8810867088020473751, guid: d6131526d59032b419298beb63db7daa, type: 3}
       propertyPath: m_Name
       value: Guest (3)
@@ -3177,6 +3188,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 746684321}
   m_CullTransparentMesh: 1
+--- !u!114 &746772997 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2812660621568443369, guid: d105d53e705c3e847a291946b8d9bb6e, type: 3}
+  m_PrefabInstance: {fileID: 501645985}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &782912550
 GameObject:
   m_ObjectHideFlags: 0
@@ -3735,7 +3757,7 @@ PrefabInstance:
     - target: {fileID: 2864922806926353999, guid: d6131526d59032b419298beb63db7daa, type: 3}
       propertyPath: m_fearSlider
       value: 
-      objectReference: {fileID: 2015705238}
+      objectReference: {fileID: 52569817}
     - target: {fileID: 8810867088020473751, guid: d6131526d59032b419298beb63db7daa, type: 3}
       propertyPath: m_Name
       value: Guest (4)
