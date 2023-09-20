@@ -67,6 +67,8 @@ public class GameManagement : MonoBehaviour
 
         UI_InGame.Instance.UpdateStars();
 
+        ReviewsControl.Instance.SendReview();
+
         if (m_stars == 0)
         {
             print("GAME OVER");
