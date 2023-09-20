@@ -71,7 +71,6 @@ public class GameManagement : MonoBehaviour
 
         if (m_stars == 0)
         {
-            print("GAME OVER");
             m_gameOver = true;
             UI_InGame.Instance.GameOver();
         }
