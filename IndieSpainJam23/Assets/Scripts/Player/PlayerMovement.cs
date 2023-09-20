@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody2D m_rb;
     private TrailRenderer m_trailRenderer;
+    private Animator m_animator;
 
     private Vector2 m_movement;
     private bool m_isDashing = false;
@@ -22,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     {
         m_rb = GetComponent<Rigidbody2D>();
         m_trailRenderer = GetComponent<TrailRenderer>();
+        m_animator = GetComponent<Animator>();
         m_timeSinceDash = m_dashCd;
     }
 
@@ -36,6 +38,9 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.localScale = new Vector3(m_movement.x > 0f ? 1f : -1f, 1f, 1f);
         }
+
+        // Animation
+        m_animator.SetBool("Walk", m_movement != Vector2.zero);
 
         // Dash
         if (m_canDash)
