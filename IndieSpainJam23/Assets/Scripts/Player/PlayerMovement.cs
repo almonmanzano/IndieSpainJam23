@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D m_rb;
     private TrailRenderer m_trailRenderer;
     private Animator m_animator;
+    private Vector2 m_initialPosition;
 
     private Vector2 m_movement;
     private bool m_isDashing = false;
@@ -25,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
         m_trailRenderer = GetComponent<TrailRenderer>();
         m_animator = GetComponent<Animator>();
         m_timeSinceDash = m_dashCd;
+        m_initialPosition = transform.position;
     }
 
     private void Update()
@@ -89,5 +91,10 @@ public class PlayerMovement : MonoBehaviour
         // Movement
         float speed = m_isDashing ? m_dashSpeed : m_moveSpeed;
         m_rb.velocity = m_movement * speed;
+    }
+
+    public void Restart()
+    {
+        transform.position = m_initialPosition;
     }
 }

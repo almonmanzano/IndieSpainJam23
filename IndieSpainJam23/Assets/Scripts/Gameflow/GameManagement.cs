@@ -86,6 +86,7 @@ public class GameManagement : MonoBehaviour
         if (m_stars == 0)
         {
             m_gameOver = true;
+            Gameflow.Instance.StopAllCoroutines();
             UI_InGame.Instance.GameOver();
         }
     }

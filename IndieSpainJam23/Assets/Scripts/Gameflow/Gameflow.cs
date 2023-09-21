@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Gameflow : MonoBehaviour
 {
+    public static Gameflow Instance { get; private set; }
+
+    [SerializeField] private PlayerMovement m_player;
     [SerializeField] private float m_startTime = 1f;
     [SerializeField] private float m_minTime = 5f;
     [SerializeField] private float m_maxTime = 10f;
@@ -11,6 +14,11 @@ public class Gameflow : MonoBehaviour
     [SerializeField] private float m_nightDuration = 10f;
     [SerializeField] private GameObject m_dayMenu;
     [SerializeField] private GameObject m_nightBegins;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     private void Start()
     {
@@ -59,6 +67,8 @@ public class Gameflow : MonoBehaviour
 
     private IEnumerator RestartNightCoroutine()
     {
+        UI_Clock.Instance.Restart();
+        m_player.Restart();
         foreach (HauntedRoom room in m_hauntedRooms)
         {
             room.Restart();
@@ -81,5 +91,10 @@ public class Gameflow : MonoBehaviour
     public void RestartNight()
     {
         StartCoroutine(RestartNightCoroutine());
+    }
+
+    public float GetNightDuration()
+    {
+        return m_nightDuration;
     }
 }

@@ -19,7 +19,7 @@ public class Guest : MonoBehaviour
 
     private void Update()
     {
-        if (m_awake) return;
+        if (m_awake || !GameManagement.Instance.IsPlayable()) return;
 
         if (m_beingScared)
         {
