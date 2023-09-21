@@ -7,6 +7,7 @@ public class GameManagement : MonoBehaviour
 
     [SerializeField] private int m_stars = 1;
 
+    private bool m_playable = false;
     private bool m_gameOver = false;
     private bool m_paused = false;
 
@@ -30,14 +31,27 @@ public class GameManagement : MonoBehaviour
         }
     }
 
-    private void PauseGame()
+    public void SetPlayable(bool playable)
+    {
+        m_playable = playable;
+    }
+
+    public bool IsPlayable()
+    {
+        return m_playable && !m_gameOver && !m_paused;
+    }
+
+    public void PauseGame(bool showUI=true)
     {
         m_paused = true;
         Time.timeScale = 0f;
-        UI_InGame.Instance.PauseGame(true);
+        if (showUI)
+        {
+            UI_InGame.Instance.PauseGame(true);
+        }
     }
 
-    private void UnpauseGame()
+    public void UnpauseGame()
     {
         m_paused = false;
         Time.timeScale = 1f;

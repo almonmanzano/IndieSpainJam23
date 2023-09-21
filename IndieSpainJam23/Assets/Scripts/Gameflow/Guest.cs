@@ -14,8 +14,7 @@ public class Guest : MonoBehaviour
 
     private void Start()
     {
-        m_tranquility = m_maxTranquility;
-        m_fearSlider.value = m_tranquility / m_maxTranquility;
+        Restart();
     }
 
     private void Update()
@@ -48,5 +47,12 @@ public class Guest : MonoBehaviour
     public void BeScared(bool scared)
     {
         m_beingScared = scared;
+    }
+
+    public void Restart()
+    {
+        m_beingScared = false;
+        m_tranquility = m_maxTranquility;
+        m_fearSlider.value = m_tranquility / m_maxTranquility;
     }
 }

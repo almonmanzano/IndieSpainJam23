@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (GameManagement.Instance.GameIsOver() || GameManagement.Instance.GamePaused()) return;
+        if (!GameManagement.Instance.IsPlayable()) return;
 
         m_movement = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
 
@@ -80,7 +80,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (GameManagement.Instance.GameIsOver() || GameManagement.Instance.GamePaused())
+        if (!GameManagement.Instance.IsPlayable())
         {
             m_rb.velocity = Vector2.zero;
             return;

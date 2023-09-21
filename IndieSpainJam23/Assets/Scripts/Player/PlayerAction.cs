@@ -8,7 +8,7 @@ public class PlayerAction : MonoBehaviour
 
     private void Update()
     {
-        if (GameManagement.Instance.GameIsOver() || GameManagement.Instance.GamePaused()) return;
+        if (!GameManagement.Instance.IsPlayable()) return;
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
