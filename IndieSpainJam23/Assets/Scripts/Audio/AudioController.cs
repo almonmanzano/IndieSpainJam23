@@ -3,13 +3,11 @@ using UnityEngine.UI;
 
 public class AudioController : MonoBehaviour
 {
+    [SerializeField] private AudioSettings m_audioSettings;
     [SerializeField] private Slider m_musicVolumeSlider;
     [SerializeField] private Slider m_sfxVolumeSlider;
     [SerializeField] private AudioSource[] m_musicSources;
     [SerializeField] private AudioSource[] m_sfxSources;
-
-    private static float m_musicVolumeValue = 0.5f;
-    private static float m_sfxVolumeValue = 0.5f;
 
     private void Start()
     {
@@ -20,6 +18,7 @@ public class AudioController : MonoBehaviour
 
     public void SetMusicVolume()
     {
+        m_audioSettings.MusicVolume = m_musicVolumeSlider.value;
         foreach (AudioSource source in m_musicSources)
         {
             source.volume = m_musicVolumeSlider.value;
@@ -28,6 +27,7 @@ public class AudioController : MonoBehaviour
 
     public void SetSFXVolume()
     {
+        m_audioSettings.SFXVolume = m_sfxVolumeSlider.value;
         foreach (AudioSource source in m_sfxSources)
         {
             source.volume = m_sfxVolumeSlider.value;
@@ -38,12 +38,12 @@ public class AudioController : MonoBehaviour
     {
         if (m_musicVolumeSlider != null)
         {
-            m_musicVolumeSlider.value = m_musicVolumeValue;
+            m_musicVolumeSlider.value = m_audioSettings.MusicVolume;
         }
 
         if (m_sfxVolumeSlider != null)
         {
-            m_sfxVolumeSlider.value = m_sfxVolumeValue;
+            m_sfxVolumeSlider.value = m_audioSettings.SFXVolume;
         }
     }
 

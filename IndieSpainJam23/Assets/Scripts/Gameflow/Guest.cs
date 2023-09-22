@@ -43,7 +43,7 @@ public class Guest : MonoBehaviour
     {
         GameManagement.Instance.LoseStar();
         HotelManager.Instance.AddSimpa(m_roomID);
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 
     public void SetRoom(int room)
@@ -58,6 +58,7 @@ public class Guest : MonoBehaviour
 
     public void Restart()
     {
+        m_awake = false;
         m_beingScared = false;
         m_tranquility = m_maxTranquility;
         m_fearSlider.value = m_tranquility / m_maxTranquility;

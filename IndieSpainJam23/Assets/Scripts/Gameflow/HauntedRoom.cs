@@ -26,7 +26,7 @@ public class HauntedRoom : MonoBehaviour
         m_monster = monsterGameObject.GetComponent<Monster>();
         m_monster.SetHauntedRoom(this);
 
-        if (m_guest)
+        if (m_guest.gameObject.activeInHierarchy)
         {
             m_guest.BeScared(true);
         }
@@ -42,7 +42,7 @@ public class HauntedRoom : MonoBehaviour
         m_haunted = false;
         m_monster = null;
 
-        if (m_guest)
+        if (m_guest.gameObject.activeInHierarchy)
         {
             m_guest.BeScared(false);
         }
@@ -57,7 +57,12 @@ public class HauntedRoom : MonoBehaviour
         }
         if (m_guest)
         {
+            m_guest.gameObject.SetActive(true);
             m_guest.Restart();
+        }
+        else
+        {
+            print("what");
         }
     }
 }
