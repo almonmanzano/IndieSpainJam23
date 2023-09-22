@@ -126,12 +126,12 @@ TextureImporter:
       name: Igormilio_dismember_0
       rect:
         serializedVersion: 2
-        x: 133
-        y: 471
+        x: 141
+        y: 473
         width: 267
         height: 583
       alignment: 9
-      pivot: {x: 0.519002, y: 0.42602885}
+      pivot: {x: 0.49049887, y: 0.01701232}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -147,12 +147,12 @@ TextureImporter:
       name: Igormilio_dismember_2
       rect:
         serializedVersion: 2
-        x: 428
-        y: 508
+        x: 439
+        y: 510
         width: 627
         height: 577
       alignment: 9
-      pivot: {x: 0.5020229, y: 0.01638651}
+      pivot: {x: 0.5, y: 0.01}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -168,12 +168,12 @@ TextureImporter:
       name: Igormilio_dismember_3
       rect:
         serializedVersion: 2
-        x: 53
-        y: 81
+        x: 61
+        y: 83
         width: 213
         height: 300
       alignment: 9
-      pivot: {x: 0.8632466, y: 0.94393533}
+      pivot: {x: 0.88111144, y: 0.9439352}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -189,12 +189,12 @@ TextureImporter:
       name: Igormilio_dismember_4
       rect:
         serializedVersion: 2
-        x: 315
-        y: 70
+        x: 323
+        y: 72
         width: 206
         height: 304
       alignment: 9
-      pivot: {x: 0.13056694, y: 0.950611}
+      pivot: {x: 0.15519582, y: 0.9422663}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -210,12 +210,12 @@ TextureImporter:
       name: Igormilio_dismember_5
       rect:
         serializedVersion: 2
-        x: 559
-        y: 29
+        x: 567
+        y: 31
         width: 123
         height: 451
       alignment: 9
-      pivot: {x: 0.8609227, y: 0.96685624}
+      pivot: {x: 0.9227955, y: 0.9556066}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -231,12 +231,12 @@ TextureImporter:
       name: Igormilio_dismember_6
       rect:
         serializedVersion: 2
-        x: 781
-        y: 16
+        x: 789
+        y: 18
         width: 128
         height: 473
       alignment: 9
-      pivot: {x: 0.1630845, y: 0.97732097}
+      pivot: {x: 0.15317535, y: 0.9558683}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -252,12 +252,12 @@ TextureImporter:
       name: Igormilio_dismember_7
       rect:
         serializedVersion: 2
-        x: 909
-        y: 180
+        x: 1165
+        y: 352
         width: 627
         height: 577
       alignment: 9
-      pivot: {x: 0.497977, y: 0.018584624}
+      pivot: {x: 0.5, y: 0.01}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -265,6 +265,27 @@ TextureImporter:
       bones: []
       spriteID: 1f30ff2b36084ec43a18ea0257409d22
       internalID: 299229268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Igormilio_dismember_1
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 1044
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fe79a0cfb92c63489f7e792a8f0b127
+      internalID: -1543186559
       vertices: []
       indices: 
       edges: []
