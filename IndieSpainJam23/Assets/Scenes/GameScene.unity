@@ -167,6 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acaafebb8273bf94abf8d26f5ffecf5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_roomNumber: 0
   m_monsterOptions:
   - {fileID: 2837540759585366175, guid: 1500a39702063094dae8b070789de22b, type: 3}
   m_guest: {fileID: 880153343}
@@ -625,6 +626,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 41211182}
   m_CullTransparentMesh: 1
+--- !u!1 &41793144
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 41793145}
+  - component: {fileID: 41793146}
+  m_Layer: 0
+  m_Name: '@HotelManager'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &41793145
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41793144}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &41793146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41793144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 803245b0053b8854abd3bd459601b30c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TVs: []
+  m_bars: []
+  m_normalRoomBenefit: 10
+  m_extraBenefitsTV: 20
+  m_extraBenefitsBar: 30
 --- !u!1 &45389942
 GameObject:
   m_ObjectHideFlags: 0
@@ -1316,8 +1366,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Dinerito ganado:\n\nHabitaci\xF3n 1 .......... 0\nHabitaci\xF3n 2 ..........
-    0\nHabitaci\xF3n 3 .......... 100\nHabitaci\xF3n 3 .......... 150\nHabitaci\xF3n
-    3 .......... 150\n\nTotal ....................... 400"
+    0\nHabitaci\xF3n 3 .......... 100\nHabitaci\xF3n 4 .......... 150\nHabitaci\xF3n
+    5 .......... 150\n\nTotal ....................... 400"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1950,7 +2000,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "A\xF1adir minibar\n- 100 -"
+  m_text: "A\xF1adir minibar<br><size=100%>- 20 -"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2421,12 +2471,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '<size=100%>Mejorar velocidad
-
-    <size=80%><i>"Hay que saber subir y
-    bajar"</i>
-
-    <size=100%>- 100 -'
+  m_text: <size=100%>Aumentar velocidad<br><size=80%><i>"Hay que saber subir y bajar"</i><br><size=100%>-
+    10 -
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2905,7 +2951,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "A\xF1adir minibar\n- 100 -"
+  m_text: "A\xF1adir minibar<br><size=100%>- 20 -"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4094,6 +4140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acaafebb8273bf94abf8d26f5ffecf5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_roomNumber: 4
   m_monsterOptions:
   - {fileID: 2837540759585366175, guid: 1500a39702063094dae8b070789de22b, type: 3}
   m_guest: {fileID: 945825465}
@@ -4719,7 +4766,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "A\xF1adir TV\n- 100 -"
+  m_text: "A\xF1adir TV<br><size=100%>- 20 -"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5020,7 +5067,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "A\xF1adir minibar\n- 100 -"
+  m_text: "A\xF1adir minibar<br><size=100%>- 20 -"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6551,7 +6598,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "2 hu\xE9spedes cobardes se han hecho un simpa"
+  m_text: "2 hu\xE9spedes cobardes han hecho un simpa"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7596,7 +7643,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "A\xF1adir TV\n- 100 -"
+  m_text: "A\xF1adir TV<br><size=100%>- 20 -"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9105,7 +9152,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "A\xF1adir minibar\n- 100 -"
+  m_text: "A\xF1adir minibar<br><size=100%>- 20 -"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9626,7 +9673,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "A\xF1adir TV\n- 100 -"
+  m_text: "A\xF1adir TV<br><size=100%>- 20 -"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9760,7 +9807,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "A\xF1adir TV\n- 100 -"
+  m_text: "A\xF1adir TV<br><size=100%>- 20 -"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9998,7 +10045,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "A\xF1adir minibar\n- 100 -"
+  m_text: "A\xF1adir minibar<br><size=100%>- 20 -"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -10292,9 +10339,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a51274c7115ea3d4280ce2973c9526a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_button:
-  - Text: {fileID: 283882965}
+  m_upgradesHotel:
+  - Button: {fileID: 48527010}
+    Text: {fileID: 283882965}
     Upgrade: {fileID: 11400000, guid: 1070d3dd1255afa4ca7c59ebefaec031, type: 2}
+  - Button: {fileID: 384428617}
+    Text: {fileID: 1612536467}
+    Upgrade: {fileID: 11400000, guid: 4ff47830edd9b4b4cba8ce58ea957489, type: 2}
+  - Button: {fileID: 1887198244}
+    Text: {fileID: 1682721026}
+    Upgrade: {fileID: 11400000, guid: a229a8139a61b0841bac7129f08ba087, type: 2}
+  m_upgradesRoom1:
+  - Button: {fileID: 349990304}
+    Text: {fileID: 963195984}
+    Upgrade: {fileID: 11400000, guid: 4145576b04138514c9787117e66c63fc, type: 2}
+  - Button: {fileID: 919007553}
+    Text: {fileID: 1317267120}
+    Upgrade: {fileID: 11400000, guid: bc5b91acc9f597347a387d976756618d, type: 2}
+  m_upgradesRoom2:
+  - Button: {fileID: 1580868444}
+    Text: {fileID: 1294377844}
+    Upgrade: {fileID: 11400000, guid: 4145576b04138514c9787117e66c63fc, type: 2}
+  - Button: {fileID: 1169022351}
+    Text: {fileID: 1201643258}
+    Upgrade: {fileID: 11400000, guid: bc5b91acc9f597347a387d976756618d, type: 2}
+  m_upgradesRoom3:
+  - Button: {fileID: 1491737905}
+    Text: {fileID: 2049901551}
+    Upgrade: {fileID: 11400000, guid: 4145576b04138514c9787117e66c63fc, type: 2}
+  - Button: {fileID: 1047695132}
+    Text: {fileID: 316993674}
+    Upgrade: {fileID: 11400000, guid: bc5b91acc9f597347a387d976756618d, type: 2}
+  m_upgradesRoom4:
+  - Button: {fileID: 474353547}
+    Text: {fileID: 1301240196}
+    Upgrade: {fileID: 11400000, guid: 4145576b04138514c9787117e66c63fc, type: 2}
+  - Button: {fileID: 790694858}
+    Text: {fileID: 598193902}
+    Upgrade: {fileID: 11400000, guid: bc5b91acc9f597347a387d976756618d, type: 2}
+  m_upgradesRoom5:
+  - Button: {fileID: 1800479655}
+    Text: {fileID: 559262693}
+    Upgrade: {fileID: 11400000, guid: 4145576b04138514c9787117e66c63fc, type: 2}
+  - Button: {fileID: 1389607832}
+    Text: {fileID: 246489092}
+    Upgrade: {fileID: 11400000, guid: bc5b91acc9f597347a387d976756618d, type: 2}
 --- !u!1 &1365252808
 GameObject:
   m_ObjectHideFlags: 0
@@ -11802,6 +11891,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acaafebb8273bf94abf8d26f5ffecf5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_roomNumber: 1
   m_monsterOptions:
   - {fileID: 2837540759585366175, guid: 1500a39702063094dae8b070789de22b, type: 3}
   m_guest: {fileID: 1517042794}
@@ -11924,6 +12014,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acaafebb8273bf94abf8d26f5ffecf5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_roomNumber: 2
   m_monsterOptions:
   - {fileID: 2837540759585366175, guid: 1500a39702063094dae8b070789de22b, type: 3}
   m_guest: {fileID: 1540368728}
@@ -12728,12 +12819,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '<size=100%>Obtener dash
-
-    <size=80%><i>"Hago dash y aparezco a tu lado"</i>
-
-    <size=100%>-
-    100 -'
+  m_text: <size=100%>Obtener dash<br><size=80%><i>"Hago dash y aparezco a tu lado"</i><br><size=100%>-
+    20 -
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -13009,8 +13096,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "<size=100%>Mejorar aspiradora\n<size=80%><i>\"\xBFQui\xE9n necesita una
-    Roomba?\"</i>\n<size=100%>- 100 -"
+  m_text: "<size=100%>Mejorar aspiradora<br><size=80%><i>\"\xBFQui\xE9n necesita
+    una Roomba?\"</i><br><size=100%>- 30 -"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -13365,6 +13452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acaafebb8273bf94abf8d26f5ffecf5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_roomNumber: 3
   m_monsterOptions:
   - {fileID: 2837540759585366175, guid: 1500a39702063094dae8b070789de22b, type: 3}
   m_guest: {fileID: 65128281}
@@ -15373,7 +15461,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "A\xF1adir TV\n- 100 -"
+  m_text: "A\xF1adir TV<br><size=100%>- 20 -"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -16364,4 +16452,5 @@ SceneRoots:
   - {fileID: 437007125}
   - {fileID: 1994778902}
   - {fileID: 424885706}
+  - {fileID: 41793145}
   - {fileID: 1166256769}

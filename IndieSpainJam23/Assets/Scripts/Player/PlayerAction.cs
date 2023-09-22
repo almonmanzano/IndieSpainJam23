@@ -13,7 +13,7 @@ public class PlayerAction : MonoBehaviour
     {
         if (!GameManagement.Instance.IsPlayable()) return;
 
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetMouseButton(0))
         {
             Collider2D[] monstersInRange = Physics2D.OverlapCircleAll(m_hand.position, m_range, m_monstersLayerMask);
             for (int i = 0; i < monstersInRange.Length; i++)

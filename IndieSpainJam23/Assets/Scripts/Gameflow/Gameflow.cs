@@ -27,6 +27,7 @@ public class Gameflow : MonoBehaviour
 
     private IEnumerator StartNight()
     {
+        HotelManager.Instance.ResetSimpas();
         GameManagement.Instance.SetPlayable(true);
         yield return new WaitForSeconds(m_startTime);
         StartCoroutine(HauntRoom());

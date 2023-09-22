@@ -3,11 +3,17 @@ using UnityEngine;
 
 public class HauntedRoom : MonoBehaviour
 {
+    [SerializeField] private int m_roomNumber;
     [SerializeField] private GameObject[] m_monsterOptions;
     [SerializeField] private Guest m_guest;
 
     private bool m_haunted = false;
     private Monster m_monster;
+
+    private void Start()
+    {
+        m_guest.SetRoom(m_roomNumber);
+    }
 
     public void SpawnMonster()
     {
