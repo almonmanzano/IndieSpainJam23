@@ -38,6 +38,11 @@ public class PlayerAction : MonoBehaviour
         }
     }
 
+    public void AddVacuumUpgrade()
+    {
+        m_suctionForce *= 1.5f;
+    }
+
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;

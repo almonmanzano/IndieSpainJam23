@@ -63,4 +63,14 @@ public class Guest : MonoBehaviour
         m_tranquility = m_maxTranquility;
         m_fearSlider.value = m_tranquility / m_maxTranquility;
     }
+
+    public void RelaxFear()
+    {
+        m_fearAmount *= 0.75f;
+    }
+
+    public void IncreaseRestore()
+    {
+        m_restoreAmount *= 1.5f;
+    }
 }

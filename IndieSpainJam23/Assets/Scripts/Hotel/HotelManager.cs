@@ -4,6 +4,8 @@ public class HotelManager : MonoBehaviour
 {
     public static HotelManager Instance { get; private set; }
 
+    [SerializeField] private GameObject m_player;
+
     [SerializeField] private GameObject[] m_TVs;
     [SerializeField] private GameObject[] m_bars;
 
@@ -15,7 +17,7 @@ public class HotelManager : MonoBehaviour
 
     private int m_money = 0;
 
-    private bool[] m_simpas = new bool[] { false, false, false, false, false };
+    private bool[] m_simpas = new bool[5] { false, false, false, false, false };
 
     // Hotel upgrades
     private bool m_speedIncrease = false;
@@ -53,7 +55,7 @@ public class HotelManager : MonoBehaviour
 
     public void ResetSimpas()
     {
-        m_simpas = new bool[] { false, false, false, false, false };
+        m_simpas = new bool[5] { false, false, false, false, false };
     }
 
     public int GetSimpas()
@@ -79,6 +81,11 @@ public class HotelManager : MonoBehaviour
     public int GetMoney()
     {
         return m_money;
+    }
+
+    public void AddMoney(int money)
+    {
+        m_money += money;
     }
 
     public void BuyUpgrade(Upgrade.UpgradeType type, int roomID, int cost)
@@ -112,7 +119,7 @@ public class HotelManager : MonoBehaviour
         if (m_speedIncrease) return;
 
         m_speedIncrease = true;
-        FindObjectOfType<PlayerMovement>().AddSpeed();
+        m_player.GetComponent<PlayerMovement>().AddSpeed();
     }
 
     private void AddDash()
@@ -120,7 +127,7 @@ public class HotelManager : MonoBehaviour
         if (m_dash) return;
 
         m_dash = true;
-        FindObjectOfType<PlayerMovement>().AddDash();
+        m_player.GetComponent<PlayerMovement>().AddDash();
     }
 
     private void AddVacuumUpgrade()
@@ -128,17 +135,22 @@ public class HotelManager : MonoBehaviour
         if (m_vacuumUpgrade) return;
 
         m_vacuumUpgrade = true;
+        m_player.GetComponent<PlayerAction>().AddVacuumUpgrade();
     }
 
     private void AddTV(int roomID)
     {
         m_hasTV[roomID] = true;
         m_TVs[roomID].SetActive(true);
+        HauntedRoom room = Gameflow.Instance.GetHauntedRoom(roomID);
+        room.GetGuest().IncreaseRestore();
     }
 
     private void AddBar(int roomID)
     {
         m_hasBar[roomID] = true;
         m_bars[roomID].SetActive(true);
+        HauntedRoom room = Gameflow.Instance.GetHauntedRoom(roomID);
+        room.GetGuest().RelaxFear();
     }
 }

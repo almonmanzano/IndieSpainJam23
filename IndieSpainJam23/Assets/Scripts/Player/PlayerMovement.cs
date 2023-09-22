@@ -54,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
                     m_isDashing = true;
                     m_dashTime = 0f;
                     m_timeSinceDash = 0f;
-                    Instantiate(m_dashFX, transform.position, transform.rotation);
+                    if (m_dashFX) Instantiate(m_dashFX, transform.position, transform.rotation);
                     if (m_trailRenderer)
                     {
                         m_trailRenderer.emitting = true;

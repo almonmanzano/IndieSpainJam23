@@ -65,4 +65,9 @@ public class HauntedRoom : MonoBehaviour
             print("what");
         }
     }
+
+    public Guest GetGuest()
+    {
+        return m_guest;
+    }
 }

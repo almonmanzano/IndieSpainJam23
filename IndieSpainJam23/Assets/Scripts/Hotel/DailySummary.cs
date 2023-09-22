@@ -6,20 +6,18 @@ public class DailySummary : MonoBehaviour
     [SerializeField] private TMP_Text m_simpaText;
     [SerializeField] private TMP_Text m_summaryText;
 
-    private void Start()
-    {
-        FillTexts();
-    }
-
     public void FillTexts()
     {
         HotelManager hotel = HotelManager.Instance;
         int simpas = hotel.GetSimpas();
         int[] roomBenefits = new int[5];
+        int totalBenefits = 0;
         for (int i = 0; i < 5; i++)
         {
             roomBenefits[i] = hotel.GetRoomBenefits(i);
+            totalBenefits += roomBenefits[i];
         }
+        hotel.AddMoney(totalBenefits);
 
         string simpaText = "";
         if (simpas == 0)
@@ -35,11 +33,6 @@ public class DailySummary : MonoBehaviour
             simpaText = simpas + " huéspedes cobardes han hecho un simpa";
         }
 
-        int totalBenefits = 0;
-        foreach (int benefit in roomBenefits)
-        {
-            totalBenefits += benefit;
-        }
         string summary = "Dinerito ganado:\r\n" +
                          "\r\n" +
                          "Habitación 1 .......... " + roomBenefits[0] + "\r\n" +

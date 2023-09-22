@@ -1,17 +1,22 @@
-using Cinemachine;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 
 public class GameManagement : MonoBehaviour
 {
     public static GameManagement Instance { get; private set; }
 
     [SerializeField] private int m_initialStars = 5;
+    [SerializeField] private Volume m_globalVolume;
+    [SerializeField] private GameObject[] m_toDisableAtPause;
 
     private int m_stars;
 
     private bool m_playable = false;
     private bool m_gameOver = false;
     private bool m_paused = false;
+
+    private DepthOfField m_depthOfField;
 
     private void Awake()
     {
@@ -21,6 +26,7 @@ public class GameManagement : MonoBehaviour
     private void Start()
     {
         m_stars = m_initialStars;
+        m_globalVolume.profile.TryGet(out m_depthOfField);
     }
 
     private void Update()
@@ -50,6 +56,13 @@ public class GameManagement : MonoBehaviour
 
     public void PauseGame(bool showUI=true)
     {
+        if (m_depthOfField) m_depthOfField.active = true;  // Blur
+
+        foreach (GameObject obj in m_toDisableAtPause)
+        {
+            obj.SetActive(false);
+        }
+
         m_paused = true;
         Time.timeScale = 0f;
         if (showUI)
@@ -60,6 +73,13 @@ public class GameManagement : MonoBehaviour
 
     public void UnpauseGame()
     {
+        if (m_depthOfField) m_depthOfField.active = false;  // Blur
+
+        foreach (GameObject obj in m_toDisableAtPause)
+        {
+            obj.SetActive(true);
+        }
+
         m_paused = false;
         Time.timeScale = 1f;
         UI_InGame.Instance.PauseGame(false);
@@ -92,9 +112,21 @@ public class GameManagement : MonoBehaviour
 
         if (m_stars == 0)
         {
-            m_gameOver = true;
-            Gameflow.Instance.StopAllCoroutines();
-            UI_InGame.Instance.GameOver();
+            GameOver();
         }
+    }
+
+    private void GameOver()
+    {
+        if (m_depthOfField) m_depthOfField.active = true;  // Blur
+
+        foreach (GameObject obj in m_toDisableAtPause)
+        {
+            obj.SetActive(false);
+        }
+
+        m_gameOver = true;
+        Gameflow.Instance.StopAllCoroutines();
+        UI_InGame.Instance.GameOver();
     }
 }

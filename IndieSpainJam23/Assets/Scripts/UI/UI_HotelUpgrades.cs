@@ -12,6 +12,7 @@ public class UI_HotelUpgrades : MonoBehaviour
         public Upgrade Upgrade;
     }
 
+    [SerializeField] private TMP_Text m_moneyText;
     [SerializeField] private UpgradeButton[] m_upgradesHotel;
     [SerializeField] private UpgradeButton[] m_upgradesRoom1;
     [SerializeField] private UpgradeButton[] m_upgradesRoom2;
@@ -22,6 +23,11 @@ public class UI_HotelUpgrades : MonoBehaviour
     private void Start()
     {
         UpdateAllUpgrades();
+    }
+
+    public void UpdateMoneyText()
+    {
+        m_moneyText.text = "Ahorrado: " + HotelManager.Instance.GetMoney();
     }
 
     [ContextMenu("Update All Upgrades")]
@@ -71,6 +77,7 @@ public class UI_HotelUpgrades : MonoBehaviour
         {
             hotel.BuyUpgrade(upgrade.Upgrade.Type, roomID, cost);
             upgrade.Button.interactable = false;
+            UpdateMoneyText();
         }
     }
 }

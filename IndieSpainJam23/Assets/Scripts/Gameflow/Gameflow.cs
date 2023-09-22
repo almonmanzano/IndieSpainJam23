@@ -14,6 +14,14 @@ public class Gameflow : MonoBehaviour
     [SerializeField] private float m_nightDuration = 10f;
     [SerializeField] private GameObject m_dayMenu;
     [SerializeField] private GameObject m_nightBegins;
+    [SerializeField] private float m_nightBeginsDuration = 2f;
+
+    [SerializeField] private Animator m_anim;
+    [SerializeField] private float m_transitionTime = 1f;
+
+    [SerializeField] private MusicSwitcher m_musicSwitcher;
+
+    [SerializeField] private DailySummary m_dailySummary;
 
     private void Awake()
     {
@@ -22,11 +30,19 @@ public class Gameflow : MonoBehaviour
 
     private void Start()
     {
+        StartCoroutine(StartGame());
+    }
+
+    private IEnumerator StartGame()
+    {
+        m_anim.SetTrigger("In");
+        yield return new WaitForSeconds(m_transitionTime);
         StartCoroutine(StartNight());
     }
 
     private IEnumerator StartNight()
     {
+        m_musicSwitcher.PlayMusicNight();
         HotelManager.Instance.ResetSimpas();
         GameManagement.Instance.SetPlayable(true);
         yield return new WaitForSeconds(m_startTime);
@@ -60,9 +76,18 @@ public class Gameflow : MonoBehaviour
 
     private void EndNight()
     {
+        m_musicSwitcher.PlayMusicDay();
+
+        // Destroy objects that were meant to be destroyed but were not yet
+        foreach (DestroyAfterSeconds go in FindObjectsOfType(typeof(DestroyAfterSeconds)))
+        {
+            Destroy(go.gameObject);
+        }
+
         StopAllCoroutines();
         GameManagement.Instance.PauseGame(false);
         GameManagement.Instance.SetPlayable(false);
+        m_dailySummary.FillTexts();
         m_dayMenu.SetActive(true);
     }
 
@@ -82,7 +107,7 @@ public class Gameflow : MonoBehaviour
         m_nightBegins.SetActive(true);
         m_nightBegins.GetComponent<Animator>().SetTrigger("NightBegins");
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(m_nightBeginsDuration);
 
         m_nightBegins.SetActive(false);
 
@@ -97,5 +122,10 @@ public class Gameflow : MonoBehaviour
     public float GetNightDuration()
     {
         return m_nightDuration;
+    }
+
+    public HauntedRoom GetHauntedRoom(int roomID)
+    {
+        return m_hauntedRooms[roomID];
     }
 }
