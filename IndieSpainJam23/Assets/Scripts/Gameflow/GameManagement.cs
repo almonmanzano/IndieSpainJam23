@@ -5,7 +5,9 @@ public class GameManagement : MonoBehaviour
 {
     public static GameManagement Instance { get; private set; }
 
-    [SerializeField] private int m_stars = 1;
+    [SerializeField] private int m_initialStars = 5;
+
+    private int m_stars;
 
     private bool m_playable = false;
     private bool m_gameOver = false;
@@ -14,6 +16,11 @@ public class GameManagement : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+    }
+
+    private void Start()
+    {
+        m_stars = m_initialStars;
     }
 
     private void Update()
