@@ -11,6 +11,7 @@ public class Guest : MonoBehaviour
     private bool m_beingScared = false;
     private float m_tranquility;
     private bool m_awake = false;
+    private int m_roomID;
 
     private void Start()
     {
@@ -41,7 +42,13 @@ public class Guest : MonoBehaviour
     private void WakeUp()
     {
         GameManagement.Instance.LoseStar();
+        HotelManager.Instance.AddSimpa(m_roomID);
         Destroy(gameObject);
+    }
+
+    public void SetRoom(int room)
+    {
+        m_roomID = room;
     }
 
     public void BeScared(bool scared)

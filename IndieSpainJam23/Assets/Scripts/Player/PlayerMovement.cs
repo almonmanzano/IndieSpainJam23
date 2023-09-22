@@ -97,4 +97,14 @@ public class PlayerMovement : MonoBehaviour
     {
         transform.position = m_initialPosition;
     }
+
+    public void AddSpeed()
+    {
+        m_moveSpeed *= 1.5f;
+    }
+
+    public void AddDash()
+    {
+        m_canDash = true;
+    }
 }

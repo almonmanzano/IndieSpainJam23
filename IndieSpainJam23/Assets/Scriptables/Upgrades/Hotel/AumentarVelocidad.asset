@@ -10,9 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 669849005edbe9f4795b561d3d233028, type: 3}
-  m_Name: MejorarVelocidad
+  m_Name: AumentarVelocidad
   m_EditorClassIdentifier: 
-  ID: 0
-  Text: <size=100%>Mejorar velocidad<br><size=80%><i>"Hay que saber subir y bajar"</i><br><size=100%>-
-    100 -
-  Cost: 100
+  Type: 0
+  Text: <size=100%>Aumentar velocidad<br><size=80%><i>"Hay que saber subir y bajar"</i>
+  Cost: 10

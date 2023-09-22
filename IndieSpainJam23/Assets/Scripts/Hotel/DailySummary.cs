@@ -13,7 +13,14 @@ public class DailySummary : MonoBehaviour
 
     public void FillTexts()
     {
-        int simpas = 0;
+        HotelManager hotel = HotelManager.Instance;
+        int simpas = hotel.GetSimpas();
+        int[] roomBenefits = new int[5];
+        for (int i = 0; i < 5; i++)
+        {
+            roomBenefits[i] = hotel.GetRoomBenefits(i);
+        }
+
         string simpaText = "";
         if (simpas == 0)
         {
@@ -21,21 +28,27 @@ public class DailySummary : MonoBehaviour
         }
         else if (simpas == 1)
         {
-            simpaText = "1 huésped cobarde se ha hecho un simpa";
+            simpaText = "1 huésped cobarde ha hecho un simpa";
         }
         else
         {
-            simpaText = simpas.ToString() + " huéspedes cobardes se han hecho un simpa";
+            simpaText = simpas + " huéspedes cobardes han hecho un simpa";
+        }
+
+        int totalBenefits = 0;
+        foreach (int benefit in roomBenefits)
+        {
+            totalBenefits += benefit;
         }
         string summary = "Dinerito ganado:\r\n" +
                          "\r\n" +
-                         "Habitación 1 .......... 0\r\n" +
-                         "Habitación 2 .......... 0\r\n" +
-                         "Habitación 3 .......... 100\r\n" +
-                         "Habitación 3 .......... 150\r\n" +
-                         "Habitación 3 .......... 150\r\n" +
+                         "Habitación 1 .......... " + roomBenefits[0] + "\r\n" +
+                         "Habitación 2 .......... " + roomBenefits[1] + "\r\n" +
+                         "Habitación 3 .......... " + roomBenefits[2] + "\r\n" +
+                         "Habitación 4 .......... " + roomBenefits[3] + "\r\n" +
+                         "Habitación 5 .......... " + roomBenefits[4] + "\r\n" +
                          "\r\n" +
-                         "Total ....................... 400";
+                         "Total ....................... " + totalBenefits;
 
         m_simpaText.text = simpaText;
         m_summaryText.text = summary;
