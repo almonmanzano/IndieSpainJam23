@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f9dc37fdac8ef534eaf8afd486de0c5c
+guid: 25ad046d1bbbd364ebb2a4ecb8c298df
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,127 +123,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Nosferatillos_dismember_0
+      name: Dust_all_3
       rect:
         serializedVersion: 2
-        x: 61
-        y: 1726
-        width: 573
-        height: 524
-      alignment: 9
-      pivot: {x: 0.49545836, y: 0.014899567}
+        x: 906
+        y: 2148
+        width: 206
+        height: 165
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f123e023a38acee49a8412906e401575
-      internalID: 1439551210
+      spriteID: 9aed652a09674bf4c9bff41a06cd0a87
+      internalID: 921831897
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nosferatillos_dismember_1
+      name: Dust_all_5
       rect:
         serializedVersion: 2
-        x: 975
-        y: 1694
-        width: 573
-        height: 550
-      alignment: 9
-      pivot: {x: 0.4364165, y: 0.01892689}
+        x: 565
+        y: 2142
+        width: 220
+        height: 173
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8dc83296cbf7014e8cb48a85b875455
-      internalID: 1283628284
+      spriteID: 6e1ce2307e47042419bf7c206037c169
+      internalID: 997621842
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nosferatillos_dismember_2
+      name: Dust_all_9
       rect:
         serializedVersion: 2
-        x: 15
-        y: 90
-        width: 875
-        height: 1116
-      alignment: 9
-      pivot: {x: 0.56543183, y: 0.9863932}
+        x: 853
+        y: 1907
+        width: 198
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95128026760b1a545a801109aa309030
-      internalID: -38746375
+      spriteID: 7da3934a830d6c64d888ee39e3631053
+      internalID: 166575820
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nosferatillos_dismember_3
+      name: Dust_all_10
       rect:
         serializedVersion: 2
-        x: 1005
-        y: 1148
-        width: 542
-        height: 447
-      alignment: 9
-      pivot: {x: 0.5768239, y: 0.01746616}
+        x: 570
+        y: 1997
+        width: 171
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50a6b35b38db9c146baf70dcd44e6968
-      internalID: 15276465
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Nosferatillos_dismember_5
-      rect:
-        serializedVersion: 2
-        x: 1000
-        y: 798
-        width: 560
-        height: 247
-      alignment: 9
-      pivot: {x: 0.039933123, y: 0.52680284}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ed7326d9bfbb2884981fffcb0642bbec
-      internalID: 156614448
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Nosferatillos_dismember_6
-      rect:
-        serializedVersion: 2
-        x: 935
-        y: 120
-        width: 613
-        height: 508
-      alignment: 9
-      pivot: {x: 0.092446454, y: 0.79916227}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4dd00295c2475be4886909d881f0c524
-      internalID: -1120926120
+      spriteID: b982c07de5bed4a4da67d7cf5263cd85
+      internalID: 1603981701
       vertices: []
       indices: 
       edges: []
@@ -259,13 +217,23 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Nosferatillos_dismember_0: 1439551210
-      Nosferatillos_dismember_1: 1283628284
-      Nosferatillos_dismember_2: -38746375
-      Nosferatillos_dismember_3: 15276465
-      Nosferatillos_dismember_4: 760911835
-      Nosferatillos_dismember_5: 156614448
-      Nosferatillos_dismember_6: -1120926120
+      Dust_all_0: -1599623772
+      Dust_all_1: -218802460
+      Dust_all_10: 1603981701
+      Dust_all_11: 369095960
+      Dust_all_12: -1443119665
+      Dust_all_13: -1898796832
+      Dust_all_14: 630858842
+      Dust_all_15: 446001319
+      Dust_all_16: 1416489127
+      Dust_all_2: 187526956
+      Dust_all_3: 921831897
+      Dust_all_4: 268209414
+      Dust_all_5: 997621842
+      Dust_all_6: -1447169917
+      Dust_all_7: -290032333
+      Dust_all_8: 1125383981
+      Dust_all_9: 166575820
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
