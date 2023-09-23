@@ -100,7 +100,7 @@ public class GameManagement : MonoBehaviour
         return m_paused;
     }
 
-    public void LoseStar()
+    public void LoseStar(Sprite portrait)
     {
         if (m_gameOver) return;
 
@@ -108,7 +108,7 @@ public class GameManagement : MonoBehaviour
 
         UI_InGame.Instance.UpdateStars();
 
-        ReviewsControl.Instance.SendReview();
+        ReviewsControl.Instance.SendReview(portrait);
 
         if (m_stars == 0)
         {
