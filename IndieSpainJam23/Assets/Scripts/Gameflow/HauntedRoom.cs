@@ -30,6 +30,9 @@ public class HauntedRoom : MonoBehaviour
         {
             m_guest.BeScared(true);
         }
+
+        // Random voices
+        AudioRandomizer.Instance.PlayRandom(m_roomNumber);
     }
 
     public bool IsHaunted()

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2539921095169345360}
   - component: {fileID: -8695921895791980888}
   m_Layer: 0
-  m_Name: VFX_Monster
+  m_Name: VFX_Generic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
