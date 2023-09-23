@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cb09f5c3f5ced7f4f9fab025c3a9bfd9
+guid: c81f5878fac8e554bad263aff8a5125e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,148 +123,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: wednesday_dismember_0
+      name: SrEsqueleto_0
       rect:
         serializedVersion: 2
-        x: 17
-        y: 967
-        width: 892
-        height: 763
+        x: 130
+        y: 468
+        width: 228
+        height: 311
       alignment: 9
-      pivot: {x: 0.5, y: 0.18}
+      pivot: {x: 0.5000001, y: 0.013141203}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9259bc4ef8a54274d8f266574949283c
-      internalID: -1604317625
+      spriteID: 665526da3321e804bbeacda371a7a72b
+      internalID: -1792676019
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wednesday_dismember_1
+      name: SrEsqueleto_1
       rect:
         serializedVersion: 2
-        x: 962
-        y: 1020
-        width: 161
-        height: 354
+        x: 504
+        y: 516
+        width: 93
+        height: 239
       alignment: 9
-      pivot: {x: 0.9357243, y: 0.8963361}
+      pivot: {x: 0.89550585, y: 0.9447747}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7fc4467392c98e84eaa8976e7c15796e
-      internalID: 768766403
+      spriteID: aefee1d3cf7cab14da93c48322831985
+      internalID: 1731415949
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wednesday_dismember_2
+      name: SrEsqueleto_2
       rect:
         serializedVersion: 2
-        x: 1240
-        y: 1025
-        width: 181
-        height: 358
+        x: 757
+        y: 511
+        width: 93
+        height: 239
       alignment: 9
-      pivot: {x: 0.08741718, y: 0.8982292}
+      pivot: {x: 0.13745248, y: 0.94049966}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3fe0aff1b45412e4f8bc1f8f6e806204
-      internalID: -286244767
+      spriteID: 84bdc5456d22b9045972eb44cfc5934a
+      internalID: 980429867
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wednesday_dismember_7
+      name: SrEsqueleto_3
       rect:
         serializedVersion: 2
-        x: 29
-        y: 83
-        width: 892
-        height: 763
+        x: 133
+        y: 152
+        width: 227
+        height: 213
       alignment: 9
-      pivot: {x: 0.5, y: 0.18}
-      border: {x: 0, y: 0, z: 44, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 81f3cc4dbaa5d404789795fde105a9dc
-      internalID: 643281326
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wednesday_dismember_8
-      rect:
-        serializedVersion: 2
-        x: 874
-        y: 443
-        width: 401
-        height: 447
-      alignment: 9
-      pivot: {x: 0.4717841, y: 0.024121108}
+      pivot: {x: 0.5180041, y: 0.038374636}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 133403415f76fa74b82183418d79a6d5
-      internalID: -1704266529
+      spriteID: d4007ebfc6233a44988abfd522bedf34
+      internalID: 1074619530
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wednesday_dismember_9
+      name: SrEsqueleto_4
       rect:
         serializedVersion: 2
-        x: 1323
-        y: 743
-        width: 191
-        height: 153
+        x: 466
+        y: 231
+        width: 113
+        height: 167
       alignment: 9
-      pivot: {x: 0.5355442, y: 0.95850646}
+      pivot: {x: 0.7531701, y: 0.96054333}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0f65d7a18a1cb0439f7301b7adebd66
-      internalID: 719632837
+      spriteID: ee07363dd1074b345807eb42353a463b
+      internalID: 1678425937
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wednesday_dismember_10
+      name: SrEsqueleto_5
       rect:
         serializedVersion: 2
-        x: 1330
-        y: 506
-        width: 127
-        height: 181
+        x: 713
+        y: 235
+        width: 113
+        height: 167
       alignment: 9
-      pivot: {x: 0.42872632, y: 0.9250846}
+      pivot: {x: 0.24682996, y: 0.96054316}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 695bfd4c202a04844bc2a82a892ba319
-      internalID: -1329363232
+      spriteID: 90ff75bdc6f12304dba3c16659ad075a
+      internalID: 98314253
       vertices: []
       indices: 
       edges: []
@@ -280,17 +259,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      wednesday_dismember_0: -1604317625
-      wednesday_dismember_1: 768766403
-      wednesday_dismember_10: -1329363232
-      wednesday_dismember_2: -286244767
-      wednesday_dismember_3: -1879083979
-      wednesday_dismember_4: 1524791501
-      wednesday_dismember_5: 791430362
-      wednesday_dismember_6: 1295556503
-      wednesday_dismember_7: 643281326
-      wednesday_dismember_8: -1704266529
-      wednesday_dismember_9: 719632837
+      SrEsqueleto_0: -1792676019
+      SrEsqueleto_1: 1731415949
+      SrEsqueleto_2: 980429867
+      SrEsqueleto_3: 1074619530
+      SrEsqueleto_4: 1678425937
+      SrEsqueleto_5: 98314253
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

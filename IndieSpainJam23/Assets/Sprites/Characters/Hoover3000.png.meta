@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c81f5878fac8e554bad263aff8a5125e
+guid: ff86094f19694fb47a2386a3688a7972
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -121,133 +121,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: SrEsqueleto_0
-      rect:
-        serializedVersion: 2
-        x: 130
-        y: 468
-        width: 228
-        height: 311
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 665526da3321e804bbeacda371a7a72b
-      internalID: -1792676019
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SrEsqueleto_1
-      rect:
-        serializedVersion: 2
-        x: 504
-        y: 516
-        width: 93
-        height: 239
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: aefee1d3cf7cab14da93c48322831985
-      internalID: 1731415949
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SrEsqueleto_2
-      rect:
-        serializedVersion: 2
-        x: 757
-        y: 511
-        width: 93
-        height: 239
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 84bdc5456d22b9045972eb44cfc5934a
-      internalID: 980429867
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SrEsqueleto_3
-      rect:
-        serializedVersion: 2
-        x: 133
-        y: 152
-        width: 227
-        height: 213
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d4007ebfc6233a44988abfd522bedf34
-      internalID: 1074619530
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SrEsqueleto_4
-      rect:
-        serializedVersion: 2
-        x: 466
-        y: 231
-        width: 113
-        height: 167
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ee07363dd1074b345807eb42353a463b
-      internalID: 1678425937
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SrEsqueleto_5
-      rect:
-        serializedVersion: 2
-        x: 713
-        y: 235
-        width: 113
-        height: 167
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 90ff75bdc6f12304dba3c16659ad075a
-      internalID: 98314253
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -258,13 +132,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      SrEsqueleto_0: -1792676019
-      SrEsqueleto_1: 1731415949
-      SrEsqueleto_2: 980429867
-      SrEsqueleto_3: 1074619530
-      SrEsqueleto_4: 1678425937
-      SrEsqueleto_5: 98314253
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
