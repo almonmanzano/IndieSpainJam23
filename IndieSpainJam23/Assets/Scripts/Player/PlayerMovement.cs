@@ -3,6 +3,7 @@ using UnityEngine;
 [RequireComponent (typeof(Rigidbody2D))]
 public class PlayerMovement : MonoBehaviour
 {
+    [SerializeField] private Animator m_animator;
     [SerializeField] private float m_moveSpeed = 5f;
     [SerializeField] private bool m_canDash = false;
     [SerializeField] private float m_dashSpeed = 25f;
@@ -12,7 +13,6 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody2D m_rb;
     private TrailRenderer m_trailRenderer;
-    private Animator m_animator;
     private Vector2 m_initialPosition;
 
     private Vector2 m_movement;
@@ -24,7 +24,6 @@ public class PlayerMovement : MonoBehaviour
     {
         m_rb = GetComponent<Rigidbody2D>();
         m_trailRenderer = GetComponent<TrailRenderer>();
-        m_animator = GetComponent<Animator>();
         m_timeSinceDash = m_dashCd;
         m_initialPosition = transform.position;
     }

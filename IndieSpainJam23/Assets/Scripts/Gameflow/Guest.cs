@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class Guest : MonoBehaviour
 {
+    [SerializeField] private Sprite m_portrait;
+    [SerializeField] private Image m_portraitImage;
     [SerializeField] private float m_maxTranquility = 100f;
     [SerializeField] private float m_fearAmount = 5f;
     [SerializeField] private float m_restoreAmount = 3f;
@@ -19,6 +21,7 @@ public class Guest : MonoBehaviour
 
     private void Start()
     {
+        m_portraitImage.sprite = m_portrait;
         Restart();
     }
 
@@ -50,8 +53,9 @@ public class Guest : MonoBehaviour
 
     private IEnumerator WakeUpCoroutine()
     {
+        if (m_portrait == null) print("what");
         m_room.StopHaunted();
-        GameManagement.Instance.LoseStar();
+        GameManagement.Instance.LoseStar(m_portrait);
         HotelManager.Instance.AddSimpa(m_roomID);
         GetComponent<Animator>().SetTrigger("WakeUp");
         Instantiate(m_vfx, transform.position, Quaternion.identity);

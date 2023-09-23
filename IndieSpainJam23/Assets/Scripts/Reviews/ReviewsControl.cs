@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ReviewsControl : MonoBehaviour
 {
@@ -14,11 +15,16 @@ public class ReviewsControl : MonoBehaviour
         Instance = this;
     }
 
-    public void SendReview()
+    public void SendReview(Sprite portrait)
     {
         GameObject reviewGameObject = Instantiate(m_reviewPrefab, m_reviewsParent);
         int rand = Random.Range(0, m_badReviews.Length);
         Review review = m_badReviews[rand];
         reviewGameObject.GetComponentInChildren<TMP_Text>().text = review.Text;
+        Transform portraitParent = reviewGameObject.transform.Find("PortraitParent");
+        if (portraitParent == null) print("no portrait parent");
+        Transform portraitChild = portraitParent.Find("Portrait");
+        if (portraitChild == null) print("no portrait child");
+        portraitChild.GetComponent<Image>().sprite = portrait;
     }
 }
