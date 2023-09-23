@@ -437,6 +437,7 @@ GameObject:
   - component: {fileID: 8496775022978966088}
   - component: {fileID: 3149639158387382137}
   - component: {fileID: 2864922806926353999}
+  - component: {fileID: 2655046697519622124}
   m_Layer: 0
   m_Name: Guest
   m_TagString: Untagged
@@ -452,7 +453,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8810867088020473751}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.15, y: 6.43, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -539,3 +540,26 @@ MonoBehaviour:
   m_fearAmount: 20
   m_restoreAmount: 3
   m_fearSlider: {fileID: 4514084460504930760}
+  m_wakeUpTime: 1
+  m_vfx: {fileID: 511801244588696918, guid: a7fadf1085861e84fa7c6f18866bbef5, type: 3}
+--- !u!95 &2655046697519622124
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8810867088020473751}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3321ba9821123fe40b286e5bb9df7edf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,6 +8,8 @@ public class Guest : MonoBehaviour
     [SerializeField] private float m_fearAmount = 5f;
     [SerializeField] private float m_restoreAmount = 3f;
     [SerializeField] private Slider m_fearSlider;
+    [SerializeField] private float m_wakeUpTime = 1f;
+    [SerializeField] private GameObject m_vfx;
 
     private bool m_beingScared = false;
     private float m_tranquility;
@@ -41,8 +44,18 @@ public class Guest : MonoBehaviour
 
     private void WakeUp()
     {
+        StartCoroutine(WakeUpCoroutine());
+    }
+
+    private IEnumerator WakeUpCoroutine()
+    {
         GameManagement.Instance.LoseStar();
         HotelManager.Instance.AddSimpa(m_roomID);
+        GetComponent<Animator>().SetTrigger("WakeUp");
+        Instantiate(m_vfx, transform.position, Quaternion.identity);
+
+        yield return new WaitForSeconds(m_wakeUpTime);
+
         gameObject.SetActive(false);
     }
 
