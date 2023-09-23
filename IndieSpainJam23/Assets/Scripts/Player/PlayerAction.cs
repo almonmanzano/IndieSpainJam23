@@ -9,6 +9,14 @@ public class PlayerAction : MonoBehaviour
     //[SerializeField] private float m_rangeH = 1.5f;
     [SerializeField] private LayerMask m_monstersLayerMask;
 
+    [SerializeField] private ParticleSystem m_vacuumFX1;
+    [SerializeField] private ParticleSystem m_vacuumFX2;
+    [SerializeField] private float m_particlesSpeed = 7f;
+    [SerializeField] private float m_particlesError = 0.5f;
+
+    private ParticleSystem.Particle[] m_vacuumParticles1;
+    private ParticleSystem.Particle[] m_vacuumParticles2;
+
     private void Update()
     {
         if (!GameManagement.Instance.IsPlayable()) return;
@@ -37,7 +45,48 @@ public class PlayerAction : MonoBehaviour
                     monster.Die(m_hand);
                 }
             }
+
+            // Particle system
+            UpdateFX(m_vacuumFX1, m_vacuumParticles1);
+            UpdateFX(m_vacuumFX2, m_vacuumParticles2);
         }
+        else
+        {
+            m_vacuumFX1.gameObject.SetActive(false);
+            m_vacuumFX2.gameObject.SetActive(false);
+        }
+    }
+
+    private void UpdateFX(ParticleSystem fx, ParticleSystem.Particle[] particles)
+    {
+        fx.gameObject.SetActive(true);
+
+        if (particles == null || particles.Length < fx.main.maxParticles)
+        {
+            particles = new ParticleSystem.Particle[fx.main.maxParticles];
+        }
+
+        int numParticles = fx.GetParticles(particles);
+
+        for (int i = 0; i < numParticles; i++)
+        {
+            float y = m_hand.transform.position.y - particles[i].position.y;
+            float xmax = m_hand.transform.position.x - fx.transform.position.x;
+            float x = m_hand.transform.position.x - particles[i].position.x;
+            if ((x > 0f && transform.localScale.x > 0f) || (x < 0f && transform.localScale.x < 0f))
+            {
+                particles[i].position += Vector3.right * 2 * x;
+                particles[i].velocity *= -1f;
+            }
+            float speed = m_particlesSpeed * (1f - (x / xmax));
+            particles[i].position += Vector3.up * y * speed * Time.deltaTime;
+            if (Vector2.Distance(m_hand.transform.position, particles[i].position) < m_particlesError)
+            {
+                particles[i].position = m_hand.transform.position;
+            }
+        }
+
+        fx.SetParticles(particles, numParticles);
     }
 
     public void AddVacuumUpgrade()

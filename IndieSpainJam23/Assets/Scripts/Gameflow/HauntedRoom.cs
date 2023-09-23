@@ -7,12 +7,14 @@ public class HauntedRoom : MonoBehaviour
     [SerializeField] private GameObject[] m_monsterOptions;
     [SerializeField] private Guest m_guest;
 
+    [SerializeField] private Transform[] m_patrolPoints;
+
     private bool m_haunted = false;
     private Monster m_monster;
 
     private void Start()
     {
-        m_guest.SetRoom(m_roomNumber);
+        m_guest.SetRoom(m_roomNumber, this);
     }
 
     public void SpawnMonster()
@@ -24,7 +26,7 @@ public class HauntedRoom : MonoBehaviour
         GameObject monsterPrefab = m_monsterOptions[rand];
         GameObject monsterGameObject = Instantiate(monsterPrefab, transform.position, Quaternion.identity);
         m_monster = monsterGameObject.GetComponent<Monster>();
-        m_monster.SetHauntedRoom(this);
+        m_monster.SetHauntedRoom(this, m_patrolPoints);
 
         if (m_guest.gameObject.activeInHierarchy)
         {

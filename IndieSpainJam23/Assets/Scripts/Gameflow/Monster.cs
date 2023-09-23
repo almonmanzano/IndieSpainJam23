@@ -9,10 +9,12 @@ public class Monster : MonoBehaviour
 
     private HauntedRoom m_room;
     private bool m_alive = true;
+    private Transform[] m_patrolPoints;
 
-    public void SetHauntedRoom(HauntedRoom room)
+    public void SetHauntedRoom(HauntedRoom room, Transform[] patrolPoints)
     {
         m_room = room;
+        m_patrolPoints = patrolPoints;
     }
 
     public void LeaveRoom()
@@ -30,7 +32,7 @@ public class Monster : MonoBehaviour
         m_alive = false;
         GetComponent<Animator>().SetTrigger("Die");
         LeaveRoom();
-        //Destroy(GetComponent<Collider2D>());
+        Destroy(GetComponent<Collider2D>()); // Bug or feature?
 
         StartCoroutine(DieCoroutine(transf, m_deathTime));
     }

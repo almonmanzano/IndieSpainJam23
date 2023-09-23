@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,7 +7,9 @@ public class Gameflow : MonoBehaviour
 {
     public static Gameflow Instance { get; private set; }
 
-    [SerializeField] private PlayerMovement m_player;
+    [SerializeField] private CharacterSelectedData m_characterData;
+    [SerializeField] private Transform m_playerInitialPos;
+
     [SerializeField] private float m_startTime = 1f;
     [SerializeField] private float m_minTime = 5f;
     [SerializeField] private float m_maxTime = 10f;
@@ -23,6 +26,8 @@ public class Gameflow : MonoBehaviour
 
     [SerializeField] private DailySummary m_dailySummary;
 
+    private PlayerMovement m_player;
+
     private void Awake()
     {
         Instance = this;
@@ -30,6 +35,11 @@ public class Gameflow : MonoBehaviour
 
     private void Start()
     {
+        GameObject player = Instantiate(m_characterData.Prefab, m_playerInitialPos.position, Quaternion.identity);
+        m_player = player.GetComponent<PlayerMovement>();
+
+        FindObjectOfType<CinemachineVirtualCamera>().Follow = player.transform;
+
         StartCoroutine(StartGame());
     }
 
@@ -55,7 +65,7 @@ public class Gameflow : MonoBehaviour
         List<HauntedRoom> rooms = new List<HauntedRoom>();
         foreach (HauntedRoom room in m_hauntedRooms)
         {
-            if (!room.IsHaunted())
+            if (!room.IsHaunted() && room.GetGuest().gameObject.activeInHierarchy)
             {
                 rooms.Add(room);
             }

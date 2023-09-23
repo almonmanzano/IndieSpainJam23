@@ -14,6 +14,7 @@ public class Guest : MonoBehaviour
     private bool m_beingScared = false;
     private float m_tranquility;
     private bool m_awake = false;
+    private HauntedRoom m_room;
     private int m_roomID;
 
     private void Start()
@@ -49,6 +50,7 @@ public class Guest : MonoBehaviour
 
     private IEnumerator WakeUpCoroutine()
     {
+        m_room.StopHaunted();
         GameManagement.Instance.LoseStar();
         HotelManager.Instance.AddSimpa(m_roomID);
         GetComponent<Animator>().SetTrigger("WakeUp");
@@ -59,9 +61,10 @@ public class Guest : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    public void SetRoom(int room)
+    public void SetRoom(int roomID, HauntedRoom room)
     {
-        m_roomID = room;
+        m_roomID = roomID;
+        m_room = room;
     }
 
     public void BeScared(bool scared)

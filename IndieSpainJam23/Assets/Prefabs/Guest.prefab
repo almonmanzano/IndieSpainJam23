@@ -536,7 +536,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e75a39ea2ebba8442948f3456f210e2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_maxTranquility: 100
+  m_maxTranquility: 10000
   m_fearAmount: 20
   m_restoreAmount: 3
   m_fearSlider: {fileID: 4514084460504930760}
