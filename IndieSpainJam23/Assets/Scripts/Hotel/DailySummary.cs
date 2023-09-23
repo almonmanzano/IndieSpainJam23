@@ -35,11 +35,11 @@ public class DailySummary : MonoBehaviour
 
         string summary = "Dinerito ganado:\r\n" +
                          "\r\n" +
-                         "Habitación 1 .......... " + roomBenefits[0] + "\r\n" +
-                         "Habitación 2 .......... " + roomBenefits[1] + "\r\n" +
-                         "Habitación 3 .......... " + roomBenefits[2] + "\r\n" +
-                         "Habitación 4 .......... " + roomBenefits[3] + "\r\n" +
-                         "Habitación 5 .......... " + roomBenefits[4] + "\r\n" +
+                         "Habitacion 1 .......... " + roomBenefits[0] + "\r\n" +
+                         "Habitacion 2 .......... " + roomBenefits[1] + "\r\n" +
+                         "Habitacion 3 .......... " + roomBenefits[2] + "\r\n" +
+                         "Habitacion 4 .......... " + roomBenefits[3] + "\r\n" +
+                         "Habitacion 5 .......... " + roomBenefits[4] + "\r\n" +
                          "\r\n" +
                          "Total ....................... " + totalBenefits;
 
