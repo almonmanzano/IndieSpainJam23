@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PlayerAction : MonoBehaviour
 {
+    [SerializeField] private Animator m_animator;
     [SerializeField] private Transform m_hand;
     [SerializeField] private float m_range = 1.5f;
     [SerializeField] private float m_suctionForce = 1f;
@@ -23,6 +24,7 @@ public class PlayerAction : MonoBehaviour
 
         if (Input.GetMouseButton(0))
         {
+            m_animator.SetBool("IsAbsorbing", true);
             Collider2D[] monstersInRange = Physics2D.OverlapCircleAll(m_hand.position, m_range, m_monstersLayerMask);
             for (int i = 0; i < monstersInRange.Length; i++)
             {
@@ -52,6 +54,7 @@ public class PlayerAction : MonoBehaviour
         }
         else
         {
+            m_animator.SetBool("IsAbsorbing", false);
             m_vacuumFX1.gameObject.SetActive(false);
             m_vacuumFX2.gameObject.SetActive(false);
         }
