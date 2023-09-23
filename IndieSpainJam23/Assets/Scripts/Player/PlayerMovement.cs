@@ -42,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // Animation
-        m_animator.SetBool("Walk", m_movement != Vector2.zero);
+        m_animator.SetBool("IsRunning", m_movement != Vector2.zero);
 
         // Dash
         if (m_canDash)

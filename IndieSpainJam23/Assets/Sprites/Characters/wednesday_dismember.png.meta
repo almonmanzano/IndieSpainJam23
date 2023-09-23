@@ -126,12 +126,12 @@ TextureImporter:
       name: wednesday_dismember_0
       rect:
         serializedVersion: 2
-        x: 17
-        y: 967
-        width: 892
-        height: 763
+        x: 1055
+        y: 1575
+        width: 161
+        height: 354
       alignment: 9
-      pivot: {x: 0.5, y: 0.18}
+      pivot: {x: 0.916231, y: 0.91015524}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -147,12 +147,12 @@ TextureImporter:
       name: wednesday_dismember_1
       rect:
         serializedVersion: 2
-        x: 962
-        y: 1020
-        width: 161
-        height: 354
+        x: 1303
+        y: 1580
+        width: 181
+        height: 358
       alignment: 9
-      pivot: {x: 0.9357243, y: 0.8963361}
+      pivot: {x: 0.05571532, y: 0.8806142}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -168,12 +168,12 @@ TextureImporter:
       name: wednesday_dismember_2
       rect:
         serializedVersion: 2
-        x: 1240
-        y: 1025
-        width: 181
-        height: 358
-      alignment: 9
-      pivot: {x: 0.08741718, y: 0.8982292}
+        x: 1487
+        y: 1785
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -189,13 +189,13 @@ TextureImporter:
       name: wednesday_dismember_7
       rect:
         serializedVersion: 2
-        x: 29
-        y: 83
-        width: 892
-        height: 763
+        x: 1328
+        y: 1308
+        width: 138
+        height: 153
       alignment: 9
-      pivot: {x: 0.5, y: 0.18}
-      border: {x: 0, y: 0, z: 44, w: 0}
+      pivot: {x: 0.74280053, y: 0.98179317}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -207,36 +207,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wednesday_dismember_8
-      rect:
-        serializedVersion: 2
-        x: 874
-        y: 443
-        width: 401
-        height: 447
-      alignment: 9
-      pivot: {x: 0.4717841, y: 0.024121108}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 133403415f76fa74b82183418d79a6d5
-      internalID: -1704266529
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: wednesday_dismember_9
       rect:
         serializedVersion: 2
-        x: 1323
-        y: 743
-        width: 191
-        height: 153
+        x: 29
+        y: 83
+        width: 892
+        height: 763
       alignment: 9
-      pivot: {x: 0.5355442, y: 0.95850646}
+      pivot: {x: 0.5, y: 0.18}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -252,12 +231,12 @@ TextureImporter:
       name: wednesday_dismember_10
       rect:
         serializedVersion: 2
-        x: 1330
-        y: 506
-        width: 127
-        height: 181
+        x: 1072
+        y: 422
+        width: 442
+        height: 447
       alignment: 9
-      pivot: {x: 0.42872632, y: 0.9250846}
+      pivot: {x: 0.46967712, y: 0.02526159}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -265,6 +244,48 @@ TextureImporter:
       bones: []
       spriteID: 695bfd4c202a04844bc2a82a892ba319
       internalID: -1329363232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wednesday_dismember_3
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 967
+        width: 892
+        height: 763
+      alignment: 9
+      pivot: {x: 0.5, y: 0.18}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e2578b527ee5204cb4e3c40e42327d1
+      internalID: -1879083979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wednesday_dismember_6
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 1286
+        width: 127
+        height: 181
+      alignment: 9
+      pivot: {x: 0.4120565, y: 0.9566266}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 158bee71f90a0e74fa67cca01d2e072f
+      internalID: 1295556503
       vertices: []
       indices: 
       edges: []
