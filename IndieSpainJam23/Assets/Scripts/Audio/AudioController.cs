@@ -18,33 +18,26 @@ public class AudioController : MonoBehaviour
 
     public void SetMusicVolume()
     {
-        m_audioSettings.MusicVolume = m_musicVolumeSlider.value;
+        if (m_musicVolumeSlider != null) m_audioSettings.MusicVolume = m_musicVolumeSlider.value;
         foreach (AudioSource source in m_musicSources)
         {
-            source.volume = m_musicVolumeSlider.value;
+            source.volume = m_audioSettings.MusicVolume;
         }
     }
 
     public void SetSFXVolume()
     {
-        m_audioSettings.SFXVolume = m_sfxVolumeSlider.value;
+        if (m_sfxVolumeSlider != null) m_audioSettings.SFXVolume = m_sfxVolumeSlider.value;
         foreach (AudioSource source in m_sfxSources)
         {
-            source.volume = m_sfxVolumeSlider.value;
+            source.volume = m_audioSettings.SFXVolume;
         }
     }
 
     public void UpdateSliders()
     {
-        if (m_musicVolumeSlider != null)
-        {
-            m_musicVolumeSlider.value = m_audioSettings.MusicVolume;
-        }
-
-        if (m_sfxVolumeSlider != null)
-        {
-            m_sfxVolumeSlider.value = m_audioSettings.SFXVolume;
-        }
+        if (m_musicVolumeSlider != null) m_musicVolumeSlider.value = m_audioSettings.MusicVolume;
+        if (m_sfxVolumeSlider != null) m_sfxVolumeSlider.value = m_audioSettings.SFXVolume;
     }
 
     public void PlayAudio(AudioSource source, AudioClip clip)
