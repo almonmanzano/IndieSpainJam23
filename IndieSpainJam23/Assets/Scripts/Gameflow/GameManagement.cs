@@ -31,7 +31,7 @@ public class GameManagement : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && !m_gameOver)
+        if (Input.GetKeyDown(KeyCode.Escape) && m_playable && !m_gameOver)
         {
             if (!m_paused)
             {

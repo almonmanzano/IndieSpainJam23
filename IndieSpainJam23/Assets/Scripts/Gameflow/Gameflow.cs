@@ -42,7 +42,6 @@ public class Gameflow : MonoBehaviour
 
     private IEnumerator StartNight()
     {
-        m_musicSwitcher.PlayMusicNight();
         HotelManager.Instance.ResetSimpas();
         GameManagement.Instance.SetPlayable(true);
         yield return new WaitForSeconds(m_startTime);
@@ -106,6 +105,8 @@ public class Gameflow : MonoBehaviour
 
         m_nightBegins.SetActive(true);
         m_nightBegins.GetComponent<Animator>().SetTrigger("NightBegins");
+
+        m_musicSwitcher.PlayMusicNight();
 
         yield return new WaitForSeconds(m_nightBeginsDuration);
 

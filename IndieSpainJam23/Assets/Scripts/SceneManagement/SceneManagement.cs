@@ -1,4 +1,5 @@
 using System.Collections;
+using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -18,11 +19,22 @@ public class SceneManagement : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
 
         yield return new WaitForSeconds(m_transitionTime);
+
+        Cursor.lockState = CursorLockMode.Confined;
         SceneManager.LoadScene(scene);
     }
 
     public void QuitGame()
     {
+        StartCoroutine(QuitGameAfter());
+    }
+
+    private IEnumerator QuitGameAfter()
+    {
+        m_anim.SetTrigger("Out");
+        Cursor.lockState = CursorLockMode.Locked;
+
+        yield return new WaitForSeconds(m_transitionTime);
         Application.Quit();
     }
 }
