@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5432142473410042599}
   - component: {fileID: 8358796703288468102}
   - component: {fileID: 4340968714804793460}
+  - component: {fileID: 2851623923243471197}
   m_Layer: 6
   m_Name: Monster
   m_TagString: Untagged
@@ -109,6 +110,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55300ef077fb1184194abf25d9d31bdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_deathTime: 0.5
+  m_vfx: {fileID: 0}
+--- !u!95 &2851623923243471197
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2837540759585366175}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 41926263b1fb0314aa5c418a8466ff05, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3825103666598389048
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,7 +313,7 @@ GameObject:
   m_Layer: 6
   m_Name: Sprites
   m_TagString: Untagged
-  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1

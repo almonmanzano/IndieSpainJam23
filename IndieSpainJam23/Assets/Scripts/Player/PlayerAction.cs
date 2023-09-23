@@ -18,21 +18,23 @@ public class PlayerAction : MonoBehaviour
             Collider2D[] monstersInRange = Physics2D.OverlapCircleAll(m_hand.position, m_range, m_monstersLayerMask);
             for (int i = 0; i < monstersInRange.Length; i++)
             {
-                GameObject monster = monstersInRange[i].gameObject;
-                if (Vector2.Distance(m_hand.position, monster.transform.position) > m_minDistance)
+                GameObject monsterObj = monstersInRange[i].gameObject;
+                Monster monster = monsterObj.GetComponent<Monster>();
+                if (!monster.IsAlive()) continue;
+
+                if (Vector2.Distance(m_hand.position, monsterObj.transform.position) > m_minDistance)
                 {
                     // Atract monster
-                    Vector2 direction = (m_hand.transform.position - monster.transform.position).normalized;
+                    Vector2 direction = (m_hand.transform.position - monsterObj.transform.position).normalized;
                     if ((direction.x < 0 && transform.localScale.x == 1f) || (direction.x > 0 && transform.localScale.x == -1f))
                     {
-                        monster.transform.position += (Vector3)direction * m_suctionForce * Time.deltaTime;
+                        monsterObj.transform.position += (Vector3)direction * m_suctionForce * Time.deltaTime;
                     }
                 }
                 else
                 {
                     // Destroy monster
-                    monster.GetComponent<Monster>().LeaveRoom();
-                    Destroy(monster);
+                    monster.Die(m_hand);
                 }
             }
         }

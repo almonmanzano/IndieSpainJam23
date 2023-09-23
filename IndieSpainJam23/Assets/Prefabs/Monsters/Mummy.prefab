@@ -516,6 +516,7 @@ GameObject:
   - component: {fileID: 6512717685549826885}
   - component: {fileID: 780714050930179269}
   - component: {fileID: 2953676799256837911}
+  - component: {fileID: 3999895610630890491}
   m_Layer: 6
   m_Name: Mummy
   m_TagString: Untagged
@@ -613,6 +614,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55300ef077fb1184194abf25d9d31bdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_deathTime: 0.5
+  m_vfx: {fileID: 511801244588696918, guid: a7fadf1085861e84fa7c6f18866bbef5, type: 3}
+--- !u!95 &3999895610630890491
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6689971823445789297}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 41926263b1fb0314aa5c418a8466ff05, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6891124452326345851
 GameObject:
   m_ObjectHideFlags: 0
