@@ -258,6 +258,7 @@ MonoBehaviour:
   - {fileID: 0}
   m_guestPosition: {fileID: 1399390773}
   m_portraitImage: {fileID: 1779385062}
+  m_fearSlider: {fileID: 1222590661}
 --- !u!1 &37752323
 GameObject:
   m_ObjectHideFlags: 0
@@ -6076,6 +6077,7 @@ MonoBehaviour:
   m_patrolPoints: []
   m_guestPosition: {fileID: 589132683}
   m_portraitImage: {fileID: 369044716}
+  m_fearSlider: {fileID: 52569817}
 --- !u!4 &478130154
 Transform:
   m_ObjectHideFlags: 0
@@ -15022,6 +15024,7 @@ MonoBehaviour:
   m_patrolPoints: []
   m_guestPosition: {fileID: 579009508}
   m_portraitImage: {fileID: 108771007}
+  m_fearSlider: {fileID: 264282157}
 --- !u!1 &1522586635
 GameObject:
   m_ObjectHideFlags: 0
@@ -15187,6 +15190,7 @@ MonoBehaviour:
   m_patrolPoints: []
   m_guestPosition: {fileID: 1948816015}
   m_portraitImage: {fileID: 1794093837}
+  m_fearSlider: {fileID: 2015705238}
 --- !u!1 &1524907380
 GameObject:
   m_ObjectHideFlags: 0
@@ -17034,6 +17038,7 @@ MonoBehaviour:
   m_patrolPoints: []
   m_guestPosition: {fileID: 419237693}
   m_portraitImage: {fileID: 211117908}
+  m_fearSlider: {fileID: 746772997}
 --- !u!1 &1753506323
 GameObject:
   m_ObjectHideFlags: 0

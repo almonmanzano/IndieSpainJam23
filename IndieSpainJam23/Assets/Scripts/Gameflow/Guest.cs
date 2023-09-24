@@ -8,7 +8,6 @@ public class Guest : MonoBehaviour
     [SerializeField] private float m_maxTranquility = 100f;
     [SerializeField] private float m_fearAmount = 5f;
     [SerializeField] private float m_restoreAmount = 3f;
-    [SerializeField] private Slider m_fearSlider;
     [SerializeField] private float m_wakeUpTime = 1f;
     [SerializeField] private GameObject m_vfx;
 
@@ -18,6 +17,7 @@ public class Guest : MonoBehaviour
     private HauntedRoom m_room;
     private int m_roomID;
     private Image m_portraitImage;
+    private Slider m_fearSlider;
 
     private void Start()
     {
@@ -26,7 +26,7 @@ public class Guest : MonoBehaviour
 
     private void Update()
     {
-        if (m_awake || !GameManagement.Instance.IsPlayable()) return;
+        if (m_awake || !GameManagement.Instance.IsPlayable() || m_fearSlider == null) return;
 
         if (m_beingScared)
         {
@@ -63,12 +63,13 @@ public class Guest : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    public void SetRoom(int roomID, HauntedRoom room, Image portraitImage)
+    public void SetRoom(int roomID, HauntedRoom room, Image portraitImage, Slider fearSlider)
     {
         m_roomID = roomID;
         m_room = room;
         m_portraitImage = portraitImage;
         m_portraitImage.sprite = m_portrait;
+        m_fearSlider = fearSlider;
     }
 
     public void BeScared(bool scared)
@@ -81,7 +82,7 @@ public class Guest : MonoBehaviour
         m_awake = false;
         m_beingScared = false;
         m_tranquility = m_maxTranquility;
-        m_fearSlider.value = m_tranquility / m_maxTranquility;
+        //m_fearSlider.value = m_tranquility / m_maxTranquility;
     }
 
     public void RelaxFear()

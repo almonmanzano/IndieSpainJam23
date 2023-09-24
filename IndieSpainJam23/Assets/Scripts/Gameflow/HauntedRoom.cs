@@ -11,6 +11,7 @@ public class HauntedRoom : MonoBehaviour
 
     [SerializeField] private Transform m_guestPosition;
     [SerializeField] private Image m_portraitImage;
+    [SerializeField] private Slider m_fearSlider;
 
     private bool m_haunted = false;
     private Monster m_monster;
@@ -19,7 +20,7 @@ public class HauntedRoom : MonoBehaviour
     public void SetGuest(Guest guest)
     {
         m_guest = guest;
-        m_guest.SetRoom(m_roomNumber, this, m_portraitImage);
+        m_guest.SetRoom(m_roomNumber, this, m_portraitImage, m_fearSlider);
         m_guest.transform.position = m_guestPosition.position;
     }
 
