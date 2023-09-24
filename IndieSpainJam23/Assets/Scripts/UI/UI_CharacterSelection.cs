@@ -20,6 +20,8 @@ public class UI_CharacterSelection : MonoBehaviour
 
         m_button[0].color = m_selectedColor;
         m_button[1].color = m_unselectedColor;
+
+        SelectIgor();
     }
 
     private void SelectCharacter(int id)
