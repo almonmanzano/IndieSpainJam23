@@ -172,6 +172,7 @@ MonoBehaviour:
   - {fileID: 6689971823445789297, guid: 3fede52f8a62f9046b210e4e65556dc8, type: 3}
   - {fileID: 6517373646350489345, guid: ebee1d6644e72344099b88ef9cd24ca5, type: 3}
   - {fileID: 5127130226634633577, guid: 8f284d26210c37149918ff1e1c6cc82e, type: 3}
+  - {fileID: 5949814868765837806, guid: 6396de27688b97645bc059fe67b4711b, type: 3}
   m_guest: {fileID: 880153343}
   m_patrolPoints:
   - {fileID: 0}
@@ -6040,6 +6041,7 @@ MonoBehaviour:
   - {fileID: 6689971823445789297, guid: 3fede52f8a62f9046b210e4e65556dc8, type: 3}
   - {fileID: 6517373646350489345, guid: ebee1d6644e72344099b88ef9cd24ca5, type: 3}
   - {fileID: 5127130226634633577, guid: 8f284d26210c37149918ff1e1c6cc82e, type: 3}
+  - {fileID: 5949814868765837806, guid: 6396de27688b97645bc059fe67b4711b, type: 3}
   m_guest: {fileID: 945825465}
   m_patrolPoints: []
 --- !u!4 &478130154
@@ -14987,6 +14989,7 @@ MonoBehaviour:
   - {fileID: 6689971823445789297, guid: 3fede52f8a62f9046b210e4e65556dc8, type: 3}
   - {fileID: 6517373646350489345, guid: ebee1d6644e72344099b88ef9cd24ca5, type: 3}
   - {fileID: 5127130226634633577, guid: 8f284d26210c37149918ff1e1c6cc82e, type: 3}
+  - {fileID: 5949814868765837806, guid: 6396de27688b97645bc059fe67b4711b, type: 3}
   m_guest: {fileID: 1517042794}
   m_patrolPoints: []
 --- !u!1 &1522586635
@@ -15149,6 +15152,7 @@ MonoBehaviour:
   - {fileID: 6689971823445789297, guid: 3fede52f8a62f9046b210e4e65556dc8, type: 3}
   - {fileID: 6517373646350489345, guid: ebee1d6644e72344099b88ef9cd24ca5, type: 3}
   - {fileID: 5127130226634633577, guid: 8f284d26210c37149918ff1e1c6cc82e, type: 3}
+  - {fileID: 5949814868765837806, guid: 6396de27688b97645bc059fe67b4711b, type: 3}
   m_guest: {fileID: 1540368728}
   m_patrolPoints: []
 --- !u!1 &1524907380
@@ -17137,6 +17141,7 @@ MonoBehaviour:
   - {fileID: 6689971823445789297, guid: 3fede52f8a62f9046b210e4e65556dc8, type: 3}
   - {fileID: 6517373646350489345, guid: ebee1d6644e72344099b88ef9cd24ca5, type: 3}
   - {fileID: 5127130226634633577, guid: 8f284d26210c37149918ff1e1c6cc82e, type: 3}
+  - {fileID: 5949814868765837806, guid: 6396de27688b97645bc059fe67b4711b, type: 3}
   m_guest: {fileID: 65128281}
   m_patrolPoints: []
 --- !u!1 &1729564870
