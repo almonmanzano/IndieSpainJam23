@@ -4097,6 +4097,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_scenes:
+  - MainMenu
   - CharacterSelection
 --- !u!4 &849243894
 Transform:

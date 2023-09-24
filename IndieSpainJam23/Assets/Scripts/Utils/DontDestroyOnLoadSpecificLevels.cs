@@ -10,14 +10,35 @@ public class DontDestroyOnLoadSpecificLevels : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    private void OnLevelWasLoaded(int level)
+    private void OnEnable()
     {
-        foreach (string scene in m_scenes)
+        // Tell our 'OnLevelFinishedLoading' function to start listening for a scene change as soon as this script is enabled.
+        SceneManager.sceneLoaded += OnLevelFinishedLoading;
+    }
+
+    private void OnDisable()
+    {
+        // Tell our 'OnLevelFinishedLoading' function to stop listening for a scene change as soon as this script is disabled.
+        // Remember to always have an unsubscription for every delegate you subscribe to!
+        SceneManager.sceneLoaded -= OnLevelFinishedLoading;
+    }
+
+    private void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
+    {
+        bool toBeDestroyed = true;
+
+        foreach (string s in m_scenes)
         {
-            if (SceneManager.GetSceneByName(scene) != SceneManager.GetActiveScene())
+            if (s == scene.name)
             {
-                Destroy(gameObject);
+                toBeDestroyed = false;
+                break;
             }
+        }
+
+        if (toBeDestroyed)
+        {
+            Destroy(gameObject);
         }
     }
 }

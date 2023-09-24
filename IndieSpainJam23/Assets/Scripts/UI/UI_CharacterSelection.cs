@@ -7,12 +7,19 @@ public class UI_CharacterSelection : MonoBehaviour
     [SerializeField] private Sprite m_selectedSprite;
     [SerializeField] private Sprite m_unselectedSprite;
 
+    [SerializeField] private Image[] m_button;
+    [SerializeField] private Color m_selectedColor;
+    [SerializeField] private Color m_unselectedColor;
+
     private int m_selected = 0;
 
     private void Start()
     {
         m_image[0].sprite = m_selectedSprite;
         m_image[1].sprite = m_unselectedSprite;
+
+        m_button[0].color = m_selectedColor;
+        m_button[1].color = m_unselectedColor;
     }
 
     private void SelectCharacter(int id)
@@ -21,6 +28,10 @@ public class UI_CharacterSelection : MonoBehaviour
         m_image[1 - id].color = Color.white;
         m_image[id].sprite = m_selectedSprite;
         m_image[id].color = Color.white;
+
+        m_button[1 - id].color = m_unselectedColor;
+        m_button[id].color = m_selectedColor;
+
         CharacterSelection.Instance.SelectCharacter(id);
     }
 
