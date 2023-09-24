@@ -9280,7 +9280,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 3.2, y: -2.4}
-  m_SizeDelta: {x: 390.6, y: 182.7}
+  m_SizeDelta: {x: 395.8, y: 207.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &859258508
 MonoBehaviour:
@@ -9378,7 +9378,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 0.8745099, g: 0.74509805, b: 0.5372549, a: 1}
     m_HighlightedColor: {r: 1, g: 0.89997727, b: 0.740566, a: 1}
@@ -9388,10 +9388,10 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 21300000, guid: 8f6005c1a7d91a044b4fd04435ee17bf, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 8f6005c1a7d91a044b4fd04435ee17bf, type: 3}
+    m_SelectedSprite: {fileID: 21300000, guid: 8f6005c1a7d91a044b4fd04435ee17bf, type: 3}
+    m_DisabledSprite: {fileID: 21300000, guid: 308cb7cf48dd9db4da00c721c4fa013d, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -9435,8 +9435,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 27832b57e91227b479a439b90ded71e4, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -10708,7 +10708,8 @@ MonoBehaviour:
     animatedRange: {x: 60, y: 69}
   - text: "Tendr\xE1s que ir r\xE1pidamente a esa habitaci\xF3n y <b>aspirar</b>
       al monstruo. \xBFQu\xE9 pasa? \xBFNunca has aspirado a un monstruo antes? Basta
-      con hacer click izquierdo... \xBFSabes al menos moverte con WASD?"
+      con hacer click izquierdo... \xBFSabes al menos moverte con WASD? Menos mal
+      que no tienes dash, la barra espaciadora ya ser\xEDa demasiado para ti."
     animate: 1
     animatedRange: {x: 46, y: 52}
   - text: "\xBFA qu\xE9 esperas? \xBFA que se haga de d\xEDa? Pues no, porque he
@@ -18352,7 +18353,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6.5, y: 1.6}
+  m_AnchoredPosition: {x: -6.5, y: 11.8}
   m_SizeDelta: {x: 271, y: 84.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1819024486
@@ -19402,7 +19403,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 0.8745099, g: 0.74509805, b: 0.5372549, a: 1}
     m_HighlightedColor: {r: 1, g: 0.89997727, b: 0.740566, a: 1}
@@ -19412,10 +19413,10 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 21300000, guid: 8f6005c1a7d91a044b4fd04435ee17bf, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 8f6005c1a7d91a044b4fd04435ee17bf, type: 3}
+    m_SelectedSprite: {fileID: 21300000, guid: 8f6005c1a7d91a044b4fd04435ee17bf, type: 3}
+    m_DisabledSprite: {fileID: 21300000, guid: 308cb7cf48dd9db4da00c721c4fa013d, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -19459,8 +19460,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 27832b57e91227b479a439b90ded71e4, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
