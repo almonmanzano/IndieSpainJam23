@@ -93,7 +93,10 @@ public class UI_Tutorial : MonoBehaviour
     private void NextLine()
     {
         m_tranquilityHint.SetActive(false);
-        m_mapHint.SetActive(false);
+        if (m_mapHint.activeInHierarchy)
+        {
+            m_mapHint.GetComponent<Animator>().SetTrigger("Out");
+        }
         m_clockHint.SetActive(false);
 
         if (m_index < m_lines.Length - 1)
