@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7562260330756935490}
   - component: {fileID: 5654779124202380783}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Leg_Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1383757823723488041}
   - component: {fileID: 8034392836221080449}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Arm_Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8022280344319577602}
   - component: {fileID: 8686937932999716911}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Arm_Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -345,7 +345,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7511105651320387642}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sprites
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -380,7 +380,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6379457215075821547}
   - component: {fileID: 8414758671272630777}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -464,7 +464,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6670887566825075069}
   - component: {fileID: 4373451517668249434}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Leg_Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -551,6 +551,7 @@ GameObject:
   - component: {fileID: 780714050930179269}
   - component: {fileID: 2953676799256837911}
   - component: {fileID: 2805945586658894405}
+  - component: {fileID: 360950517698939208}
   m_Layer: 6
   m_Name: Mummy
   m_TagString: Untagged
@@ -672,6 +673,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!210 &360950517698939208
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6689971823445789297}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &6891124452326345851
 GameObject:
   m_ObjectHideFlags: 0
@@ -682,7 +695,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3110180760939360403}
   - component: {fileID: 4462518051954345748}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
