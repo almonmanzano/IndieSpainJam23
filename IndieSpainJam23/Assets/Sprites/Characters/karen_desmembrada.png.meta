@@ -1,0 +1,635 @@
+fileFormatVersion: 2
+guid: de42b370c3c2edc4b8739eceb44a315f
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: karen_desmembrada_0
+      rect:
+        serializedVersion: 2
+        x: 2210
+        y: 1583
+        width: 108
+        height: 147
+      alignment: 9
+      pivot: {x: 0.39687094, y: 0.03023856}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 353ea0ae760a1bb4997aec8b9422cfbd
+      internalID: -924418628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karen_desmembrada_2
+      rect:
+        serializedVersion: 2
+        x: 2790
+        y: 1593
+        width: 76
+        height: 139
+      alignment: 9
+      pivot: {x: 0.3827611, y: 0.067304656}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a0cde4d9915f6d43b442222515b451a
+      internalID: 1050180286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karen_desmembrada_3
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 911
+        width: 603
+        height: 771
+      alignment: 9
+      pivot: {x: 0.6, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb4a3f53109318b4789cf71ce29c2edb
+      internalID: 1659280195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karen_desmembrada_5
+      rect:
+        serializedVersion: 2
+        x: 1159
+        y: 929
+        width: 603
+        height: 770
+      alignment: 9
+      pivot: {x: 0.6, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 574445bb74eaf594cb7bfd2e24e7c3bc
+      internalID: 50312792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karen_desmembrada_6
+      rect:
+        serializedVersion: 2
+        x: 1973
+        y: 1197
+        width: 496
+        height: 276
+      alignment: 9
+      pivot: {x: 0.5, y: 0.31}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6de4a80ccc4acb940a2cc043213a61ec
+      internalID: 1115421648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karen_desmembrada_7
+      rect:
+        serializedVersion: 2
+        x: 2611
+        y: 1172
+        width: 495
+        height: 275
+      alignment: 9
+      pivot: {x: 0.5, y: 0.31}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29aba5678d942ae4bbb296857775b53d
+      internalID: 1877825290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karen_desmembrada_9
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 519
+        width: 471
+        height: 361
+      alignment: 9
+      pivot: {x: 0.46689355, y: 0.79927313}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd6e091266b3c394cbb7df19a221ce2c
+      internalID: 1235035401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karen_desmembrada_10
+      rect:
+        serializedVersion: 2
+        x: 2374
+        y: 852
+        width: 84
+        height: 191
+      alignment: 9
+      pivot: {x: 0.36740547, y: 0.9490149}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fb74aebdc1aa0d4fb1ad89220d6e308
+      internalID: 1164594186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karen_desmembrada_11
+      rect:
+        serializedVersion: 2
+        x: 2706
+        y: 822
+        width: 148
+        height: 244
+      alignment: 9
+      pivot: {x: 0.71824193, y: 0.9473417}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6461a856c6b57b141959c3891dcf1c96
+      internalID: -374112578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karen_desmembrada_13
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 558
+        width: 235
+        height: 160
+      alignment: 9
+      pivot: {x: 0.04026548, y: 0.8480595}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e7169ed56bef54429e107ae113040cf
+      internalID: -1621543538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karen_desmembrada_14
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 566
+        width: 212
+        height: 177
+      alignment: 9
+      pivot: {x: 0.93605936, y: 0.90901864}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b6d3a2435565cc418624f4e55fed7ea
+      internalID: -259462723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karen_desmembrada_16
+      rect:
+        serializedVersion: 2
+        x: 2341
+        y: 500
+        width: 89
+        height: 243
+      alignment: 9
+      pivot: {x: 0.43742868, y: 0.9766838}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29593786b389c974bbd37720ad31f45a
+      internalID: -1897413580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karen_desmembrada_17
+      rect:
+        serializedVersion: 2
+        x: 2766
+        y: 466
+        width: 103
+        height: 203
+      alignment: 9
+      pivot: {x: 0.175594, y: 0.96087825}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63057b58223a29241b229adb9d498f0a
+      internalID: -311028768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karen_desmembrada_18
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 279
+        width: 153
+        height: 208
+      alignment: 9
+      pivot: {x: 0.66015303, y: 0.87483335}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0b98b588a54d5b4f8c073321700f3c1
+      internalID: 1051092629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karen_desmembrada_19
+      rect:
+        serializedVersion: 2
+        x: 1018
+        y: 299
+        width: 113
+        height: 211
+      alignment: 9
+      pivot: {x: 0.38172144, y: 0.86422527}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de1fbf39956150b43b785dee39867641
+      internalID: -1023957548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karen_desmembrada_25
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 57
+        width: 87
+        height: 154
+      alignment: 9
+      pivot: {x: 0.90967005, y: 0.42767596}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edeee71da2e17684788fdc62b6aa1afe
+      internalID: -873643436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karen_desmembrada_26
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 85
+        width: 116
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c803d4a4bdc2a04cb3fd34198d81058
+      internalID: 1396660549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karen_desmembrada_27
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 31
+        width: 138
+        height: 197
+      alignment: 9
+      pivot: {x: 0.5322841, y: 0.96360785}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6668079b4300c4a4aa6c2bcf4455e285
+      internalID: 1631072220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karen_desmembrada_28
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 14
+        width: 124
+        height: 214
+      alignment: 9
+      pivot: {x: 0.5718571, y: 0.9371885}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bad3e74947a5944c9f948d9f946a3b9
+      internalID: -625392754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karen_desmembrada_29
+      rect:
+        serializedVersion: 2
+        x: 1319
+        y: 73
+        width: 85
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a93fa03a67b3d0c49a76e08ff3c4c753
+      internalID: -848895130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karen_desmembrada_30
+      rect:
+        serializedVersion: 2
+        x: 2248
+        y: 131
+        width: 237
+        height: 256
+      alignment: 9
+      pivot: {x: 0.9699532, y: 0.9655292}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb6143723edacc74ba3e0b5b92b4759a
+      internalID: -1261274702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karen_desmembrada_31
+      rect:
+        serializedVersion: 2
+        x: 2779
+        y: 161
+        width: 114
+        height: 180
+      alignment: 9
+      pivot: {x: 0.10919725, y: 0.9393283}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a74c3c65cbe182c44aa3d6285d048d16
+      internalID: -897129537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      karen_desmembrada_0: -924418628
+      karen_desmembrada_1: 1861095736
+      karen_desmembrada_10: 1164594186
+      karen_desmembrada_11: -374112578
+      karen_desmembrada_12: -1705626806
+      karen_desmembrada_13: -1621543538
+      karen_desmembrada_14: -259462723
+      karen_desmembrada_15: -316280110
+      karen_desmembrada_16: -1897413580
+      karen_desmembrada_17: -311028768
+      karen_desmembrada_18: 1051092629
+      karen_desmembrada_19: -1023957548
+      karen_desmembrada_2: 1050180286
+      karen_desmembrada_20: -18163578
+      karen_desmembrada_21: -1376129794
+      karen_desmembrada_22: -2105243540
+      karen_desmembrada_23: -399093379
+      karen_desmembrada_24: 1982633669
+      karen_desmembrada_25: -873643436
+      karen_desmembrada_26: 1396660549
+      karen_desmembrada_27: 1631072220
+      karen_desmembrada_28: -625392754
+      karen_desmembrada_29: -848895130
+      karen_desmembrada_3: 1659280195
+      karen_desmembrada_30: -1261274702
+      karen_desmembrada_31: -897129537
+      karen_desmembrada_32: 1010312677
+      karen_desmembrada_4: -626740052
+      karen_desmembrada_5: 50312792
+      karen_desmembrada_6: 1115421648
+      karen_desmembrada_7: 1877825290
+      karen_desmembrada_8: 1986389441
+      karen_desmembrada_9: 1235035401
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

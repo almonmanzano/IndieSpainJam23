@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6db7afec222a7b544a5887eeaa9c99a3
+guid: 8e0d3856f7894924caee6dc61e82b577
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,127 +123,169 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Fantasmiko_dismember_0
+      name: alvin_hot_0
       rect:
         serializedVersion: 2
-        x: 215
-        y: 997
-        width: 195
-        height: 113
+        x: 249
+        y: 1710
+        width: 189
+        height: 217
       alignment: 9
-      pivot: {x: 0.973027, y: 0.38338828}
+      pivot: {x: 0.811843, y: 0.98575544}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0848c1e3d7287494b9e7697b594a2957
-      internalID: -1301653937
+      spriteID: 0a676ebd27ec2f144aafc3942d0feef1
+      internalID: 2120078820
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fantasmiko_dismember_1
+      name: alvin_hot_1
       rect:
         serializedVersion: 2
-        x: 588
-        y: 997
-        width: 195
-        height: 113
+        x: 772
+        y: 1715
+        width: 189
+        height: 217
       alignment: 9
-      pivot: {x: 0.04198906, y: 0.38338828}
+      pivot: {x: 0.21814191, y: 0.9805323}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0157c31e5e166e34dba85ea8081c761b
-      internalID: -750131044
+      spriteID: 6231aaec6b3cb9247a54cbb1fa6d88c0
+      internalID: -2080189828
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fantasmiko_dismember_2
+      name: alvin_hot_2
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 995
-        width: 195
-        height: 113
+        x: 1377
+        y: 1572
+        width: 146
+        height: 371
       alignment: 9
-      pivot: {x: 0.94299316, y: 0.40930176}
+      pivot: {x: 0.7794758, y: 0.95214975}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e001509a2383b614f91d03af223f907e
-      internalID: 1159099789
+      spriteID: e0b3be3d6980e4a45a85f51217c8c63f
+      internalID: -620985168
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fantasmiko_dismember_3
+      name: alvin_hot_3
       rect:
         serializedVersion: 2
-        x: 1397
-        y: 996
-        width: 195
-        height: 113
+        x: 165
+        y: 960
+        width: 707
+        height: 492
       alignment: 9
-      pivot: {x: 0.079531, y: 0.38338828}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ebd5c050f119a0545a7ef0d791facec7
-      internalID: -1371925159
+      spriteID: c09eefc9a82480446bd5c773869436d3
+      internalID: 1946289120
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fantasmiko_dismember_4
+      name: alvin_hot_4
       rect:
         serializedVersion: 2
-        x: 301
-        y: 122
-        width: 323
-        height: 680
+        x: 1307
+        y: 1003
+        width: 116
+        height: 326
       alignment: 9
-      pivot: {x: 0.49999982, y: 0.015544712}
+      pivot: {x: 0.25572678, y: 0.96241134}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83227a871290fec499dab8533fd78b33
-      internalID: -542869377
+      spriteID: f69f3b4417acfe14593205c1997d17b9
+      internalID: -752167254
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fantasmiko_dismember_5
+      name: alvin_hot_6
       rect:
         serializedVersion: 2
-        x: 1120
-        y: 117
-        width: 324
-        height: 680
+        x: 124
+        y: 270
+        width: 707
+        height: 492
       alignment: 9
-      pivot: {x: 0.4909619, y: 0.03061656}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 161ee8ae40426cd4b8013dbda3fe0979
-      internalID: 187094524
+      spriteID: 3b4d4f263bb108e4e9463b392c4f6bf9
+      internalID: 1442846464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alvin_hot_7
+      rect:
+        serializedVersion: 2
+        x: 1141
+        y: 238
+        width: 547
+        height: 482
+      alignment: 9
+      pivot: {x: 0.48135114, y: 0.0061821206}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dab174cba9e7bab43a75681d87524c25
+      internalID: 1072958972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alvin_hot_5
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 1728
+        width: 24
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbec9afa944ad8c4e8830aad1defd4d0
+      internalID: -1099386787
       vertices: []
       indices: 
       edges: []
@@ -259,12 +301,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Fantasmiko_dismember_0: -1301653937
-      Fantasmiko_dismember_1: -750131044
-      Fantasmiko_dismember_2: 1159099789
-      Fantasmiko_dismember_3: -1371925159
-      Fantasmiko_dismember_4: -542869377
-      Fantasmiko_dismember_5: 187094524
+      alvin_hot_0: 2120078820
+      alvin_hot_1: -2080189828
+      alvin_hot_2: -620985168
+      alvin_hot_3: 1946289120
+      alvin_hot_4: -752167254
+      alvin_hot_5: -1099386787
+      alvin_hot_6: 1442846464
+      alvin_hot_7: 1072958972
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
