@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: "A\xF1adirMinibar"
   m_EditorClassIdentifier: 
   Type: 4
-  Text: "Minibar(+calma,\u20AC)"
+  Text: "Bar(+calma,\u20AC)"
   Cost: 50
