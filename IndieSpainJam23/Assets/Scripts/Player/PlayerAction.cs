@@ -34,12 +34,7 @@ public class PlayerAction : MonoBehaviour
 
                 if (Vector2.Distance(m_hand.position, monsterObj.transform.position) > m_minDistance)
                 {
-                    // Atract monster
-                    Vector2 direction = (m_hand.transform.position - monsterObj.transform.position).normalized;
-                    if ((direction.x < 0 && transform.localScale.x == 1f) || (direction.x > 0 && transform.localScale.x == -1f))
-                    {
-                        monsterObj.transform.position += (Vector3)direction * m_suctionForce * Time.deltaTime;
-                    }
+                    monster.GetAttracted(m_hand, m_suctionForce);
                 }
                 else
                 {

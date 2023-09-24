@@ -11,6 +11,35 @@ public class Monster : MonoBehaviour
     private bool m_alive = true;
     private Transform[] m_patrolPoints;
 
+    private Vector2 m_direction;
+    private Vector2 m_lastPosition;
+
+    private Animator m_animator;
+
+    private void Start()
+    {
+        m_animator = GetComponent<Animator>();
+    }
+
+    private void Update()
+    {
+        if (m_lastPosition != (Vector2)transform.position) {
+            m_animator.SetBool("IsBeingAbsorbed", true);
+            m_direction = (Vector2)transform.position - m_lastPosition;
+
+            // flip sprite if direction changed
+            if (m_direction.x < 0) {
+                transform.localScale = new Vector3(1f, 1f, 1f);
+            } else if (m_direction.x > 0) {
+                transform.localScale = new Vector3(-1f, 1f, 1f);
+            }
+        } else {
+            m_animator.SetBool("IsBeingAbsorbed", false);
+        }
+
+        m_lastPosition = transform.position;
+    }
+
     public void SetHauntedRoom(HauntedRoom room, Transform[] patrolPoints)
     {
         m_room = room;
@@ -30,11 +59,17 @@ public class Monster : MonoBehaviour
     public void Die(Transform transf)
     {
         m_alive = false;
-        GetComponent<Animator>().SetTrigger("Die");
+        m_animator.SetTrigger("Die");
         LeaveRoom();
         Destroy(GetComponent<Collider2D>()); // Bug or feature?
 
         StartCoroutine(DieCoroutine(transf, m_deathTime));
+    }
+
+    public void GetAttracted(Transform transf, float suctionForce)
+    {
+        Vector2 direction = (transf.position - transform.position).normalized;
+        transform.position += (Vector3)direction * suctionForce * Time.deltaTime;
     }
 
     private IEnumerator DieCoroutine(Transform transf, float t)
