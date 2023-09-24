@@ -53,8 +53,6 @@ public class Guest : MonoBehaviour
 
     private IEnumerator WakeUpCoroutine()
     {
-        if (m_portrait == null) print("what");
-        m_room.StopHaunted();
         GameManagement.Instance.LoseStar(m_portrait);
         HotelManager.Instance.AddSimpa(m_roomID);
         GetComponent<Animator>().SetTrigger("WakeUp");
@@ -62,6 +60,7 @@ public class Guest : MonoBehaviour
 
         yield return new WaitForSeconds(m_wakeUpTime);
 
+        m_room.StopHaunted();
         gameObject.SetActive(false);
     }
 
