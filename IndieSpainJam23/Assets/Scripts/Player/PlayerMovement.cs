@@ -20,6 +20,8 @@ public class PlayerMovement : MonoBehaviour
     private float m_dashTime = 0f;
     private float m_timeSinceDash;
 
+    private bool m_isFlipped = false;
+
     private void Start()
     {
         m_rb = GetComponent<Rigidbody2D>();
@@ -38,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
         if (!Mathf.Approximately(m_movement.x, 0f))
         {
             transform.localScale = new Vector3(m_movement.x > 0f ? 1f : -1f, 1f, 1f);
+            m_isFlipped = !(m_movement.x > 0f);
         }
 
         // Animation
@@ -105,5 +108,10 @@ public class PlayerMovement : MonoBehaviour
     public void AddDash()
     {
         m_canDash = true;
+    }
+
+    public bool IsFlipped()
+    {
+        return m_isFlipped;
     }
 }
