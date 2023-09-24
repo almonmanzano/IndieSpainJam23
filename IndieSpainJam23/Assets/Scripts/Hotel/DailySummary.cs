@@ -22,15 +22,15 @@ public class DailySummary : MonoBehaviour
         string simpaText = "";
         if (simpas == 0)
         {
-            simpaText = "Todos los huéspedes han pagado";
+            simpaText = "Todos los clientes han pagado";
         }
         else if (simpas == 1)
         {
-            simpaText = "1 huésped cobarde ha hecho un simpa";
+            simpaText = "1 cliente cobarde ha hecho un simpa";
         }
         else
         {
-            simpaText = simpas + " huéspedes cobardes han hecho un simpa";
+            simpaText = simpas + " clientes cobardes han hecho un simpa";
         }
 
         string summary = "Dinerito ganado:\r\n" +

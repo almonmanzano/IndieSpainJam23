@@ -28,6 +28,8 @@ public class PlayerMovement : MonoBehaviour
         m_trailRenderer = GetComponent<TrailRenderer>();
         m_timeSinceDash = m_dashCd;
         m_initialPosition = transform.position;
+
+        HotelManager.Instance.SetPlayer(gameObject);
     }
 
     private void Update()

@@ -4,8 +4,6 @@ public class HotelManager : MonoBehaviour
 {
     public static HotelManager Instance { get; private set; }
 
-    [SerializeField] private GameObject m_player;
-
     [SerializeField] private GameObject[] m_TVs;
     [SerializeField] private GameObject[] m_bars;
 
@@ -28,6 +26,8 @@ public class HotelManager : MonoBehaviour
     private bool[] m_hasTV;
     private bool[] m_hasBar;
 
+    private GameObject m_player;
+
     private void Awake()
     {
         Instance = this;
@@ -46,6 +46,11 @@ public class HotelManager : MonoBehaviour
         m_roomBenefits[0] = m_normalRoomBenefit;
         m_roomBenefits[1] = m_extraBenefitsTV;
         m_roomBenefits[2] = m_extraBenefitsBar;
+    }
+
+    public void SetPlayer(GameObject player)
+    {
+        m_player = player;
     }
 
     public void AddSimpa(int roomID)
