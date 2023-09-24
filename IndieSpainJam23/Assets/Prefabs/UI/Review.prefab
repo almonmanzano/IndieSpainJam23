@@ -215,8 +215,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: This Hotel is pure s***, had to change my pants 2 times before I decided
-    to leave!!
+  m_text: Este hotel es una p*** mi***, tuve que cambiarme de pantalones 2 veces
+    en una noche!!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 00a08df350c640142b6fde707c89a34f, type: 2}
   m_sharedMaterial: {fileID: -5490525123118666392, guid: 00a08df350c640142b6fde707c89a34f, type: 2}

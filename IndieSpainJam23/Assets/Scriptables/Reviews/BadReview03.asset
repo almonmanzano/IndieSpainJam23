@@ -10,8 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 672304a29c127064c86d9c5f6d8ab7a4, type: 3}
-  m_Name: BadReview02
+  m_Name: BadReview03
   m_EditorClassIdentifier: 
   Stars: 1
-  Text: Este hotel es una p*** mi***, tuve que cambiarme de pantalones 2 veces en
-    una noche!!
+  Text: Esto con Dracula no pasaba.
