@@ -30,6 +30,8 @@ public class Gameflow : MonoBehaviour
 
     [SerializeField] private DailySummary m_dailySummary;
 
+    [SerializeField] private GameObject m_tutorial;
+
     private PlayerMovement m_player;
 
     private int m_nights = 0;
@@ -53,10 +55,22 @@ public class Gameflow : MonoBehaviour
     {
         m_anim.SetTrigger("In");
         yield return new WaitForSeconds(m_transitionTime);
-        StartCoroutine(StartNight());
+
+        m_tutorial.SetActive(true);
     }
 
-    private IEnumerator StartNight()
+    public void StartFirstNight()
+    {
+        StartCoroutine(StartFirstNightCoroutine());
+    }
+
+    private IEnumerator StartFirstNightCoroutine()
+    {
+        yield return new WaitForSeconds(1f);
+        StartCoroutine(StartNightCoroutine());
+    }
+
+    private IEnumerator StartNightCoroutine()
     {
         HotelManager.Instance.ResetSimpas();
         GameManagement.Instance.SetPlayable(true);
@@ -143,7 +157,7 @@ public class Gameflow : MonoBehaviour
 
         m_nightBegins.SetActive(false);
 
-        StartCoroutine(StartNight());
+        StartCoroutine(StartNightCoroutine());
     }
 
     public void RestartNight()
