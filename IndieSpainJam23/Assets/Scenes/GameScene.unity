@@ -10596,9 +10596,10 @@ MonoBehaviour:
   m_lines:
   - text: "\xA1Hola! As\xED que t\xFA eres la nueva v\xEDcti... persona encargada
       del hotel. Muy bien. El due\xF1o se ha ido al Caribe, as\xED que tendr\xE1s
-      que ocuparte t\xFA de que todo siga en su sitio cuando vuelva."
-    animate: 0
-    animatedRange: {x: 0, y: 0}
+      que ocuparte t\xFA de que todo siga en su sitio cuando vuelva <b>dentro de
+      5 noches</b>."
+    animate: 1
+    animatedRange: {x: 185, y: 202}
   - text: "Como en todo hotel que se precie en temporada alta, todas nuestras habitaciones
       est\xE1n completas. Aqu\xED puedes ver la <b>tranquilidad</b> de los clientes
       mientras duermen."
