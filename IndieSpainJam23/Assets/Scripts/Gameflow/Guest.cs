@@ -5,7 +5,6 @@ using UnityEngine.UI;
 public class Guest : MonoBehaviour
 {
     [SerializeField] private Sprite m_portrait;
-    [SerializeField] private Image m_portraitImage;
     [SerializeField] private float m_maxTranquility = 100f;
     [SerializeField] private float m_fearAmount = 5f;
     [SerializeField] private float m_restoreAmount = 3f;
@@ -18,10 +17,10 @@ public class Guest : MonoBehaviour
     private bool m_awake = false;
     private HauntedRoom m_room;
     private int m_roomID;
+    private Image m_portraitImage;
 
     private void Start()
     {
-        m_portraitImage.sprite = m_portrait;
         Restart();
     }
 
@@ -64,10 +63,12 @@ public class Guest : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    public void SetRoom(int roomID, HauntedRoom room)
+    public void SetRoom(int roomID, HauntedRoom room, Image portraitImage)
     {
         m_roomID = roomID;
         m_room = room;
+        m_portraitImage = portraitImage;
+        m_portraitImage.sprite = m_portrait;
     }
 
     public void BeScared(bool scared)

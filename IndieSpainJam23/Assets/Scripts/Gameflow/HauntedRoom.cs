@@ -1,20 +1,26 @@
 using System.Drawing;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HauntedRoom : MonoBehaviour
 {
     [SerializeField] private int m_roomNumber;
     [SerializeField] private GameObject[] m_monsterOptions;
-    [SerializeField] private Guest m_guest;
 
     [SerializeField] private Transform[] m_patrolPoints;
 
+    [SerializeField] private Transform m_guestPosition;
+    [SerializeField] private Image m_portraitImage;
+
     private bool m_haunted = false;
     private Monster m_monster;
+    private Guest m_guest;
 
-    private void Start()
+    public void SetGuest(Guest guest)
     {
-        m_guest.SetRoom(m_roomNumber, this);
+        m_guest = guest;
+        m_guest.SetRoom(m_roomNumber, this, m_portraitImage);
+        m_guest.transform.position = m_guestPosition.position;
     }
 
     public void SpawnMonster()

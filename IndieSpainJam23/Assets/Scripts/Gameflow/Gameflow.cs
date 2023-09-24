@@ -16,7 +16,10 @@ public class Gameflow : MonoBehaviour
     [SerializeField] private float m_startTime = 1f;
     [SerializeField] private float m_minTime = 5f;
     [SerializeField] private float m_maxTime = 10f;
+
     [SerializeField] private HauntedRoom[] m_hauntedRooms;
+    [SerializeField] private Guest[] m_guests;
+
     [SerializeField] private float m_nightDuration = 10f;
     [SerializeField] private GameObject m_dayMenu;
     [SerializeField] private GameObject m_nightBegins;
@@ -48,7 +51,22 @@ public class Gameflow : MonoBehaviour
 
         FindObjectOfType<CinemachineVirtualCamera>().Follow = player.transform;
 
+        RandomizeRoomsAndGuests();
+
         StartCoroutine(StartGame());
+    }
+
+    public void RandomizeRoomsAndGuests()
+    {
+        List<Guest> guests = new List<Guest>();
+        guests.AddRange(m_guests);
+
+        foreach (HauntedRoom room in m_hauntedRooms)
+        {
+            int rand = Random.Range(0, guests.Count);
+            room.SetGuest(guests[rand]);
+            guests.RemoveAt(rand);
+        }
     }
 
     private IEnumerator StartGame()
@@ -72,8 +90,8 @@ public class Gameflow : MonoBehaviour
 
     private IEnumerator StartNightCoroutine()
     {
-        HotelManager.Instance.ResetSimpas();
         GameManagement.Instance.SetPlayable(true);
+        HotelManager.Instance.ResetSimpas();
         yield return new WaitForSeconds(m_startTime);
         StartCoroutine(HauntRoom());
         yield return new WaitForSeconds(m_nightDuration - m_startTime);
@@ -137,6 +155,7 @@ public class Gameflow : MonoBehaviour
 
     private IEnumerator RestartNightCoroutine()
     {
+        RandomizeRoomsAndGuests();
         UI_Clock.Instance.Restart();
         m_player.Restart();
         foreach (HauntedRoom room in m_hauntedRooms)
