@@ -370,7 +370,7 @@ Transform:
   m_GameObject: {fileID: 8810867088020473751}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.15, y: 6.43, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -454,9 +454,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_portrait: {fileID: 0}
   m_portraitImage: {fileID: 0}
-  m_maxTranquility: 10000
-  m_fearAmount: 20
-  m_restoreAmount: 3
+  m_maxTranquility: 100
+  m_fearAmount: 3
+  m_restoreAmount: 2
   m_fearSlider: {fileID: 4514084460504930760}
   m_wakeUpTime: 1
   m_vfx: {fileID: 511801244588696918, guid: a7fadf1085861e84fa7c6f18866bbef5, type: 3}

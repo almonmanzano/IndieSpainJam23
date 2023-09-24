@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: "A\xF1adirMinibar"
   m_EditorClassIdentifier: 
   Type: 4
-  Text: "A\xF1adir minibar"
-  Cost: 20
+  Text: "Minibar (+ Recuperaci\xF3n, + \u20AC)"
+  Cost: 50

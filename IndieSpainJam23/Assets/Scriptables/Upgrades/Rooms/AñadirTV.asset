@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: "A\xF1adirTV"
   m_EditorClassIdentifier: 
   Type: 3
-  Text: "A\xF1adir TV"
-  Cost: 20
+  Text: "TV (- Miedo, + \u20AC)"
+  Cost: 30
