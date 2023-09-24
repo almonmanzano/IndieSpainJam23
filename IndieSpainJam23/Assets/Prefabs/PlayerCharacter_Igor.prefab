@@ -14657,7 +14657,6 @@ GameObject:
   - component: {fileID: 4630094445988095994}
   - component: {fileID: 2685751277134529097}
   - component: {fileID: 5124874365992785915}
-  - component: {fileID: 5757986545297480831}
   - component: {fileID: 4899461512689470274}
   m_Layer: 0
   m_Name: PlayerCharacter_Igor
@@ -14801,27 +14800,6 @@ MonoBehaviour:
   m_vacuumFX2: {fileID: 4810023295721747256}
   m_particlesSpeed: 7
   m_particlesError: 0.5
---- !u!95 &5757986545297480831
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5168517845032524551}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e2417d2f268dc5946ad5f0f78af220ce, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!96 &4899461512689470274
 TrailRenderer:
   serializedVersion: 3
