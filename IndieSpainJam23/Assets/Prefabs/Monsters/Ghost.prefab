@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8408811493294934245}
   - component: {fileID: 2916608954839708203}
   m_Layer: 6
-  m_Name: Fantasmiko_dismember_0
+  m_Name: Arm_Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -256,7 +256,7 @@ Transform:
   m_GameObject: {fileID: 6593650156920848850}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.498, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.36506167, y: 0.36506167, z: 0.36506167}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -359,7 +359,7 @@ GameObject:
   - component: {fileID: 5797778837650050446}
   - component: {fileID: 4116691091596950201}
   m_Layer: 6
-  m_Name: Fantasmiko_dismember_1
+  m_Name: Arm_Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
