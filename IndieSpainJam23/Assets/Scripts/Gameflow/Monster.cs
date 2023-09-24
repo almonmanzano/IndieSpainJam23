@@ -23,19 +23,22 @@ public class Monster : MonoBehaviour
 
     private void Update()
     {
-        if (m_lastPosition != (Vector2)transform.position) {
-            m_animator.SetBool("IsBeingAbsorbed", true);
-            m_direction = (Vector2)transform.position - m_lastPosition;
+        if (m_lastPosition != Vector2.zero) {
+            if (m_lastPosition != (Vector2)transform.position) {
+                m_animator.SetBool("IsBeingAbsorbed", true);
+                m_direction = (Vector2)transform.position - m_lastPosition;
 
-            // flip sprite if direction changed
-            if (m_direction.x < 0) {
-                transform.localScale = new Vector3(1f, 1f, 1f);
-            } else if (m_direction.x > 0) {
-                transform.localScale = new Vector3(-1f, 1f, 1f);
+                // flip sprite if direction changed
+                if (m_direction.x < 0) {
+                    transform.localScale = new Vector3(1f, 1f, 1f);
+                } else if (m_direction.x > 0) {
+                    transform.localScale = new Vector3(-1f, 1f, 1f);
+                }
+            } else {
+                m_animator.SetBool("IsBeingAbsorbed", false);
             }
-        } else {
-            m_animator.SetBool("IsBeingAbsorbed", false);
         }
+        
 
         m_lastPosition = transform.position;
     }
