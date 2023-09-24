@@ -1,6 +1,7 @@
 using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Gameflow : MonoBehaviour
@@ -23,6 +24,7 @@ public class Gameflow : MonoBehaviour
     [SerializeField] private float m_nightDuration = 10f;
     [SerializeField] private GameObject m_dayMenu;
     [SerializeField] private GameObject m_nightBegins;
+    [SerializeField] private TMP_Text m_nightNumberText;
     [SerializeField] private float m_nightBeginsDuration = 2f;
     [SerializeField] private float m_spawnTimeReduceRate = 0.2f;
 
@@ -168,6 +170,7 @@ public class Gameflow : MonoBehaviour
         m_dayMenu.SetActive(false);
 
         m_nightBegins.SetActive(true);
+        m_nightNumberText.text = "- Noche " + (m_nights + 1) + " -";
         m_nightBegins.GetComponent<Animator>().SetTrigger("NightBegins");
 
         m_musicSwitcher.PlayMusicNight();
