@@ -70,6 +70,7 @@ public class Guest : MonoBehaviour
         m_portraitImage = portraitImage;
         m_portraitImage.sprite = m_portrait;
         m_fearSlider = fearSlider;
+        m_fearSlider.value = m_tranquility / m_maxTranquility;
     }
 
     public void BeScared(bool scared)
@@ -82,7 +83,6 @@ public class Guest : MonoBehaviour
         m_awake = false;
         m_beingScared = false;
         m_tranquility = m_maxTranquility;
-        //m_fearSlider.value = m_tranquility / m_maxTranquility;
     }
 
     public void RelaxFear()

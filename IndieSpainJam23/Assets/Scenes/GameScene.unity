@@ -3748,7 +3748,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1002064439}
   - {fileID: 941778783}
   - {fileID: 1039958305}
   - {fileID: 838299821}
@@ -3759,6 +3758,7 @@ RectTransform:
   - {fileID: 1546685365}
   - {fileID: 1261397036}
   - {fileID: 1753506324}
+  - {fileID: 1002064439}
   - {fileID: 311378335}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9217,7 +9217,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 165cf50afc281fe43937f29cedcedc11, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 93621b69ace84e4448aef033f3f20313, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -13346,7 +13346,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1339861082}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
