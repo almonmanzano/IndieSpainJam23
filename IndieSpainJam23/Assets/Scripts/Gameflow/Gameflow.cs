@@ -7,6 +7,9 @@ public class Gameflow : MonoBehaviour
 {
     public static Gameflow Instance { get; private set; }
 
+    [SerializeField] private int m_totalNights = 3;
+    [SerializeField] private GameObject m_winScreen;
+
     [SerializeField] private CharacterSelectedData m_characterData;
     [SerializeField] private Transform m_playerInitialPos;
 
@@ -27,6 +30,8 @@ public class Gameflow : MonoBehaviour
     [SerializeField] private DailySummary m_dailySummary;
 
     private PlayerMovement m_player;
+
+    private int m_nights = 0;
 
     private void Awake()
     {
@@ -96,6 +101,21 @@ public class Gameflow : MonoBehaviour
         StopAllCoroutines();
         GameManagement.Instance.PauseGame(false);
         GameManagement.Instance.SetPlayable(false);
+
+        m_nights++;
+
+        if (m_nights == m_totalNights)
+        {
+            m_winScreen.SetActive(true);
+        }
+        else
+        {
+            StartDay();
+        }
+    }
+
+    private void StartDay()
+    {
         m_dailySummary.FillTexts();
         m_dayMenu.SetActive(true);
     }
