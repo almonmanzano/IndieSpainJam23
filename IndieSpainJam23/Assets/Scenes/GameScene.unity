@@ -1133,7 +1133,7 @@ MonoBehaviour:
   m_SpriteState:
     m_HighlightedSprite: {fileID: 21300000, guid: 298a1e65f74fcbe498a029a78cb184f8, type: 3}
     m_PressedSprite: {fileID: 21300000, guid: 298a1e65f74fcbe498a029a78cb184f8, type: 3}
-    m_SelectedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 21300000, guid: 298a1e65f74fcbe498a029a78cb184f8, type: 3}
     m_DisabledSprite: {fileID: 21300000, guid: 238a0288b13419641b916130ce4f8d75, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -1166,7 +1166,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 238a0288b13419641b916130ce4f8d75, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c7c81de66e028774397ad4f8a16bbb23, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -2116,7 +2116,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "A\xF1adir TV<br><size=100%>- 20 -"
+  m_text: "TV(-miedo,\u20AC)<br><size=100%>- 30 -"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 00a08df350c640142b6fde707c89a34f, type: 2}
   m_sharedMaterial: {fileID: -5490525123118666392, guid: 00a08df350c640142b6fde707c89a34f, type: 2}
@@ -3119,7 +3119,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "A\xF1adir minibar<br><size=100%>- 20 -"
+  m_text: "Bar(+calma,\u20AC)<br><size=100%>- 50 -"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 00a08df350c640142b6fde707c89a34f, type: 2}
   m_sharedMaterial: {fileID: -5490525123118666392, guid: 00a08df350c640142b6fde707c89a34f, type: 2}
@@ -4546,8 +4546,8 @@ MonoBehaviour:
   m_SpriteState:
     m_HighlightedSprite: {fileID: 21300000, guid: 61f5d7fba5ccc0e418e972ef9e35a255, type: 3}
     m_PressedSprite: {fileID: 21300000, guid: 61f5d7fba5ccc0e418e972ef9e35a255, type: 3}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 21300000, guid: 61f5d7fba5ccc0e418e972ef9e35a255, type: 3}
+    m_DisabledSprite: {fileID: 21300000, guid: 20add2eaa32b5f543aeca44087ad5bca, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -4999,8 +4999,8 @@ MonoBehaviour:
   m_SpriteState:
     m_HighlightedSprite: {fileID: 21300000, guid: 61f5d7fba5ccc0e418e972ef9e35a255, type: 3}
     m_PressedSprite: {fileID: 21300000, guid: 61f5d7fba5ccc0e418e972ef9e35a255, type: 3}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 21300000, guid: 61f5d7fba5ccc0e418e972ef9e35a255, type: 3}
+    m_DisabledSprite: {fileID: 21300000, guid: 20add2eaa32b5f543aeca44087ad5bca, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -5231,8 +5231,8 @@ MonoBehaviour:
   m_SpriteState:
     m_HighlightedSprite: {fileID: 21300000, guid: ed59d2851807a6b42afc0f70618c2355, type: 3}
     m_PressedSprite: {fileID: 21300000, guid: ed59d2851807a6b42afc0f70618c2355, type: 3}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 21300000, guid: ed59d2851807a6b42afc0f70618c2355, type: 3}
+    m_DisabledSprite: {fileID: 21300000, guid: f4d8037c53fcd0f41b2419efede6dd4f, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -5952,8 +5952,8 @@ MonoBehaviour:
   m_SpriteState:
     m_HighlightedSprite: {fileID: 21300000, guid: 61f5d7fba5ccc0e418e972ef9e35a255, type: 3}
     m_PressedSprite: {fileID: 21300000, guid: 61f5d7fba5ccc0e418e972ef9e35a255, type: 3}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 21300000, guid: 61f5d7fba5ccc0e418e972ef9e35a255, type: 3}
+    m_DisabledSprite: {fileID: 21300000, guid: 20add2eaa32b5f543aeca44087ad5bca, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -6830,7 +6830,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "A\xF1adir minibar<br><size=100%>- 20 -"
+  m_text: "Bar(+calma,\u20AC)<br><size=100%>- 50 -"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 00a08df350c640142b6fde707c89a34f, type: 2}
   m_sharedMaterial: {fileID: -5490525123118666392, guid: 00a08df350c640142b6fde707c89a34f, type: 2}
@@ -7111,7 +7111,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "A\xF1adir TV<br><size=100%>- 20 -"
+  m_text: "TV(-miedo,\u20AC)<br><size=100%>- 30 -"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 00a08df350c640142b6fde707c89a34f, type: 2}
   m_sharedMaterial: {fileID: -5490525123118666392, guid: 00a08df350c640142b6fde707c89a34f, type: 2}
@@ -7432,8 +7432,8 @@ MonoBehaviour:
   m_SpriteState:
     m_HighlightedSprite: {fileID: 21300000, guid: 61f5d7fba5ccc0e418e972ef9e35a255, type: 3}
     m_PressedSprite: {fileID: 21300000, guid: 61f5d7fba5ccc0e418e972ef9e35a255, type: 3}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 21300000, guid: 61f5d7fba5ccc0e418e972ef9e35a255, type: 3}
+    m_DisabledSprite: {fileID: 21300000, guid: 20add2eaa32b5f543aeca44087ad5bca, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -7540,7 +7540,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "A\xF1adir minibar<br><size=100%>- 20 -"
+  m_text: "Bar(+calma,\u20AC)<br><size=100%>- 50 -"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 00a08df350c640142b6fde707c89a34f, type: 2}
   m_sharedMaterial: {fileID: -5490525123118666392, guid: 00a08df350c640142b6fde707c89a34f, type: 2}
@@ -8408,7 +8408,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "A\xF1adir minibar<br><size=100%>- 20 -"
+  m_text: "Bar(+calma,\u20AC)<br><size=100%>- 50 -"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 00a08df350c640142b6fde707c89a34f, type: 2}
   m_sharedMaterial: {fileID: -5490525123118666392, guid: 00a08df350c640142b6fde707c89a34f, type: 2}
@@ -9676,8 +9676,8 @@ MonoBehaviour:
   m_SpriteState:
     m_HighlightedSprite: {fileID: 21300000, guid: 61f5d7fba5ccc0e418e972ef9e35a255, type: 3}
     m_PressedSprite: {fileID: 21300000, guid: 61f5d7fba5ccc0e418e972ef9e35a255, type: 3}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 21300000, guid: 61f5d7fba5ccc0e418e972ef9e35a255, type: 3}
+    m_DisabledSprite: {fileID: 21300000, guid: 20add2eaa32b5f543aeca44087ad5bca, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -10363,7 +10363,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "A\xF1adir TV<br><size=100%>- 20 -"
+  m_text: "TV(-miedo,\u20AC)<br><size=100%>- 30 -"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 00a08df350c640142b6fde707c89a34f, type: 2}
   m_sharedMaterial: {fileID: -5490525123118666392, guid: 00a08df350c640142b6fde707c89a34f, type: 2}
@@ -13131,7 +13131,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "A\xF1adir TV<br><size=100%>- 20 -"
+  m_text: "TV(-miedo,\u20AC)<br><size=100%>- 30 -"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 00a08df350c640142b6fde707c89a34f, type: 2}
   m_sharedMaterial: {fileID: -5490525123118666392, guid: 00a08df350c640142b6fde707c89a34f, type: 2}
@@ -13369,7 +13369,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "A\xF1adir minibar<br><size=100%>- 20 -"
+  m_text: "Bar(+calma,\u20AC)<br><size=100%>- 50 -"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 00a08df350c640142b6fde707c89a34f, type: 2}
   m_sharedMaterial: {fileID: -5490525123118666392, guid: 00a08df350c640142b6fde707c89a34f, type: 2}
@@ -16472,7 +16472,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "A\xF1adir TV<br><size=100%>- 20 -"
+  m_text: "TV(-miedo,\u20AC)<br><size=100%>- 30 -"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 00a08df350c640142b6fde707c89a34f, type: 2}
   m_sharedMaterial: {fileID: -5490525123118666392, guid: 00a08df350c640142b6fde707c89a34f, type: 2}
@@ -18848,8 +18848,8 @@ MonoBehaviour:
   m_SpriteState:
     m_HighlightedSprite: {fileID: 21300000, guid: 61f5d7fba5ccc0e418e972ef9e35a255, type: 3}
     m_PressedSprite: {fileID: 21300000, guid: 61f5d7fba5ccc0e418e972ef9e35a255, type: 3}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 21300000, guid: 61f5d7fba5ccc0e418e972ef9e35a255, type: 3}
+    m_DisabledSprite: {fileID: 21300000, guid: 20add2eaa32b5f543aeca44087ad5bca, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -19131,8 +19131,8 @@ MonoBehaviour:
   m_SpriteState:
     m_HighlightedSprite: {fileID: 21300000, guid: c91f609dcc27d7744956a976548695de, type: 3}
     m_PressedSprite: {fileID: 21300000, guid: c91f609dcc27d7744956a976548695de, type: 3}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 21300000, guid: c91f609dcc27d7744956a976548695de, type: 3}
+    m_DisabledSprite: {fileID: 21300000, guid: ce11d3e7d3057df44bf25879190d200c, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
