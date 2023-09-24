@@ -249,7 +249,7 @@ MonoBehaviour:
   - {fileID: 6517373646350489345, guid: ebee1d6644e72344099b88ef9cd24ca5, type: 3}
   - {fileID: 5127130226634633577, guid: 8f284d26210c37149918ff1e1c6cc82e, type: 3}
   - {fileID: 5949814868765837806, guid: 6396de27688b97645bc059fe67b4711b, type: 3}
-  m_guest: {fileID: 880153343}
+  m_guest: {fileID: 1927326891}
   m_patrolPoints:
   - {fileID: 0}
   - {fileID: 0}
@@ -775,9 +775,9 @@ MonoBehaviour:
   - {fileID: 1393575578}
   - {fileID: 1542419085}
   - {fileID: 2124863306}
-  m_normalRoomBenefit: 10
-  m_extraBenefitsTV: 20
-  m_extraBenefitsBar: 30
+  m_normalRoomBenefit: 15
+  m_extraBenefitsTV: 5
+  m_extraBenefitsBar: 5
 --- !u!1 &41822113
 GameObject:
   m_ObjectHideFlags: 0
@@ -1426,7 +1426,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 401bfa36210bcc044a02cba3f355ecf1, type: 3}
     - target: {fileID: 2864922806926353999, guid: d6131526d59032b419298beb63db7daa, type: 3}
       propertyPath: m_fearAmount
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2864922806926353999, guid: d6131526d59032b419298beb63db7daa, type: 3}
       propertyPath: m_fearSlider
@@ -1436,6 +1436,10 @@ PrefabInstance:
       propertyPath: m_portraitImage
       value: 
       objectReference: {fileID: 211117908}
+    - target: {fileID: 2864922806926353999, guid: d6131526d59032b419298beb63db7daa, type: 3}
+      propertyPath: m_restoreAmount
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2864922806926353999, guid: d6131526d59032b419298beb63db7daa, type: 3}
       propertyPath: m_maxTranquility
       value: 100
@@ -9048,17 +9052,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2068372307772058038, guid: d6131526d59032b419298beb63db7daa, type: 3}
   m_PrefabInstance: {fileID: 3494096436974918126}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &880153343 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2864922806926353999, guid: d6131526d59032b419298beb63db7daa, type: 3}
-  m_PrefabInstance: {fileID: 3494096436974918126}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e75a39ea2ebba8442948f3456f210e2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &919007551
 GameObject:
   m_ObjectHideFlags: 0
@@ -9458,7 +9451,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 00c753eeed1b19842b72d4ebaef4719b, type: 3}
     - target: {fileID: 2864922806926353999, guid: d6131526d59032b419298beb63db7daa, type: 3}
       propertyPath: m_fearAmount
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2864922806926353999, guid: d6131526d59032b419298beb63db7daa, type: 3}
       propertyPath: m_fearSlider
@@ -9468,6 +9461,10 @@ PrefabInstance:
       propertyPath: m_portraitImage
       value: 
       objectReference: {fileID: 369044716}
+    - target: {fileID: 2864922806926353999, guid: d6131526d59032b419298beb63db7daa, type: 3}
+      propertyPath: m_restoreAmount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2864922806926353999, guid: d6131526d59032b419298beb63db7daa, type: 3}
       propertyPath: m_maxTranquility
       value: 100
@@ -13836,23 +13833,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aee550374a9b7984b8bf0f95e767ef58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_totalNights: 3
+  m_totalNights: 5
   m_winScreen: {fileID: 1261397035}
   m_characterData: {fileID: 11400000, guid: 55c4f5876002777479fda6d1753f89e0, type: 2}
   m_playerInitialPos: {fileID: 1247001005}
   m_startTime: 1
-  m_minTime: 1
-  m_maxTime: 1
+  m_minTime: 8
+  m_maxTime: 10
   m_hauntedRooms:
   - {fileID: 16372078}
   - {fileID: 1520645492}
   - {fileID: 1524673129}
   - {fileID: 1721935398}
   - {fileID: 478130153}
-  m_nightDuration: 6
+  m_nightDuration: 60
   m_dayMenu: {fileID: 1599872574}
   m_nightBegins: {fileID: 1753506323}
   m_nightBeginsDuration: 2
+  m_spawnTimeReduceRate: 1
   m_anim: {fileID: 311378336}
   m_transitionTime: 1
   m_musicSwitcher: {fileID: 1166256770}
@@ -14080,91 +14078,95 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1607197639}
     m_Modifications:
-    - target: {fileID: 2068372307772058038, guid: d6131526d59032b419298beb63db7daa, type: 3}
+    - target: {fileID: 2068372307772058038, guid: 5d2260d2cd9262946bba6fdac4d8794a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12.459999
       objectReference: {fileID: 0}
-    - target: {fileID: 2068372307772058038, guid: d6131526d59032b419298beb63db7daa, type: 3}
+    - target: {fileID: 2068372307772058038, guid: 5d2260d2cd9262946bba6fdac4d8794a, type: 3}
       propertyPath: m_LocalPosition.y
       value: 10.58
       objectReference: {fileID: 0}
-    - target: {fileID: 2068372307772058038, guid: d6131526d59032b419298beb63db7daa, type: 3}
+    - target: {fileID: 2068372307772058038, guid: 5d2260d2cd9262946bba6fdac4d8794a, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2068372307772058038, guid: d6131526d59032b419298beb63db7daa, type: 3}
+    - target: {fileID: 2068372307772058038, guid: 5d2260d2cd9262946bba6fdac4d8794a, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2068372307772058038, guid: d6131526d59032b419298beb63db7daa, type: 3}
+    - target: {fileID: 2068372307772058038, guid: 5d2260d2cd9262946bba6fdac4d8794a, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 2068372307772058038, guid: d6131526d59032b419298beb63db7daa, type: 3}
+    - target: {fileID: 2068372307772058038, guid: 5d2260d2cd9262946bba6fdac4d8794a, type: 3}
       propertyPath: m_LocalRotation.y
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 2068372307772058038, guid: d6131526d59032b419298beb63db7daa, type: 3}
+    - target: {fileID: 2068372307772058038, guid: 5d2260d2cd9262946bba6fdac4d8794a, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 2068372307772058038, guid: d6131526d59032b419298beb63db7daa, type: 3}
+    - target: {fileID: 2068372307772058038, guid: 5d2260d2cd9262946bba6fdac4d8794a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2068372307772058038, guid: d6131526d59032b419298beb63db7daa, type: 3}
+    - target: {fileID: 2068372307772058038, guid: 5d2260d2cd9262946bba6fdac4d8794a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2068372307772058038, guid: d6131526d59032b419298beb63db7daa, type: 3}
+    - target: {fileID: 2068372307772058038, guid: 5d2260d2cd9262946bba6fdac4d8794a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2651419687752364201, guid: d6131526d59032b419298beb63db7daa, type: 3}
+    - target: {fileID: 2651419687752364201, guid: 5d2260d2cd9262946bba6fdac4d8794a, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2651419687752364201, guid: d6131526d59032b419298beb63db7daa, type: 3}
+    - target: {fileID: 2651419687752364201, guid: 5d2260d2cd9262946bba6fdac4d8794a, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2864922806926353999, guid: d6131526d59032b419298beb63db7daa, type: 3}
+    - target: {fileID: 2864922806926353999, guid: 5d2260d2cd9262946bba6fdac4d8794a, type: 3}
       propertyPath: m_portrait
       value: 
       objectReference: {fileID: 21300000, guid: 398dce762d1e8694889d2b360cb1c66d, type: 3}
-    - target: {fileID: 2864922806926353999, guid: d6131526d59032b419298beb63db7daa, type: 3}
+    - target: {fileID: 2864922806926353999, guid: 5d2260d2cd9262946bba6fdac4d8794a, type: 3}
       propertyPath: m_fearAmount
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 2864922806926353999, guid: d6131526d59032b419298beb63db7daa, type: 3}
+    - target: {fileID: 2864922806926353999, guid: 5d2260d2cd9262946bba6fdac4d8794a, type: 3}
       propertyPath: m_fearSlider
       value: 
       objectReference: {fileID: 264282157}
-    - target: {fileID: 2864922806926353999, guid: d6131526d59032b419298beb63db7daa, type: 3}
+    - target: {fileID: 2864922806926353999, guid: 5d2260d2cd9262946bba6fdac4d8794a, type: 3}
       propertyPath: m_portraitImage
       value: 
       objectReference: {fileID: 108771007}
-    - target: {fileID: 2864922806926353999, guid: d6131526d59032b419298beb63db7daa, type: 3}
+    - target: {fileID: 2864922806926353999, guid: 5d2260d2cd9262946bba6fdac4d8794a, type: 3}
+      propertyPath: m_restoreAmount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2864922806926353999, guid: 5d2260d2cd9262946bba6fdac4d8794a, type: 3}
       propertyPath: m_maxTranquility
       value: 100
       objectReference: {fileID: 0}
-    - target: {fileID: 8810867088020473751, guid: d6131526d59032b419298beb63db7daa, type: 3}
+    - target: {fileID: 8810867088020473751, guid: 5d2260d2cd9262946bba6fdac4d8794a, type: 3}
       propertyPath: m_Name
-      value: Guest (1)
+      value: Guest_Karen
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d6131526d59032b419298beb63db7daa, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 5d2260d2cd9262946bba6fdac4d8794a, type: 3}
 --- !u!4 &1517042793 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 2068372307772058038, guid: d6131526d59032b419298beb63db7daa, type: 3}
+  m_CorrespondingSourceObject: {fileID: 2068372307772058038, guid: 5d2260d2cd9262946bba6fdac4d8794a, type: 3}
   m_PrefabInstance: {fileID: 1517042792}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1517042794 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2864922806926353999, guid: d6131526d59032b419298beb63db7daa, type: 3}
+  m_CorrespondingSourceObject: {fileID: 2864922806926353999, guid: 5d2260d2cd9262946bba6fdac4d8794a, type: 3}
   m_PrefabInstance: {fileID: 1517042792}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -14589,7 +14591,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: a8f5b1af289c99c45adda4302f459b6d, type: 3}
     - target: {fileID: 2864922806926353999, guid: d6131526d59032b419298beb63db7daa, type: 3}
       propertyPath: m_fearAmount
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2864922806926353999, guid: d6131526d59032b419298beb63db7daa, type: 3}
       propertyPath: m_fearSlider
@@ -18352,6 +18354,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1924580402}
   m_CullTransparentMesh: 1
+--- !u!114 &1927326891 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2864922806926353999, guid: d6131526d59032b419298beb63db7daa, type: 3}
+  m_PrefabInstance: {fileID: 3494096436974918126}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e75a39ea2ebba8442948f3456f210e2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1965881372
 GameObject:
   m_ObjectHideFlags: 0
@@ -20499,7 +20512,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -0.5, y: 0.69999695}
+  m_AnchoredPosition: {x: -0.5, y: 0.7000122}
   m_SizeDelta: {x: 219.7, y: 345.07996}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2138236511
@@ -20691,7 +20704,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2068372307772058038, guid: d6131526d59032b419298beb63db7daa, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.3
+      value: 8.86
       objectReference: {fileID: 0}
     - target: {fileID: 2068372307772058038, guid: d6131526d59032b419298beb63db7daa, type: 3}
       propertyPath: m_LocalPosition.z
@@ -20739,7 +20752,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 66d1cfa1f35ea4a4f8bca11c0275d28b, type: 3}
     - target: {fileID: 2864922806926353999, guid: d6131526d59032b419298beb63db7daa, type: 3}
       propertyPath: m_fearAmount
-      value: 20
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2864922806926353999, guid: d6131526d59032b419298beb63db7daa, type: 3}
       propertyPath: m_fearSlider
@@ -20750,12 +20763,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1779385062}
     - target: {fileID: 2864922806926353999, guid: d6131526d59032b419298beb63db7daa, type: 3}
+      propertyPath: m_restoreAmount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2864922806926353999, guid: d6131526d59032b419298beb63db7daa, type: 3}
       propertyPath: m_maxTranquility
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8810867088020473751, guid: d6131526d59032b419298beb63db7daa, type: 3}
       propertyPath: m_Name
-      value: Guest
+      value: Guest_AlvinHot
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

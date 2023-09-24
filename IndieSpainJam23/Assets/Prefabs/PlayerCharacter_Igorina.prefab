@@ -19868,6 +19868,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 113013437365434959, guid: d1891c416fe1a39408b78860aa4d3084, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 330437362820978948, guid: d1891c416fe1a39408b78860aa4d3084, type: 3}
       propertyPath: m_Name
       value: Igorina

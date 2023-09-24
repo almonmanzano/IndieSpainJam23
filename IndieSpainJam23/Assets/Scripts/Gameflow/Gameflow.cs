@@ -21,6 +21,7 @@ public class Gameflow : MonoBehaviour
     [SerializeField] private GameObject m_dayMenu;
     [SerializeField] private GameObject m_nightBegins;
     [SerializeField] private float m_nightBeginsDuration = 2f;
+    [SerializeField] private float m_spawnTimeReduceRate = 0.2f;
 
     [SerializeField] private Animator m_anim;
     [SerializeField] private float m_transitionTime = 1f;
@@ -82,7 +83,7 @@ public class Gameflow : MonoBehaviour
             rooms[rand].SpawnMonster();
         }
 
-        float t = Random.Range(m_minTime, m_maxTime);
+        float t = Random.Range(m_minTime-(m_nights*m_spawnTimeReduceRate), m_maxTime-(m_nights*m_spawnTimeReduceRate));
         yield return new WaitForSeconds(t);
 
         StartCoroutine(HauntRoom());
