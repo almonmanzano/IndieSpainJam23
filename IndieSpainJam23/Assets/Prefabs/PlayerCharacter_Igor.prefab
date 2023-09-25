@@ -66,8 +66,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.27405, y: 0.27185, z: 0}
-    m_Extent: {x: 1.51705, y: 2.0841498, z: 0}
+    m_Center: {x: 0.268, y: 0.2752, z: 0}
+    m_Extent: {x: 1.5152, y: 2.0753999, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -14880,7 +14880,10 @@ MonoBehaviour:
   m_dashFX: {fileID: 0}
   m_timeBetweenStepsSFX: 0.5
   m_stepsAudioClips:
-  - {fileID: 8300000, guid: f44e051a29b8c584c993f8176ea678e3, type: 3}
+  - {fileID: 8300000, guid: a314f4e75abf5bf4d877dacb3f66f1f6, type: 3}
+  - {fileID: 8300000, guid: 4b81966db6dc9cd4690fd7037bf1fc0d, type: 3}
+  - {fileID: 8300000, guid: 2d5812dc16459654f804bf9a8e7f5139, type: 3}
+  - {fileID: 8300000, guid: 28491ec9213a05c46bb34336b63dff7a, type: 3}
   m_movementFX: {fileID: 313706224610517876}
   m_timeBetweenMovementFX: 0.2
 --- !u!114 &5124874365992785915

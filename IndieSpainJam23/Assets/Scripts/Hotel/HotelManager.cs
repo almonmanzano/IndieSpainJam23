@@ -18,7 +18,7 @@ public class HotelManager : MonoBehaviour
     private bool[] m_simpas = new bool[5] { false, false, false, false, false };
 
     // Hotel upgrades
-    private bool m_speedIncrease = false;
+    private int m_speedIncrease = 0;
     private bool m_dash = false;
     private bool m_vacuumUpgrade = false;
 
@@ -95,13 +95,17 @@ public class HotelManager : MonoBehaviour
         m_money += money;
     }
 
-    public void BuyUpgrade(Upgrade.UpgradeType type, int roomID, int cost)
+    public bool BuyUpgrade(Upgrade.UpgradeType type, int roomID, int cost)
     {
         m_money -= cost;
 
         if (type == Upgrade.UpgradeType.Speed)
         {
             AddSpeedIncrease();
+            if (m_speedIncrease < 2)
+            {
+                return false;
+            }
         }
         else if (type == Upgrade.UpgradeType.Dash)
         {
@@ -119,13 +123,15 @@ public class HotelManager : MonoBehaviour
         {
             AddBar(roomID - 1);
         }
+
+        return true;
     }
 
     private void AddSpeedIncrease()
     {
-        if (m_speedIncrease) return;
+        if (m_speedIncrease == 2) return;
 
-        m_speedIncrease = true;
+        m_speedIncrease += 1;
         m_player.GetComponent<PlayerMovement>().AddSpeed();
     }
 

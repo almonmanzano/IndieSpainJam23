@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PlayerAction : MonoBehaviour
 {
@@ -24,7 +25,7 @@ public class PlayerAction : MonoBehaviour
     {
         if (!GameManagement.Instance.IsPlayable()) return;
 
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && !EventSystem.current.IsPointerOverGameObject())
         {
             // Audio
             if (!m_vacuumSFX.isPlaying) m_vacuumSFX.Play();

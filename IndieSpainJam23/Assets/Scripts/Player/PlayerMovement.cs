@@ -141,7 +141,8 @@ public class PlayerMovement : MonoBehaviour
 
     public void AddSpeed()
     {
-        m_moveSpeed *= 1.5f;
+        m_moveSpeed *= 1.2f;
+        m_timeBetweenStepsSFX /= 1.2f;
     }
 
     public void AddDash()

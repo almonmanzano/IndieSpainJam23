@@ -69,14 +69,24 @@ public class UI_HotelUpgrades : MonoBehaviour
         });
     }
 
+    private void IncreaseUpgrade(UpgradeButton upgrade)
+    {
+        upgrade.Upgrade.Cost = (int)(upgrade.Upgrade.Cost * 2f);
+        UpdateUpgrade(upgrade, 0);
+    }
+
     private void BuyUpgrade(UpgradeButton upgrade, int roomID, int cost)
     {
         HotelManager hotel = HotelManager.Instance;
         int money = hotel.GetMoney();
         if (money >= cost)
         {
-            hotel.BuyUpgrade(upgrade.Upgrade.Type, roomID, cost);
-            upgrade.Button.interactable = false;
+            bool maxLevel = hotel.BuyUpgrade(upgrade.Upgrade.Type, roomID, cost);
+            if (maxLevel) {
+                upgrade.Button.interactable = false;
+            } else {
+                IncreaseUpgrade(upgrade);
+            }
             UpdateMoneyText();
         }
     }

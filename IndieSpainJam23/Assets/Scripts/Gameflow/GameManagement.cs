@@ -10,6 +10,8 @@ public class GameManagement : MonoBehaviour
     [SerializeField] private int m_initialStars = 5;
     [SerializeField] private Volume m_globalVolume;
     [SerializeField] private GameObject[] m_toDisableAtPause;
+    [SerializeField] private AudioSource m_audioSource;
+    [SerializeField] private AudioClip m_audioGameOver;
 
     private int m_stars;
 
@@ -126,6 +128,7 @@ public class GameManagement : MonoBehaviour
             obj.SetActive(false);
         }
 
+        m_audioSource.PlayOneShot(m_audioGameOver);
         m_gameOver = true;
         Gameflow.Instance.StopAllCoroutines();
         UI_InGame.Instance.GameOver();

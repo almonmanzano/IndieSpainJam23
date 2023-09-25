@@ -39,6 +39,10 @@ public class Gameflow : MonoBehaviour
 
     [SerializeField] private AudioSource m_stepsAudioSource;
     [SerializeField] private AudioSource m_vacuumAudioSource;
+    [SerializeField] private AudioSource m_audioSource;
+    [SerializeField] private AudioClip m_audioNightBegins;
+    [SerializeField] private AudioClip m_audioNightEnds;
+    [SerializeField] private AudioClip m_audioWinGame;
 
     private PlayerMovement m_player;
 
@@ -147,9 +151,11 @@ public class Gameflow : MonoBehaviour
         if (m_nights == m_totalNights)
         {
             m_winScreen.SetActive(true);
+            m_audioSource.PlayOneShot(m_audioWinGame);
         }
         else
         {
+            m_audioSource.PlayOneShot(m_audioNightEnds);
             StartDay();
         }
     }
@@ -177,6 +183,7 @@ public class Gameflow : MonoBehaviour
         m_nightBegins.SetActive(true);
         m_nightNumberText.text = "- Noche " + (m_nights + 1) + " -";
         m_nightBegins.GetComponent<Animator>().SetTrigger("NightBegins");
+        m_audioSource.PlayOneShot(m_audioNightBegins);
 
         m_musicSwitcher.PlayMusicNight();
 
