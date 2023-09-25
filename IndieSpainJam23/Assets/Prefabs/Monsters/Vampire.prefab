@@ -352,6 +352,7 @@ GameObject:
   - component: {fileID: 7125575760852149014}
   - component: {fileID: 2553697493653919572}
   - component: {fileID: 8353666507520217831}
+  - component: {fileID: 7185569371694985290}
   m_Layer: 6
   m_Name: Vampire
   m_TagString: Untagged
@@ -472,6 +473,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!210 &7185569371694985290
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5127130226634633577}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &6818426206476309268
 GameObject:
   m_ObjectHideFlags: 0

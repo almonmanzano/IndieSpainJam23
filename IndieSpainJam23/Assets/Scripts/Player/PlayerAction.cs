@@ -18,12 +18,17 @@ public class PlayerAction : MonoBehaviour
     private ParticleSystem.Particle[] m_vacuumParticles1;
     private ParticleSystem.Particle[] m_vacuumParticles2;
 
+    private AudioSource m_vacuumSFX;
+
     private void Update()
     {
         if (!GameManagement.Instance.IsPlayable()) return;
 
         if (Input.GetMouseButton(0))
         {
+            // Audio
+            if (!m_vacuumSFX.isPlaying) m_vacuumSFX.Play();
+
             m_animator.SetBool("IsAbsorbing", true);
             Collider2D[] monstersInRange = Physics2D.OverlapCircleAll(m_hand.position, m_range, m_monstersLayerMask);
             for (int i = 0; i < monstersInRange.Length; i++)
@@ -32,9 +37,18 @@ public class PlayerAction : MonoBehaviour
                 Monster monster = monsterObj.GetComponent<Monster>();
                 if (!monster.IsAlive()) continue;
 
+
+
+                //float x = m_hand.transform.position.x - particles[i].position.x;
+                //if ((x > 0f && transform.localScale.x > 0f) || (x < 0f && transform.localScale.x < 0f))
+
                 if (Vector2.Distance(m_hand.position, monsterObj.transform.position) > m_minDistance)
                 {
-                    monster.GetAttracted(m_hand, m_suctionForce);
+                    float x = m_hand.position.x - monsterObj.transform.position.x;
+                    if ((x > 0f && transform.localScale.x < 0f) || (x < 0f && transform.localScale.x > 0f))
+                    {
+                        monster.GetAttracted(m_hand, m_suctionForce);
+                    }
                 }
                 else
                 {
@@ -49,6 +63,9 @@ public class PlayerAction : MonoBehaviour
         }
         else
         {
+            // Audio
+            m_vacuumSFX.Stop();
+
             m_animator.SetBool("IsAbsorbing", false);
             m_vacuumFX1.gameObject.SetActive(false);
             m_vacuumFX2.gameObject.SetActive(false);
@@ -68,9 +85,9 @@ public class PlayerAction : MonoBehaviour
 
         for (int i = 0; i < numParticles; i++)
         {
-            float y = m_hand.transform.position.y - particles[i].position.y;
-            float xmax = m_hand.transform.position.x - fx.transform.position.x;
-            float x = m_hand.transform.position.x - particles[i].position.x;
+            float y = m_hand.position.y - particles[i].position.y;
+            float xmax = m_hand.position.x - fx.transform.position.x;
+            float x = m_hand.position.x - particles[i].position.x;
             if ((x > 0f && transform.localScale.x > 0f) || (x < 0f && transform.localScale.x < 0f))
             {
                 particles[i].position += Vector3.right * 2 * x;
@@ -78,13 +95,18 @@ public class PlayerAction : MonoBehaviour
             }
             float speed = m_particlesSpeed * (1f - (x / xmax));
             particles[i].position += Vector3.up * y * speed * Time.deltaTime;
-            if (Vector2.Distance(m_hand.transform.position, particles[i].position) < m_particlesError)
+            if (Vector2.Distance(m_hand.position, particles[i].position) < m_particlesError)
             {
-                particles[i].position = m_hand.transform.position;
+                particles[i].position = m_hand.position;
             }
         }
 
         fx.SetParticles(particles, numParticles);
+    }
+
+    public void SetVacuumSFX(AudioSource audioSource)
+    {
+        m_vacuumSFX = audioSource;
     }
 
     public void AddVacuumUpgrade()

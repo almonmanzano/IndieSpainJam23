@@ -37,6 +37,9 @@ public class Gameflow : MonoBehaviour
 
     [SerializeField] private GameObject m_tutorial;
 
+    [SerializeField] private AudioSource m_stepsAudioSource;
+    [SerializeField] private AudioSource m_vacuumAudioSource;
+
     private PlayerMovement m_player;
 
     private int m_nights = 0;
@@ -50,6 +53,8 @@ public class Gameflow : MonoBehaviour
     {
         GameObject player = Instantiate(m_characterData.Prefab, m_playerInitialPos.position, Quaternion.identity);
         m_player = player.GetComponent<PlayerMovement>();
+        m_player.SetStepsAudioSource(m_stepsAudioSource);
+        m_player.GetComponent<PlayerAction>().SetVacuumSFX(m_vacuumAudioSource);
 
         FindObjectOfType<CinemachineVirtualCamera>().Follow = player.transform;
 

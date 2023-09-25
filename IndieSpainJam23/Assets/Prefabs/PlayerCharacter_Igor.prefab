@@ -49,7 +49,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1.89
+  m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 999dff4a00000000a9dfdba7
@@ -66,8 +66,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.29464996, y: 0.27269995, z: 0}
-    m_Extent: {x: 1.54485, y: 2.0760999, z: 0}
+    m_Center: {x: 0.27405, y: 0.27185, z: 0}
+    m_Extent: {x: 1.51705, y: 2.0841498, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -79,19 +79,28 @@ MonoBehaviour:
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
   - {x: -0.45304108, y: -1.0541148, z: 0}
+  - {x: -0.118768394, y: -1.0173594, z: 0}
+  - {x: -0.0038047433, y: -0.5212008, z: 0}
+  - {x: 0.07485461, y: -1.029461, z: 0}
   - {x: 0.35912335, y: -1.044723, z: 0}
-  - {x: 0.24143231, y: -0.6545057, z: 0}
-  - {x: 1.0866923, y: 0.10622835, z: 0}
+  - {x: 0.20191967, y: -0.8539902, z: 0}
+  - {x: 0.15067154, y: -0.52138984, z: 0}
+  - {x: 0.71623063, y: -0.29732406, z: 0}
+  - {x: 1.0369186, y: -0.0068896413, z: 0}
+  - {x: 0.9838301, y: 0.14253265, z: 0}
   - {x: 0.4198761, y: 0.031094074, z: 0}
-  - {x: 0.29778302, y: 0.45372438, z: 0}
-  - {x: 0.5419692, y: 0.9608803, z: 0}
+  - {x: 0.26752946, y: 0.4960794, z: 0}
+  - {x: 0.43184695, y: 0.8825659, z: 0}
+  - {x: 0.60852706, y: 0.98508316, z: 0}
   - {x: 0.42486578, y: 1.486136, z: 0}
   - {x: 0.072380304, y: 1.5995212, z: 0}
   - {x: -0.34973156, y: 1.4110026, z: 0}
   - {x: -0.46295106, y: 0.92331314, z: 0}
-  - {x: -0.2187649, y: 0.52885866, z: 0}
+  - {x: -0.1824606, y: 0.649873, z: 0}
   - {x: -0.49112642, y: -0.3633604, z: 0}
-  - {x: -0.25633192, y: -0.7390318, z: 0}
+  - {x: -0.4092028, y: -0.5514542, z: 0}
+  - {x: -0.17162186, y: -0.6119667, z: 0}
+  - {x: -0.25188416, y: -0.8842437, z: 0}
 --- !u!1 &561397676219769770
 GameObject:
   m_ObjectHideFlags: 0
@@ -119,7 +128,7 @@ Transform:
   m_GameObject: {fileID: 561397676219769770}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.037567437, y: -0.009760022, z: -0.01}
+  m_LocalPosition: {x: -0.037567437, y: -1.052, z: -0.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14870,6 +14879,10 @@ MonoBehaviour:
   m_dashCd: 1
   m_dashFX: {fileID: 0}
   m_timeBetweenStepsSFX: 0.5
+  m_stepsAudioClips:
+  - {fileID: 8300000, guid: f44e051a29b8c584c993f8176ea678e3, type: 3}
+  m_movementFX: {fileID: 313706224610517876}
+  m_timeBetweenMovementFX: 0.2
 --- !u!114 &5124874365992785915
 MonoBehaviour:
   m_ObjectHideFlags: 0

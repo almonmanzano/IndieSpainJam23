@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 561397676219769770}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.037567437, y: -0.009760022, z: -0.01}
+  m_LocalPosition: {x: -0.037567437, y: -0.282, z: -0.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9763,7 +9763,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1.89
+  m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 999dff4a00000000a9dfdba7
@@ -9780,8 +9780,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.43334997, y: -0.10644996, z: 0}
-    m_Extent: {x: 1.79645, y: 1.93895, z: 0}
+    m_Center: {x: 0.43400007, y: -0.09215003, z: 0}
+    m_Extent: {x: 1.7987001, y: 1.9382501, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -9792,11 +9792,14 @@ MonoBehaviour:
   m_ShapeLightFalloffSize: 0.75
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
-  - {x: -0.18645039, y: -1.2873815, z: 0}
-  - {x: 0.36745435, y: -1.2863208, z: 0}
-  - {x: 0.45803723, y: -1.1460322, z: 0}
+  - {x: -0.03935477, y: -1.2812525, z: 0}
+  - {x: 0.12053788, y: -0.9943241, z: 0}
+  - {x: 0.21422978, y: -1.261805, z: 0}
+  - {x: 0.36610246, y: -1.0418394, z: 0}
+  - {x: 1.1992391, y: -0.89013135, z: 0}
   - {x: 1.4880313, y: -0.6575696, z: 0}
-  - {x: 0.5951657, y: -0.5769102, z: 0}
+  - {x: 0.6135527, y: -0.7301348, z: 0}
+  - {x: 0.5618248, y: -0.3936836, z: 0}
   - {x: 0.9965048, y: -0.31600034, z: 0}
   - {x: 0.5498301, y: 0.919631, z: 0}
   - {x: 0.09737319, y: 1.0913328, z: 0}
@@ -14867,6 +14870,10 @@ MonoBehaviour:
   m_dashCd: 1
   m_dashFX: {fileID: 0}
   m_timeBetweenStepsSFX: 0.5
+  m_stepsAudioClips:
+  - {fileID: 8300000, guid: f44e051a29b8c584c993f8176ea678e3, type: 3}
+  m_movementFX: {fileID: 313706224610517876}
+  m_timeBetweenMovementFX: 0.2
 --- !u!114 &5124874365992785915
 MonoBehaviour:
   m_ObjectHideFlags: 0

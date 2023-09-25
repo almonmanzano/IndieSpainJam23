@@ -11,6 +11,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float m_dashCd = 1f;
     [SerializeField] private GameObject m_dashFX;
     [SerializeField] private float m_timeBetweenStepsSFX = 0.5f;
+    [SerializeField] private AudioClip[] m_stepsAudioClips;
+    [SerializeField] private ParticleSystem m_movementFX;
+    [SerializeField] private float m_timeBetweenMovementFX = 0.2f;
 
     private Rigidbody2D m_rb;
     private TrailRenderer m_trailRenderer;
@@ -25,12 +28,17 @@ public class PlayerMovement : MonoBehaviour
 
     private float m_timeSinceStep = 0f;
 
+    private AudioSource m_stepsAudioSource;
+
+    private float m_timeSinceMovementFX = 0f;
+
     private void Start()
     {
         m_rb = GetComponent<Rigidbody2D>();
         m_trailRenderer = GetComponent<TrailRenderer>();
         m_timeSinceDash = m_dashCd;
         m_initialPosition = transform.position;
+        m_timeSinceStep = m_timeBetweenStepsSFX;
 
         HotelManager.Instance.SetPlayer(gameObject);
     }
@@ -38,6 +46,27 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         if (!GameManagement.Instance.IsPlayable()) return;
+
+        // Audio
+        m_timeSinceStep += Time.deltaTime;
+        if (m_timeSinceStep > m_timeBetweenStepsSFX && m_rb.velocity != Vector2.zero)
+        {
+            m_timeSinceStep = 0f;
+            int rand = Random.Range(0, m_stepsAudioClips.Length);
+            m_stepsAudioSource.clip = m_stepsAudioClips[rand];
+            m_stepsAudioSource.Play();
+        }
+
+        // Movement FX
+        m_timeSinceMovementFX += Time.deltaTime;
+        if (m_rb.velocity != Vector2.zero)
+        {
+            if (m_timeSinceMovementFX > m_timeBetweenMovementFX)
+            {
+                m_timeSinceMovementFX = 0f;
+                m_movementFX.Play();
+            }
+        }
 
         m_movement = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
 
@@ -98,6 +127,11 @@ public class PlayerMovement : MonoBehaviour
         // Movement
         float speed = m_isDashing ? m_dashSpeed : m_moveSpeed;
         m_rb.velocity = m_movement * speed;
+    }
+
+    public void SetStepsAudioSource(AudioSource audioSource)
+    {
+        m_stepsAudioSource = audioSource;
     }
 
     public void Restart()
