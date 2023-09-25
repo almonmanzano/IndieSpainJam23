@@ -12,6 +12,7 @@ public class GameManagement : MonoBehaviour
     [SerializeField] private GameObject[] m_toDisableAtPause;
     [SerializeField] private AudioSource m_audioSource;
     [SerializeField] private AudioClip m_audioGameOver;
+    [SerializeField] private AudioController m_audioController;
 
     private int m_stars;
 
@@ -20,6 +21,8 @@ public class GameManagement : MonoBehaviour
     private bool m_paused = false;
 
     private DepthOfField m_depthOfField;
+
+    private PlayerAction m_playerAction;
 
     private void Awake()
     {
@@ -71,6 +74,11 @@ public class GameManagement : MonoBehaviour
         if (showUI)
         {
             UI_InGame.Instance.PauseGame(true);
+        }
+        else
+        {
+            m_audioController.StopAllSFX();
+            m_playerAction.StopVacuum();
         }
     }
 
@@ -132,5 +140,10 @@ public class GameManagement : MonoBehaviour
         m_gameOver = true;
         Gameflow.Instance.StopAllCoroutines();
         UI_InGame.Instance.GameOver();
+    }
+
+    public void SetPlayer(PlayerAction player)
+    {
+        m_playerAction = player;
     }
 }

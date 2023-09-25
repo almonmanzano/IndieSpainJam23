@@ -7245,6 +7245,7 @@ MonoBehaviour:
   - {fileID: 1365252808}
   m_audioSource: {fileID: 1856685361}
   m_audioGameOver: {fileID: 8300000, guid: 50265d9625e741d43a0458e18fdb9bf3, type: 3}
+  m_audioController: {fileID: 782693212}
 --- !u!4 &437007125
 Transform:
   m_ObjectHideFlags: 0
@@ -11429,8 +11430,10 @@ MonoBehaviour:
   m_sfxSources:
   - {fileID: 1691795248}
   - {fileID: 1856685361}
+  - {fileID: 2052104940}
   - {fileID: 1707366495}
   - {fileID: 339482928}
+  - {fileID: 1359814195}
 --- !u!4 &782693213
 Transform:
   m_ObjectHideFlags: 0

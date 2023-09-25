@@ -47,7 +47,6 @@ public class UI_Tutorial : MonoBehaviour
         {
             if (m_textComponent.text == m_lines[m_index].text)
             {
-                if (m_index == 3) print(m_waitingForMap);
                 if (m_index == 3 && m_waitingForMap) return;
                 NextLine();
             }
