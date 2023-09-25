@@ -451,7 +451,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_deathTime: 0.5
-  m_vfx: {fileID: 511801244588696918, guid: a7fadf1085861e84fa7c6f18866bbef5, type: 3}
+  m_vfx: {fileID: 2313424801131194298, guid: 8b1b4f93bc8af974881ab25bf427c7b7, type: 3}
 --- !u!95 &8353666507520217831
 Animator:
   serializedVersion: 5

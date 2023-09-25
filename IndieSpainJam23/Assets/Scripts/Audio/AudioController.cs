@@ -51,4 +51,12 @@ public class AudioController : MonoBehaviour
         source.clip = clips[Random.Range(0, clips.Length)];
         source.Play();
     }
+
+    public void StopAllSFX()
+    {
+        foreach (AudioSource source in m_sfxSources)
+        {
+            source.Stop();
+        }
+    }
 }
