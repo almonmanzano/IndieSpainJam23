@@ -41,6 +41,8 @@ public class HotelManager : MonoBehaviour
         {
             m_hasTV[i] = false;
             m_hasBar[i] = false;
+            m_TVs[i].SetActive(false);
+            m_bars[i].SetActive(false);
         }
 
         m_roomBenefits[0] = m_normalRoomBenefit;
