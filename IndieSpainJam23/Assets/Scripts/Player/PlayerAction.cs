@@ -28,7 +28,11 @@ public class PlayerAction : MonoBehaviour
 
     private void Update()
     {
-        if (!GameManagement.Instance.IsPlayable()) return;
+        bool playable = GameManagement.Instance.IsPlayable();
+
+        GetComponent<TrailRenderer>().enabled = playable;
+
+        if (!playable) return;
 
         if (Input.GetMouseButton(0) && !EventSystem.current.IsPointerOverGameObject())
         {
