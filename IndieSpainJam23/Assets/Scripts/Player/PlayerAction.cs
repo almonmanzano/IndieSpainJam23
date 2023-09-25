@@ -37,11 +37,6 @@ public class PlayerAction : MonoBehaviour
                 Monster monster = monsterObj.GetComponent<Monster>();
                 if (!monster.IsAlive()) continue;
 
-
-
-                //float x = m_hand.transform.position.x - particles[i].position.x;
-                //if ((x > 0f && transform.localScale.x > 0f) || (x < 0f && transform.localScale.x < 0f))
-
                 if (Vector2.Distance(m_hand.position, monsterObj.transform.position) > m_minDistance)
                 {
                     float x = m_hand.position.x - monsterObj.transform.position.x;
