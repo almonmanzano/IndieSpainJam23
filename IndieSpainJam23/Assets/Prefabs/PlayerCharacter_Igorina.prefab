@@ -9780,8 +9780,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.44215, y: -0.08850002, z: 0}
-    m_Extent: {x: 1.80115, y: 1.9352, z: 0}
+    m_Center: {x: 0.43390006, y: -0.09889996, z: 0}
+    m_Extent: {x: 1.7972, y: 1.9388, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -14835,9 +14835,9 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.5}
-  m_Size: {x: 1, y: 1.05}
-  m_Direction: 0
+  m_Offset: {x: -0.09587245, y: -0.21385615}
+  m_Size: {x: 0.68043226, y: 0.19042525}
+  m_Direction: 1
 --- !u!210 &4630094445988095994
 SortingGroup:
   m_ObjectHideFlags: 0

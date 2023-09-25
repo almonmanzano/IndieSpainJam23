@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: MejorarAspiradora
   m_EditorClassIdentifier: 
   Type: 2
-  Text: "<size=100%>Mejorar aspiradora<br><size=80%><i>\"\xBFQui\xE9n necesita una
-    Roomba?\"</i>"
+  Text: <size=100%>Mejorar aspiradora<br><size=80%><i>"Para los amantes de la limpieza"</i>
   Cost: 30

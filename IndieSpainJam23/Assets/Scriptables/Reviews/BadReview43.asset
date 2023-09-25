@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 669849005edbe9f4795b561d3d233028, type: 3}
-  m_Name: ObtenerDash
+  m_Script: {fileID: 11500000, guid: 672304a29c127064c86d9c5f6d8ab7a4, type: 3}
+  m_Name: BadReview43
   m_EditorClassIdentifier: 
-  Type: 1
-  Text: <size=100%>Obtener dash<br><size=80%><i>"Barra espaciadora y gano media hora"</i>
-  Cost: 20
+  Stars: 1
+  Text: "Suelo pasar miedo por las noches y por si acaso miro debajo de la cama.
+    Esta noche lo que hab\xEDa debajo de la cama me ha mirado a mi."
