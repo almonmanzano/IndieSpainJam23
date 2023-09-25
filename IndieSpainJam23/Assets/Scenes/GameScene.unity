@@ -8309,7 +8309,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: -1720902097, guid: 53902a2c246073d42ba8bb49f7a926d5, type: 3}
   m_Color: {r: 0.51677644, g: 0.745283, b: 0.59699607, a: 1}
   m_FlipX: 0
@@ -19508,7 +19508,7 @@ MonoBehaviour:
   - {fileID: 1540368728}
   - {fileID: 65128281}
   - {fileID: 945825465}
-  m_nightDuration: 60
+  m_nightDuration: 600
   m_dayMenu: {fileID: 1599872574}
   m_nightBegins: {fileID: 1753506323}
   m_nightNumberText: {fileID: 1765810063}
@@ -31210,10 +31210,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1019831267}
     m_Modifications:
-    - target: {fileID: 2970707591692974977, guid: d9e46f54518cb0a4dbbcdbee3be99845, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7050234488148317133, guid: d9e46f54518cb0a4dbbcdbee3be99845, type: 3}
       propertyPath: m_Name
       value: Planta_1
