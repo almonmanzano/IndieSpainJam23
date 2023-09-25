@@ -20463,7 +20463,7 @@ MonoBehaviour:
   - {fileID: 1540368728}
   - {fileID: 65128281}
   - {fileID: 945825465}
-  m_nightDuration: 3
+  m_nightDuration: 60
   m_dayMenu: {fileID: 1599872574}
   m_nightBegins: {fileID: 1753506323}
   m_nightNumberText: {fileID: 1765810063}
