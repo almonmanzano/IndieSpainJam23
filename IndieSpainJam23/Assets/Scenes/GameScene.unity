@@ -10520,7 +10520,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -14704,7 +14704,7 @@ SortingGroup:
   m_Enabled: 1
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_SortAtRoot: 0
 --- !u!1001 &1022609380
 PrefabInstance:
@@ -28263,7 +28263,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -32566,6 +32566,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1019831267}
     m_Modifications:
+    - target: {fileID: 703769922196911014, guid: d9e46f54518cb0a4dbbcdbee3be99845, type: 3}
+      propertyPath: m_Size.x
+      value: 3.374085
+      objectReference: {fileID: 0}
+    - target: {fileID: 703769922196911014, guid: d9e46f54518cb0a4dbbcdbee3be99845, type: 3}
+      propertyPath: m_Size.y
+      value: 4.5649924
+      objectReference: {fileID: 0}
+    - target: {fileID: 703769922196911014, guid: d9e46f54518cb0a4dbbcdbee3be99845, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.6314626
+      objectReference: {fileID: 0}
+    - target: {fileID: 703769922196911014, guid: d9e46f54518cb0a4dbbcdbee3be99845, type: 3}
+      propertyPath: m_Offset.y
+      value: 3.5838058
+      objectReference: {fileID: 0}
     - target: {fileID: 7050234488148317133, guid: d9e46f54518cb0a4dbbcdbee3be99845, type: 3}
       propertyPath: m_Name
       value: Planta_1
