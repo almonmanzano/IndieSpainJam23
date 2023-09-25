@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float m_dashDuration = 0.3f;
     [SerializeField] private float m_dashCd = 1f;
     [SerializeField] private GameObject m_dashFX;
+    [SerializeField] private float m_timeBetweenStepsSFX = 0.5f;
 
     private Rigidbody2D m_rb;
     private TrailRenderer m_trailRenderer;
@@ -21,6 +22,8 @@ public class PlayerMovement : MonoBehaviour
     private float m_timeSinceDash;
 
     private bool m_isFlipped = false;
+
+    private float m_timeSinceStep = 0f;
 
     private void Start()
     {
