@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: BadReview50
   m_EditorClassIdentifier: 
   Stars: 1
-  Text: "Reservamos una suite para montar una gran fiesta, en la que se arm\xF3 un
-    gran pifostio. Mi sorpresa llega cuando le pregunto a los invitados que les pareci\xF3
-    y todos me aseguran no haber asistido. El pr\xF3ximo a\xF1o repetiremos."
+  Text: "Reservamos una suite para montar una fiesta. Mi sorpresa llega cuando le
+    pregunto a los invitados que les pareci\xF3 y todos me aseguran no haber asistido."
