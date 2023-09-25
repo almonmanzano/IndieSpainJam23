@@ -6437,7 +6437,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "* Agradecimiento especial a Tuni la vigilante de\n   seguridad por avisarnos
+  m_text: "* Agradecimiento especial a Tuni, la vigilante de\n   seguridad, por avisarnos
     de los monstruos."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 00a08df350c640142b6fde707c89a34f, type: 2}
