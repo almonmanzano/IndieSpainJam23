@@ -17320,6 +17320,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerCharacter_Igorina
       objectReference: {fileID: 0}
+    - target: {fileID: 5168517845032524551, guid: e03ea34709cf29b47b7e340fd29bf362, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
