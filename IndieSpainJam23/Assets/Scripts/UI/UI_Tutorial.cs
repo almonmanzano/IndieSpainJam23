@@ -12,6 +12,9 @@ public class UI_Tutorial : MonoBehaviour
     [SerializeField] private GameObject m_mapHint;
     [SerializeField] private GameObject m_clockHint;
 
+    [SerializeField] private AudioSource m_textAudioSource;
+    [SerializeField] private AudioClip[] m_textClips;
+
     [System.Serializable]
     public struct Line
     {
@@ -68,6 +71,13 @@ public class UI_Tutorial : MonoBehaviour
             char c = text[i];
             m_textComponent.text += c;
             if (c == '<' || (i > 0 && text[i - 1] == '<') || c == '>') continue;
+
+            if (!m_textAudioSource.isPlaying)
+            {
+                int rand = Random.Range(0, m_textClips.Length);
+                m_textAudioSource.clip = m_textClips[rand];
+                m_textAudioSource.Play();
+            }
             yield return new WaitForSeconds(1f / m_textSpeed);
         }
 
