@@ -154,4 +154,9 @@ public class PlayerMovement : MonoBehaviour
     {
         return m_isFlipped;
     }
+
+    public void StopRunningAnimation()
+    {
+        m_animator.SetBool("IsRunning", false);
+    }
 }

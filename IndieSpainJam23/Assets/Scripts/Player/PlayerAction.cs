@@ -21,6 +21,11 @@ public class PlayerAction : MonoBehaviour
 
     private AudioSource m_vacuumSFX;
 
+    private void Start()
+    {
+        GameManagement.Instance.SetPlayer(this);
+    }
+
     private void Update()
     {
         if (!GameManagement.Instance.IsPlayable()) return;
@@ -98,6 +103,15 @@ public class PlayerAction : MonoBehaviour
         }
 
         fx.SetParticles(particles, numParticles);
+    }
+
+    public void StopVacuum()
+    {
+        m_vacuumSFX.Stop();
+
+        m_animator.SetBool("IsAbsorbing", false);
+        m_vacuumFX1.gameObject.SetActive(false);
+        m_vacuumFX2.gameObject.SetActive(false);
     }
 
     public void SetVacuumSFX(AudioSource audioSource)

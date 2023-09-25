@@ -66,8 +66,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.2705, y: 0.27029997, z: 0}
-    m_Extent: {x: 1.5127001, y: 2.0762, z: 0}
+    m_Center: {x: 0.2726, y: 0.27060002, z: 0}
+    m_Extent: {x: 1.5102, y: 2.076, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -14952,7 +14952,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Time: 5
+  m_Time: 0.5
   m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
@@ -14983,8 +14983,8 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 1}
-      key1: {r: 1, g: 1, b: 1, a: 0}
+      key0: {r: 0.63616323, g: 0, b: 1, a: 0.7764706}
+      key1: {r: 0, g: 1, b: 0.16973758, a: 0}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}

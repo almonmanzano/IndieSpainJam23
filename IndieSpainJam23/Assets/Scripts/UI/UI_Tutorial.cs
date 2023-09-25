@@ -26,6 +26,8 @@ public class UI_Tutorial : MonoBehaviour
     private int m_index;
     private TextMeshProUGUI m_textComponent;
     private UI_WobblyText m_wobblyText;
+    private bool m_waitingForMap = true;
+    private IEnumerator m_typeLineCoroutine;
 
     private void Awake()
     {
@@ -45,11 +47,12 @@ public class UI_Tutorial : MonoBehaviour
         {
             if (m_textComponent.text == m_lines[m_index].text)
             {
+                if (m_index == 3 && m_waitingForMap) return;
                 NextLine();
             }
             else
             {
-                StopAllCoroutines();
+                StopCoroutine(m_typeLineCoroutine);
                 m_textComponent.text = m_lines[m_index].text;
                 EndLine();
             }
@@ -59,18 +62,25 @@ public class UI_Tutorial : MonoBehaviour
     private void StartDialogue()
     {
         m_index = 0;
-        StartCoroutine(TypeLine());
+        m_typeLineCoroutine = TypeLine();
+        StartCoroutine(m_typeLineCoroutine);
     }
 
     private IEnumerator TypeLine()
     {
+        // Map
+        if (m_index == 3)
+        {
+            StartCoroutine(WaitForMap());
+        }
+
         m_wobblyText.SetAnimatedRange(m_lines[m_index].animate, m_lines[m_index].animatedRange);
         char[] text = m_lines[m_index].text.ToCharArray();
         for (int i = 0; i < text.Length; i++)
         {
             char c = text[i];
             m_textComponent.text += c;
-            if (c == '<' || (i > 0 && text[i - 1] == '<') || c == '>') continue;
+            if (c == '<' || (i > 0 && text[i - 1] == '<') || (i < text.Length - 1 && text[i + 1] == '>') || c == '>') continue;
 
             if (!m_textAudioSource.isPlaying)
             {
@@ -113,12 +123,19 @@ public class UI_Tutorial : MonoBehaviour
         {
             m_index++;
             m_textComponent.text = string.Empty;
-            StartCoroutine(TypeLine());
+            m_typeLineCoroutine = TypeLine();
+            StartCoroutine(m_typeLineCoroutine);
         }
         else
         {
             Gameflow.Instance.StartFirstNight();
             gameObject.SetActive(false);
         }
+    }
+
+    private IEnumerator WaitForMap()
+    {
+        yield return new WaitForSeconds(1f);
+        m_waitingForMap = false;
     }
 }
