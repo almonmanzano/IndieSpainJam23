@@ -17,6 +17,11 @@ public class HauntedRoom : MonoBehaviour
     private Monster m_monster;
     private Guest m_guest;
 
+    private void Update()
+    {
+        if (m_haunted) AudioRandomizer.Instance.PlayRandom(m_roomNumber);
+    }
+
     public void SetGuest(Guest guest)
     {
         m_guest = guest;

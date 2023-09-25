@@ -79,6 +79,7 @@ public class GameManagement : MonoBehaviour
         {
             m_audioController.StopAllSFX();
             m_playerAction.StopVacuum();
+            m_playerAction.gameObject.GetComponent<PlayerMovement>().StopRunningAnimation();
         }
     }
 
