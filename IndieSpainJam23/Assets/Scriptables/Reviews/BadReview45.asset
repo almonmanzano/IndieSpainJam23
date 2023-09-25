@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: BadReview45
   m_EditorClassIdentifier: 
   Stars: 1
-  Text: "Al volver al hotel por la tarde la cama y los muebles de la habitaci\xF3n
-    se hab\xEDan desplazado de sitio. Dormir en el techo da mas dolor de espalda
-    de lo que pensaba."
+  Text: "Al volver al hotel la cama se hab\xEDan desplazado. Dormir en el techo da
+    mas dolor de lo que pensaba."

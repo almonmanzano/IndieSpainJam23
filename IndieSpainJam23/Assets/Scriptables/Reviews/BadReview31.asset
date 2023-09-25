@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: BadReview31
   m_EditorClassIdentifier: 
   Stars: 1
-  Text: "Este hotel es un aut\xE9ntico circo, y el encargado es el maestro de ceremonias.
-    Vi c\xF3mo usaba un aspirador gigante para tratar de mantener a raya a los clientes
-    raritos."
+  Text: "Este hotel es un aut\xE9ntico circo. Vi c\xF3mo el encargado usaba un aspirador
+    gigante para tratar de mantener a raya a los clientes raritos."

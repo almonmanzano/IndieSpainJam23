@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: BadReview36
   m_EditorClassIdentifier: 
   Stars: 1
-  Text: "Muy descontentos con el restaurante. Pedimos sopa y encontramos un dedo
-    flotando, justo del camarero que lo tra\xEDa. Le pedimos explicaciones y s\xF3lo
-    balbuceaba, 0 comunicaci\xF3n. No volveremos."
+  Text: "Pedimos sopa y encontramos un dedo flotando. Le pedimos explicaciones y
+    s\xF3lo balbuceaba, 0 comunicaci\xF3n."
