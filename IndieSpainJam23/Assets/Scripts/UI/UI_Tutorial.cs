@@ -80,7 +80,7 @@ public class UI_Tutorial : MonoBehaviour
         {
             char c = text[i];
             m_textComponent.text += c;
-            if (c == '<' || (i > 0 && text[i - 1] == '<') || c == '>') continue;
+            if (c == '<' || (i > 0 && text[i - 1] == '<') || (i < text.Length - 1 && text[i + 1] == '>') || c == '>') continue;
 
             if (!m_textAudioSource.isPlaying)
             {

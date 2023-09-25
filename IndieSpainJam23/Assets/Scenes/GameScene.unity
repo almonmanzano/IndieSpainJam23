@@ -14060,7 +14060,7 @@ MonoBehaviour:
   - text: "\xA1Hola! As\xED que t\xFA eres la nueva v\xEDcti... persona encargada
       del hotel. Muy bien. El due\xF1o se ha ido al Caribe, as\xED que tendr\xE1s
       que ocuparte t\xFA de que todo siga en su sitio cuando vuelva <b>dentro de
-      5 noches</b>."
+      5 noches</b>.<br><br>         - Click izquierdo para continuar -"
     animate: 1
     animatedRange: {x: 185, y: 202}
   - text: "Como en todo hotel que se precie en temporada alta, todas nuestras habitaciones
