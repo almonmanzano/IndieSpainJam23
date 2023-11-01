@@ -8,7 +8,6 @@ public class PlayerAction : MonoBehaviour
     [SerializeField] private float m_range = 1.5f;
     [SerializeField] private float m_suctionForce = 1f;
     [SerializeField] private float m_minDistance = 1f;
-    //[SerializeField] private float m_rangeH = 1.5f;
     [SerializeField] private LayerMask m_monstersLayerMask;
 
     [SerializeField] private ParticleSystem m_vacuumFX1;
@@ -32,81 +31,107 @@ public class PlayerAction : MonoBehaviour
 
         GetComponent<TrailRenderer>().enabled = playable;
 
-        if (!playable) return;
+        if (!playable)
+            return;
 
-        if (Input.GetMouseButton(0) && !EventSystem.current.IsPointerOverGameObject())
+        bool isVaccumAbsorbing = Input.GetMouseButton(0) && !EventSystem.current.IsPointerOverGameObject();
+
+        // Animation
+        m_animator.SetBool("IsAbsorbing", isVaccumAbsorbing);
+
+        // Audio
+        UpdateAudio(isVaccumAbsorbing);
+
+        if (isVaccumAbsorbing)
         {
-            // Audio
-            if (!m_vacuumSFX.isPlaying) m_vacuumSFX.Play();
+            VacuumAbsorbMonsters();
+        }
 
-            m_animator.SetBool("IsAbsorbing", true);
-            Collider2D[] monstersInRange = Physics2D.OverlapCircleAll(m_hand.position, m_range, m_monstersLayerMask);
-            for (int i = 0; i < monstersInRange.Length; i++)
+        // Particle systems
+        UpdateVFX(isVaccumAbsorbing);
+    }
+
+    private void VacuumAbsorbMonsters()
+    {
+        Collider2D[] monstersInRange = Physics2D.OverlapCircleAll(m_hand.position, m_range, m_monstersLayerMask);
+        for (int i = 0; i < monstersInRange.Length; i++)
+        {
+            GameObject monsterObj = monstersInRange[i].gameObject;
+            Monster monster = monsterObj.GetComponent<Monster>();
+
+            if (!monster.IsAlive())
+                continue;
+
+            if (Vector2.Distance(m_hand.position, monsterObj.transform.position) > m_minDistance)
             {
-                GameObject monsterObj = monstersInRange[i].gameObject;
-                Monster monster = monsterObj.GetComponent<Monster>();
-                if (!monster.IsAlive()) continue;
-
-                if (Vector2.Distance(m_hand.position, monsterObj.transform.position) > m_minDistance)
-                {
-                    float x = m_hand.position.x - monsterObj.transform.position.x;
-                    if ((x > 0f && transform.localScale.x < 0f) || (x < 0f && transform.localScale.x > 0f))
-                    {
-                        monster.GetAttracted(m_hand, m_suctionForce);
-                    }
-                }
-                else
-                {
-                    // Destroy monster
-                    monster.Die(m_hand);
-                }
+                float x = m_hand.position.x - monsterObj.transform.position.x;
+                bool isInFrontOf = (x > 0f && transform.localScale.x < 0f) || (x < 0f && transform.localScale.x > 0f);
+                if (isInFrontOf)
+                    monster.GetAttracted(m_hand, m_suctionForce);
             }
+            else
+            {
+                // Destroy monster
+                monster.Die(m_hand);
+            }
+        }
+    }
 
-            // Particle system
-            UpdateFX(m_vacuumFX1, m_vacuumParticles1);
-            UpdateFX(m_vacuumFX2, m_vacuumParticles2);
+    private void UpdateVFX(bool absorbing)
+    {
+        if (absorbing)
+        {
+            UpdateParticles(m_vacuumFX1, m_vacuumParticles1);
+            UpdateParticles(m_vacuumFX2, m_vacuumParticles2);
         }
         else
         {
-            // Audio
-            m_vacuumSFX.Stop();
-
-            m_animator.SetBool("IsAbsorbing", false);
             m_vacuumFX1.gameObject.SetActive(false);
             m_vacuumFX2.gameObject.SetActive(false);
         }
     }
 
-    private void UpdateFX(ParticleSystem fx, ParticleSystem.Particle[] particles)
+    private void UpdateAudio(bool absorbing)
     {
-        fx.gameObject.SetActive(true);
-
-        if (particles == null || particles.Length < fx.main.maxParticles)
+        if (absorbing)
         {
-            particles = new ParticleSystem.Particle[fx.main.maxParticles];
+            if (!m_vacuumSFX.isPlaying)
+                m_vacuumSFX.Play();
         }
+        else
+        {
+            m_vacuumSFX.Stop();
+        }
+    }
 
-        int numParticles = fx.GetParticles(particles);
+    private void UpdateParticles(ParticleSystem vfx, ParticleSystem.Particle[] particles)
+    {
+        vfx.gameObject.SetActive(true);
+
+        if (particles == null || particles.Length < vfx.main.maxParticles)
+            particles = new ParticleSystem.Particle[vfx.main.maxParticles];
+
+        int numParticles = vfx.GetParticles(particles);
 
         for (int i = 0; i < numParticles; i++)
         {
             float y = m_hand.position.y - particles[i].position.y;
-            float xmax = m_hand.position.x - fx.transform.position.x;
+            float xmax = m_hand.position.x - vfx.transform.position.x;
             float x = m_hand.position.x - particles[i].position.x;
-            if ((x > 0f && transform.localScale.x > 0f) || (x < 0f && transform.localScale.x < 0f))
+            bool isInFrontOf = (x > 0f && transform.localScale.x > 0f) || (x < 0f && transform.localScale.x < 0f);
+            if (isInFrontOf)
             {
                 particles[i].position += Vector3.right * 2 * x;
                 particles[i].velocity *= -1f;
             }
             float speed = m_particlesSpeed * (1f - (x / xmax));
             particles[i].position += Vector3.up * y * speed * Time.deltaTime;
+
             if (Vector2.Distance(m_hand.position, particles[i].position) < m_particlesError)
-            {
                 particles[i].position = m_hand.position;
-            }
         }
 
-        fx.SetParticles(particles, numParticles);
+        vfx.SetParticles(particles, numParticles);
     }
 
     public void StopVacuum()
@@ -114,6 +139,7 @@ public class PlayerAction : MonoBehaviour
         m_vacuumSFX.Stop();
 
         m_animator.SetBool("IsAbsorbing", false);
+
         m_vacuumFX1.gameObject.SetActive(false);
         m_vacuumFX2.gameObject.SetActive(false);
     }
