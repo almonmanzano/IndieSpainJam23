@@ -24,18 +24,15 @@ public class Monster : MonoBehaviour
     {
         if (m_lastPosition != Vector2.zero)
         {
+            m_animator.SetBool("IsBeingAbsorbed", m_lastPosition != (Vector2)transform.position);
+
             if (m_lastPosition != (Vector2)transform.position)
             {
-                m_animator.SetBool("IsBeingAbsorbed", true);
                 m_direction = (Vector2)transform.position - m_lastPosition;
 
                 // flip sprite if direction changed
                 if (m_direction.x != 0)
                     transform.localScale = new Vector3(m_direction.x < 0 ? 1f : -1f, 1f, 1f);
-            }
-            else
-            {
-                m_animator.SetBool("IsBeingAbsorbed", false);
             }
         }
         
