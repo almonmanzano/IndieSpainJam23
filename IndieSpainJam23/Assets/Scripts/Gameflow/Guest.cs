@@ -37,7 +37,7 @@ public class Guest : MonoBehaviour
             if (m_tranquility <= 0)
             {
                 m_awake = true;
-                WakeUp();
+                GetMad();
             }
         }
         else
@@ -47,23 +47,34 @@ public class Guest : MonoBehaviour
         }
     }
 
-    private void WakeUp()
+    private void GetMad()
     {
-        StartCoroutine(WakeUpCoroutine());
-    }
-
-    private IEnumerator WakeUpCoroutine()
-    {
-        GameManagement.Instance.LoseStar(m_portrait);
-        HotelManager.Instance.AddSimpa(m_roomID);
         GetComponent<Animator>().SetTrigger("WakeUp");
         Instantiate(m_vfx, transform.position, Quaternion.identity);
         m_audioSource.PlayOneShot(m_audioWakeUp);
 
+        StartCoroutine(GetMadCoroutine());
+    }
+
+    private IEnumerator GetMadCoroutine()
+    {
+        ReportMadGuest();
+
         yield return new WaitForSeconds(m_wakeUpTime);
 
+        DisableGuest();
+    }
+
+    private void DisableGuest()
+    {
         m_room.StopHaunted();
         gameObject.SetActive(false);
+    }
+
+    private void ReportMadGuest()
+    {
+        GameManagement.Instance.LoseStar(m_portrait);
+        HotelManager.Instance.AddSimpa(m_roomID);
     }
 
     public void SetRoom(int roomID, HauntedRoom room, Image portraitImage, Slider fearSlider)
