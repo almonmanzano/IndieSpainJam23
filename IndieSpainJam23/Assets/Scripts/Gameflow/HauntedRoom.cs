@@ -7,8 +7,6 @@ public class HauntedRoom : MonoBehaviour
     [SerializeField] private int m_roomNumber;
     [SerializeField] private GameObject[] m_monsterOptions;
 
-    [SerializeField] private Transform[] m_patrolPoints;
-
     [SerializeField] private Transform m_guestPosition;
     [SerializeField] private Image m_portraitImage;
     [SerializeField] private Slider m_fearSlider;
@@ -38,7 +36,7 @@ public class HauntedRoom : MonoBehaviour
         GameObject monsterPrefab = m_monsterOptions[rand];
         GameObject monsterGameObject = Instantiate(monsterPrefab, transform.position, Quaternion.identity);
         m_monster = monsterGameObject.GetComponent<Monster>();
-        m_monster.SetHauntedRoom(this, m_patrolPoints);
+        m_monster.SetHauntedRoom(this);
 
         if (m_guest.gameObject.activeInHierarchy)
         {

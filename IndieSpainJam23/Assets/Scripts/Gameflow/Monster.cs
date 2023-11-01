@@ -9,7 +9,6 @@ public class Monster : MonoBehaviour
 
     private HauntedRoom m_room;
     private bool m_alive = true;
-    private Transform[] m_patrolPoints;
 
     private Vector2 m_direction;
     private Vector2 m_lastPosition;
@@ -23,18 +22,19 @@ public class Monster : MonoBehaviour
 
     private void Update()
     {
-        if (m_lastPosition != Vector2.zero) {
-            if (m_lastPosition != (Vector2)transform.position) {
+        if (m_lastPosition != Vector2.zero)
+        {
+            if (m_lastPosition != (Vector2)transform.position)
+            {
                 m_animator.SetBool("IsBeingAbsorbed", true);
                 m_direction = (Vector2)transform.position - m_lastPosition;
 
                 // flip sprite if direction changed
-                if (m_direction.x < 0) {
-                    transform.localScale = new Vector3(1f, 1f, 1f);
-                } else if (m_direction.x > 0) {
-                    transform.localScale = new Vector3(-1f, 1f, 1f);
-                }
-            } else {
+                if (m_direction.x != 0)
+                    transform.localScale = new Vector3(m_direction.x < 0 ? 1f : -1f, 1f, 1f);
+            }
+            else
+            {
                 m_animator.SetBool("IsBeingAbsorbed", false);
             }
         }
@@ -43,10 +43,9 @@ public class Monster : MonoBehaviour
         m_lastPosition = transform.position;
     }
 
-    public void SetHauntedRoom(HauntedRoom room, Transform[] patrolPoints)
+    public void SetHauntedRoom(HauntedRoom room)
     {
         m_room = room;
-        m_patrolPoints = patrolPoints;
     }
 
     public void LeaveRoom()
@@ -79,7 +78,6 @@ public class Monster : MonoBehaviour
     {
         float elapsedTime = 0f;
         Vector2 startingPos = transform.position;
-        Vector2 direction = (startingPos - (Vector2)transf.position).normalized;
         while (elapsedTime < t)
         {
             transform.position = Vector2.Lerp(startingPos, transf.position, elapsedTime / t);
