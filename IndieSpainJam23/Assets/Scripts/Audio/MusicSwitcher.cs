@@ -14,17 +14,20 @@ public class MusicSwitcher : MonoBehaviour
 
     public void PlayMusicNight()
     {
-        if (m_source.clip == m_musicNight) return;
-
-        m_source.clip = m_musicNight;
-        m_source.Play();
+        PlayMusic(m_musicNight);
     }
 
     public void PlayMusicDay()
     {
-        if (m_source.clip == m_musicDay) return;
+        PlayMusic(m_musicDay);
+    }
 
-        m_source.clip = m_musicDay;
+    private void PlayMusic(AudioClip clip)
+    {
+        if (m_source.clip == clip)
+            return;
+
+        m_source.clip = clip;
         m_source.Play();
     }
 }
