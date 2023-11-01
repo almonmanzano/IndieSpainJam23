@@ -15,26 +15,25 @@ public class UI_CharacterSelection : MonoBehaviour
 
     private void Start()
     {
-        m_image[0].sprite = m_selectedSprite;
-        m_image[1].sprite = m_unselectedSprite;
-
-        m_button[0].color = m_selectedColor;
-        m_button[1].color = m_unselectedColor;
-
         SelectIgor();
     }
 
     private void SelectCharacter(int id)
     {
-        m_image[1 - id].sprite = m_unselectedSprite;
-        m_image[1 - id].color = Color.white;
+        DeselectCharacter(1 - id);
+
         m_image[id].sprite = m_selectedSprite;
         m_image[id].color = Color.white;
-
-        m_button[1 - id].color = m_unselectedColor;
         m_button[id].color = m_selectedColor;
 
         CharacterSelection.Instance.SelectCharacter(id);
+    }
+
+    private void DeselectCharacter(int id)
+    {
+        m_image[id].sprite = m_unselectedSprite;
+        m_image[id].color = Color.white;
+        m_button[id].color = m_unselectedColor;
     }
 
     public void OnHover(int id)
