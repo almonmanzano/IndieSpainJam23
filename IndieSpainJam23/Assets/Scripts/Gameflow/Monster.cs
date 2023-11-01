@@ -55,19 +55,19 @@ public class Monster : MonoBehaviour
         return m_alive;
     }
 
-    public void Die(Transform transf)
+    public void Die(Transform attractionPoint)
     {
         m_alive = false;
         m_animator.SetTrigger("Die");
         LeaveRoom();
         Destroy(GetComponent<Collider2D>()); // Bug or feature?
 
-        StartCoroutine(DieCoroutine(transf, m_deathTime));
+        StartCoroutine(DieCoroutine(attractionPoint, m_deathTime));
     }
 
-    public void GetAttracted(Transform transf, float suctionForce)
+    public void GetAttracted(Transform attractionPoint, float suctionForce)
     {
-        Vector2 direction = (transf.position - transform.position).normalized;
+        Vector2 direction = (attractionPoint.position - transform.position).normalized;
         transform.position += (Vector3)direction * suctionForce * Time.deltaTime;
     }
 
